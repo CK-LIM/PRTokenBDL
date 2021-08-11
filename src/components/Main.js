@@ -1,15 +1,32 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 import x from '../x.png'
 import pteria from '../pteria.png'
+import ButtonGroup from 'react-bootstrap/ButtonGroup'
+import Button from '@material-ui/core/Button';
 
 class Main extends Component {
 
     render() {
         return (
             <div id="content" className="mt-3">
+                <div className="text-center">
+                    <ButtonGroup>
+                        <Button variant="contained" color="default" component={Link} to="/YieldFarm_BridgeEthBsc/">Liquidity Pool</Button>
+                        <Button variant="outlined" color="default" component={Link} to="/YieldFarm_BridgeEthBsc/NPXSXEMigration">Migrate NPXSXEM</Button>
+                        <Button variant="outlined" color="default" component={Link} to="/YieldFarm_BridgeEthBsc/PurseDistribution">Purse Distribution</Button>
+                    </ButtonGroup>
+                </div>
+                &nbsp;
+                {/* <a className="nav-links ">
+                    <Link className="text-dark text-center" to='/YieldFarm_BridgeEthBsc/'><li>Liquidity Pool</li></Link>
+                    <Link className="text-dark text-center" to='/YieldFarm_BridgeEthBsc/NPXSXEMigration'><li>Migrate NPXSXEM </li></Link>
+                    <Link className="text-dark text-center" to='/YieldFarm_BridgeEthBsc/PurseDistribution'><li>Purse Distribution </li></Link>
+                </a> */}
+
                 <button
                     type="submit"
-                    className="btn btn-info btn-block btn-sm"
+                    className="btn btn-primary btn-block btn-sm"
                     style={{ maxWidth: '180px' }}
                     onClick={(event) => {
                         event.preventDefault()
@@ -30,7 +47,7 @@ class Main extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr> 
+                        <tr>
                             <td>{window.web3.utils.fromWei(this.props.farmInfo.blockReward, 'Ether')} Purse</td>
                             <td>{window.web3.utils.fromWei(this.props.farmInfo.farmableSupply, 'Ether')} X</td>
                             <td>{window.web3.utils.fromWei(this.props.lpXTokenBalance_farm, 'Ether')} TF.LPX</td>

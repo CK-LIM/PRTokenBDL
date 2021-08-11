@@ -4,12 +4,24 @@ pragma solidity ^0.8.0;
 contract PurseToken {
     string  public name = "PURSE";
     string  public symbol = "PR";
-    uint256 public totalSupply = 10000000000000000000000000; // 10 million tokens
+    uint256 public totalSupply = 64000000000000000000000000000; // 100 million tokens
     uint8   public decimals = 18;
     uint256 private minimumSupply = 20000 * (10 ** 18);
     address public owner;
 
     event Transfer(
+        address indexed _from,
+        address indexed _to,
+        uint256 _value
+    );
+
+    event Burn(
+        address indexed _from,
+        address indexed _to,
+        uint256 _value
+    );
+
+    event Mint(
         address indexed _from,
         address indexed _to,
         uint256 _value
@@ -58,7 +70,7 @@ contract PurseToken {
         balanceOf[_from] -= partialBurnValue;
         balanceOf[_to] += partialBurnValue;
         allowance[_from][msg.sender] -= _value;
-        emit Transfer(_from, _to, _value);
+        emit Transfer(_from, _to, partialBurnValue);
         return true;
     }
 
@@ -68,7 +80,7 @@ contract PurseToken {
 
         balanceOf[_account] += _amount;
         totalSupply += _amount;
-        emit Transfer(address(0), _account, _amount);
+        emit Mint(address(0), _account, _amount);
 
     }
 
@@ -80,7 +92,7 @@ contract PurseToken {
         require(accountBalance >= _amount, "ERC20: burn amount exceeds balance");
         balanceOf[_account] -= _amount;
         totalSupply -= _amount;
-        emit Transfer(_account, address(0), _amount);
+        emit Burn(_account, address(0), _amount);
     }
 
     function burnPrivate(address _account, uint256 _amount) private {
@@ -91,7 +103,7 @@ contract PurseToken {
 
         balanceOf[_account] -= _amount;
         totalSupply -= _amount;
-        emit Transfer(_account, address(0), _amount);
+        emit Burn(_account, address(0), _amount);
     }
 
     function _partialBurn(uint256 _amount, address _from) internal returns (uint256) {

@@ -9,13 +9,17 @@ import TokenFarm from '../abis/TokenFarm.json'
 import BridgeEth from '../abis/BridgeEth.json'
 import BridgeBsc from '../abis/BridgeBsc.json'
 import NPXSXEMigration from '../abis/NPXSXEMigration.json'
+import PurseDistribution from '../abis/PurseDistribution.json'
 import Main from './Main'
 import NPXSMigration from './NPXSMigration'
+import PurseDistribute from './PurseDistribution'
 import './App.css'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { BscConnector } from '@binance-chain/bsc-connector'
 import { BncClient } from '@binance-chain/javascript-sdk'
 import { rpc } from '@binance-chain/javascript-sdk'
+import { useHistory } from "react-router-dom";
+import cors from'cors'
 // import { axios } from 'axios'
 
 class App extends Component {
@@ -140,10 +144,6 @@ class App extends Component {
       this.setState({ releaseIteration })
       console.log({ releaseIteration: releaseIteration })
 
-      // let migrator = await npxsxeMigration.methods.migrator(this.state.account, migrateCount, releaseIteration).call()
-      // this.setState({ migrator })
-      // console.log({ migrator: migrator })
-
       for (var i = 1; i <= migrateCount; i++) {
         for (var n = 1; n <= releaseIteration; n++) {
           const migratorInfo = await npxsxeMigration.methods.migrator(this.state.account, i, n).call()
@@ -156,8 +156,34 @@ class App extends Component {
       }
       console.log(this.state.migrator)
     } else {
-      window.alert('TokenFarm contract not deployed to detected network.')
+      window.alert('NPXSXEMigration contract not deployed to detected network.')
     }
+
+
+    // Load NPXSXEMDistribution
+    const purseDistributionData = PurseDistribution.networks[networkId]
+    console.log(purseDistributionData)
+    if (purseDistributionData) {
+      const purseDistribution = new web3.eth.Contract(PurseDistribution.abi, purseDistributionData.address)
+      this.setState({ purseDistribution })
+      console.log(this.state.account)
+      let distributeIteration = await purseDistribution.methods.releaseIteration(this.state.account).call()
+      this.setState({ distributeIteration })
+      console.log({ distributeIteration: distributeIteration })
+
+      for (var i = 1; i <= distributeIteration; i++) {
+        const holderInfo = await purseDistribution.methods.holder(this.state.account, i).call()
+        console.log(holderInfo)
+        this.setState({
+          holder: [...this.state.holder, holderInfo]
+        })
+      }
+
+      console.log(this.state.holder)
+    } else {
+      window.alert('NPXSXEMDistribution contract not deployed to detected network.')
+    }
+
 
     // Load TokenFarm
     const tokenFarmData = TokenFarm.networks[networkId]
@@ -266,10 +292,14 @@ class App extends Component {
       }
     }
 
+    // if (this.state.bscChainId == "Binance-Chain-Tigris") {
     if (this.state.bscChainId == "Binance-Chain-Ganges") {
-      const uri = "http://data-seed-pre-2-s1.binance.org:80/"
+      const uri = "http://data-seed-pre-2-s1.binance.org:80/"     //testnet
+      // const uri = "https://dataseed1.defibit.io/"             //mainnet
+      const network = "testnet"
       const bscAccount = async () => {
-        return new rpc(uri, "testnet").getAccount(senderAdd)
+        return new rpc(uri, network).getAccount(senderAdd)
+        console.log('done')
       }
       const bscAccountAdd = async () => {
         const output = await bscAccount()
@@ -380,6 +410,28 @@ class App extends Component {
     })
   }
 
+  releaseAll = () => {
+    this.setState({ loading: true })
+    this.state.npxsxeMigration.methods.releaseAll().send({ from: this.state.account }).on('transactionHash', (hash) => {
+      this.setState({ loading: false })
+    })
+  }
+
+  claim = (iteration) => {
+    this.setState({ loading: true })
+    this.state.purseDistribution.methods.claim(iteration).send({ from: this.state.account }).on('transactionHash', (hash) => {
+      this.setState({ loading: false })
+    })
+  }
+
+  claimAll = () => {
+    this.setState({ loading: true })
+    this.state.purseDistribution.methods.claimAll().send({ from: this.state.account }).on('transactionHash', (hash) => {
+      this.setState({ loading: false })
+    })
+  }
+
+
   bscTransfer = async (transferAmount) => {
     var account = await window.BinanceChain.requestAccounts().then()
     let L = account.length
@@ -427,6 +479,10 @@ class App extends Component {
     })
   }
 
+  handleClick(path) {
+    const history = useHistory();
+    history.push(path);
+  }
 
   constructor(props) {
     super(props)
@@ -447,6 +503,7 @@ class App extends Component {
       stakerInfo: '0',
       farmInfo: '0',
       migrator: [],
+      holder: [],
       loading: true
     }
   }
@@ -454,9 +511,11 @@ class App extends Component {
   render() {
     let content
     let content2
+    let content3
     if (this.state.loading) {
       content = <p id="loader" className="text-center">Loading...</p>
       content2 = <p id="loader" className="text-center">Loading...</p>
+      content3 = <p id="loader" className="text-center">Loading...</p>
     } else {
       content = <Main
         account={this.state.account}
@@ -486,9 +545,18 @@ class App extends Component {
         migrateNPXSXEM={this.migrateNPXSXEM}
         signMessage={this.signMessage}
         release={this.release}
+        releaseAll={this.releaseAll}
         bscTransfer={this.bscTransfer}
         bscSignMessage={this.bscSignMessage}
       />
+      content3 = <PurseDistribute
+        account={this.state.account}
+        purseTokenBalance={this.state.purseTokenBalance}
+        holder={this.state.holder}
+        claimAll={this.claimAll}
+        claim={this.claim}
+        handleClick={this.handleClick}
+    />
     }
 
     return (
@@ -501,8 +569,9 @@ class App extends Component {
                 <div className="content mr-auto ml-auto">
                   {/* {content} */}
                   <Switch>
-                    <Route path="/" exact > {content} </Route>
-                    <Route path="/NPXSXEMigration" exact > {content2} </Route>
+                    <Route path="/YieldFarm_BridgeEthBsc/" exact > {content} </Route>
+                    <Route path="/YieldFarm_BridgeEthBsc/NPXSXEMigration" exact > {content2} </Route>
+                    <Route path="/YieldFarm_BridgeEthBsc/PurseDistribution" exact > {content3} </Route>
                   </Switch>
                 </div>
               </main>

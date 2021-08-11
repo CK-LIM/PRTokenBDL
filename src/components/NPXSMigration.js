@@ -1,21 +1,28 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 import x from '../x.png'
+import ButtonGroup from 'react-bootstrap/ButtonGroup'
+import Button from '@material-ui/core/Button';
 
 class NPXSMigration extends Component {
 
     render() {
         return (
             <div id="content" className="mt-3" >
-                {/* <button
-                    type="submit"
-                    className="btn btn-info btn-block btn-sm"
-                    style={{ maxWidth: '160px' }}
-                    onClick={(event) => {
-                        event.preventDefault()
-                        this.props.bscSignMessage()
-                    }}>
-                    Binance Sign Message
-                </button>&nbsp; */}
+                <div className="text-center">
+                    <ButtonGroup>
+                        <Button variant="outlined" color="default" component={Link} to="/YieldFarm_BridgeEthBsc/">Liquidity Pool</Button>
+                        <Button variant="contained" color="default" component={Link} to="/YieldFarm_BridgeEthBsc/NPXSXEMigration">Migrate NPXSXEM</Button>
+                        <Button variant="outlined" color="default" component={Link} to="/YieldFarm_BridgeEthBsc/PurseDistribution">Purse Distribution</Button>
+                    </ButtonGroup>
+                </div>
+                &nbsp;
+                {/* <a className="nav-links float">
+                    <Link className="text-dark  text-center" to='/YieldFarm_BridgeEthBsc/'><li>Liquidity Pool</li></Link>
+                    <Link className="text-dark text-center" to='/YieldFarm_BridgeEthBsc/NPXSXEMigration'><li>Migrate NPXSXEM </li></Link>
+                    <Link className="text-dark text-center" to='/YieldFarm_BridgeEthBsc/PurseDistribution'><li>Purse Distribution </li></Link>
+                </a>&nbsp; */}
+
                 {/* ******************************************Migrate NPXSXEM on Binance Chain BEP2******************************************** */}
                 <h2 className="table table-borderless text-muted text-center">Migrate NPXSXEM Token!</h2>&nbsp;
 
@@ -24,11 +31,11 @@ class NPXSMigration extends Component {
                         event.preventDefault()
                         let amount = this.transferValue.value.toString()
                         this.props.bscTransfer(amount)
-                        }}>
+                    }}>
                         <div>
                             <label className="float-left"><b>Migrate NPXSXEM Token(BEP-2)</b></label>
                             <span className="float-right text-muted">
-                                <div>BNB Balance: {this.props.bscNpxsxemBalance/100000000}</div>
+                                <div>BNB Balance: {this.props.bscNpxsxemBalance / 100000000}</div>
                                 <div>PURSE Balance: {window.web3.utils.fromWei(this.props.purseTokenBalance, 'Ether')}</div>
                             </span>
                         </div>
@@ -98,7 +105,21 @@ class NPXSMigration extends Component {
                 {/* ******************************************Claim PURSE ******************************************** */}
 
                 <div className="card mb-4 card-body" >
-                    <h3 className="table table-borderless text-muted text-center">Claimable PURSE Token(BEP-20)</h3>&nbsp;
+                    <div>
+                        <h3 className="table table-borderless text-muted text-center">Claimable PURSE Token(BEP-20)</h3>&nbsp;
+                        <span className="float-right text-muted">
+                            <button
+                                type="submit"
+                                className="btn btn-primary btn-block btn-sm"
+                                style={{ maxWidth: '100px' }}
+                                onClick={(event) => {
+                                    event.preventDefault()
+                                    this.props.releaseAll()
+                                }}>
+                                Claim All
+                            </button>&nbsp;
+                        </span>
+                    </div>
                     <table className="table">
                         <thead>
                             <tr>
@@ -116,7 +137,7 @@ class NPXSMigration extends Component {
                                     <tr key={key}>
                                         {/* <th scope="row">{this.props.account}</th> */}
                                         <td>{this.props.account}</td>
-                                        <td>{window.web3.utils.fromWei((migratorInfo.migrateBalance * 0.08).toString(), 'Ether')} PURSE</td>
+                                        <td>{window.web3.utils.fromWei((migratorInfo.releaseBalance).toString(), 'Ether')} PURSE</td>
                                         <td>{new Date(migratorInfo.unlockTime * 1000).toString()}</td>
                                         {/* <td>{migratorInfo.migrateCount}</td> */}
                                         {/* <td>{migratorInfo.releaseIteration}</td> */}

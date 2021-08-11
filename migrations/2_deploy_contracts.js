@@ -6,6 +6,7 @@ const NPXSXEMToken = artifacts.require("NPXSXEMToken.sol")
 const NPXSXEMigration = artifacts.require("NPXSXEMigration.sol")
 const BridgeEth = artifacts.require('BridgeEth.sol');
 const BridgeBsc = artifacts.require('BridgeBsc.sol');
+const PurseDistribution = artifacts.require('PurseDistribution.sol');
 
 
 function tokens(n) {
@@ -38,9 +39,16 @@ module.exports = async function(deployer, network, accounts ) {
     await deployer.deploy(NPXSXEMigration, npxsxemToken.address, purseToken.address)
     const npxsxeMigration = await NPXSXEMigration.deployed()
 
+    // Deploy NPXSXEMDistribution
+    await deployer.deploy(PurseDistribution, purseToken.address)
+    const purseDistribution = await PurseDistribution.deployed()    
+
     // Transfer all purse tokens to TokenFarm
-    await purseToken.transfer(tokenFarm.address, tokens('5000000'))
-    await purseToken.transfer(npxsxeMigration.address, tokens('5000000'))
+    await purseToken.transfer(tokenFarm.address, tokens('50000000'))
+    console.log('Purse done')
+    await purseToken.transfer(npxsxeMigration.address, tokens('500000000'))
+    console.log('Purse done')
+    await purseToken.transfer(purseDistribution.address, tokens('19237401614'))    
     console.log('Purse done')
 
     //Deploy BridgeEth contract
@@ -51,6 +59,7 @@ module.exports = async function(deployer, network, accounts ) {
     // Transfer all lpX tokens to TokenFarm (1million)
     await lpXToken.transfer(tokenFarm.address, tokens('1000000'))
     console.log('lpX done')
+
 
     // Transfer 100 Mock X tokens to TokenFarm
     // await xToken.transfer(tokenFarm.address, tokens('10000'))

@@ -11,7 +11,7 @@ const addressTo = "tbnb1xkyvtsflufxmk6ferpczf07rlxhzdj3cl5ef2z" // addressTo str
 const message = "A note to you" // memo string
 const api = "https://testnet-dex.binance.org/" /// api string
 
-let privKey = "67a10632033e079ef2de86db0560155134ebfdc077ded3dc8aa6a57f1e3e197f" // privkey hexstring (keep this safe)
+let privKey = "" // privkey hexstring (keep this safe)
 
 const bnbClient = new BncClient(api)
 const httpClient = axios.create({ baseURL: api })

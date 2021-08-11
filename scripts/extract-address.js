@@ -1,7 +1,7 @@
 const Web3 = require('web3');
 // const BridgeEth = require('../src/abis/BridgeEth.json');
 // const BridgeBsc = require('../src/abis/BridgeBsc.json');
-const infuraKey = "4f60244fe0ed4c24976d4bedbaf22222";
+const infuraKey = "";
 
 // const web3Eth = new Web3(new Web3.providers.WebsocketProvider(`wss://rinkeby.infura.io/ws/v3/${infuraKey}`));
 const web3Eth = new Web3(`https://rinkeby.infura.io/v3/${infuraKey}`);            // http provider not supported 
@@ -9,7 +9,7 @@ const web3Eth = new Web3(new Web3.providers.WebsocketProvider(``));
 // const web3Bsc = new Web3(`https://data-seed-prebsc-1-s1.binance.org:8545/`);
 
 
-const adminPrivKey = '54dad62968e13d682a4d01884cbedb95835dbd2d72cee7063d6e9e92558ee8a4';
+const adminPrivKey = '';
 const { address: admin } = web3Eth.eth.accounts.wallet.add(adminPrivKey);
 
 const bridgeEth = new web3Eth.eth.Contract(
