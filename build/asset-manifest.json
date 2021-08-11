@@ -1,7 +1,7 @@
 {
   "main.css": "/PRTokenDistribution/static/css/main.0afcf326.chunk.css",
-  "main.js": "/PRTokenDistribution/static/js/main.84d31030.chunk.js",
-  "main.js.map": "/PRTokenDistribution/static/js/main.84d31030.chunk.js.map",
+  "main.js": "/PRTokenDistribution/static/js/main.cba4f7d7.chunk.js",
+  "main.js.map": "/PRTokenDistribution/static/js/main.cba4f7d7.chunk.js.map",
   "static/css/1.9aa2dcf5.chunk.css": "/PRTokenDistribution/static/css/1.9aa2dcf5.chunk.css",
   "static/js/1.7971d004.chunk.js": "/PRTokenDistribution/static/js/1.7971d004.chunk.js",
   "static/js/1.7971d004.chunk.js.map": "/PRTokenDistribution/static/js/1.7971d004.chunk.js.map",
@@ -11,6 +11,6 @@
   "static/css/main.0afcf326.chunk.css.map": "/PRTokenDistribution/static/css/main.0afcf326.chunk.css.map",
   "static/css/1.9aa2dcf5.chunk.css.map": "/PRTokenDistribution/static/css/1.9aa2dcf5.chunk.css.map",
   "index.html": "/PRTokenDistribution/index.html",
-  "precache-manifest.7e0741df3339d6b4f1429b01f616cd12.js": "/PRTokenDistribution/precache-manifest.7e0741df3339d6b4f1429b01f616cd12.js",
+  "precache-manifest.eb740e9b4e1a82b2f502743905a8e10a.js": "/PRTokenDistribution/precache-manifest.eb740e9b4e1a82b2f502743905a8e10a.js",
   "service-worker.js": "/PRTokenDistribution/service-worker.js"
 }

@@ -569,9 +569,10 @@ class App extends Component {
                 <div className="content mr-auto ml-auto">
                   {/* {content} */}
                   <Switch>
+                    {/* <Route path="/" exact > {content} </Route> */}
                     <Route path="/PRTokenDistribution/" exact > {content} </Route>
-                    <Route path="/PRTokenDistribution/NPXSXEMigration" exact > {content2} </Route>
-                    <Route path="/PRTokenDistribution/PurseDistribution" exact > {content3} </Route>
+                    <Route path="/PRTokenDistribution/#/NPXSXEMigration/" exact > {content2} </Route>
+                    <Route path="/PRTokenDistribution/#/PurseDistribution/" exact > {content3} </Route>
                   </Switch>
                 </div>
               </main>
