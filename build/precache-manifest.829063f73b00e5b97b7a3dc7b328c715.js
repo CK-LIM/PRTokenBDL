@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "7601a80bcf7e7959a8e8",
+    "revision": "9f8643a7d8dca0f4863c",
     "url": "/PRTokenDistribution/static/css/main.0afcf326.chunk.css"
   },
   {
-    "revision": "7601a80bcf7e7959a8e8",
-    "url": "/PRTokenDistribution/static/js/main.7601a80b.chunk.js"
+    "revision": "9f8643a7d8dca0f4863c",
+    "url": "/PRTokenDistribution/static/js/main.9f8643a7.chunk.js"
   },
   {
     "revision": "7971d004414225d14020",
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/PRTokenDistribution/static/media/pteria.0c120fa3.png"
   },
   {
-    "revision": "21e0ff45cc9b8e2590dafe61a7093860",
+    "revision": "ebbf24f74bdcdcdc49e3f5dd51e7fe9f",
     "url": "/PRTokenDistribution/index.html"
   }
 ];

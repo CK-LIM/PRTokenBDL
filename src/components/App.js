@@ -571,8 +571,8 @@ class App extends Component {
                   <Switch>
                     {/* <Route path="/" exact > {content} </Route> */}
                     <Route path="/PRTokenDistribution/" exact > {content} </Route>
-                    <Route path="/gh-pages-CK-LIM.github.io/PRTokenDistribution/NPXSXEMigration/" exact > {content2} </Route>
-                    <Route path="/gh-pages-CK-LIM.github.io/PRTokenDistribution/PurseDistribution/" exact > {content3} </Route>
+                    <Route path="/CK-LIM.github.io/PRTokenDistribution/NPXSXEMigration/" exact > {content2} </Route>
+                    <Route path="/CK-LIM.github.io/PRTokenDistribution/PurseDistribution/" exact > {content3} </Route>
                   </Switch>
                 </div>
               </main>

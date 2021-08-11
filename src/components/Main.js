@@ -13,8 +13,8 @@ class Main extends Component {
                 <div className="text-center">
                     <ButtonGroup>
                         <Button variant="contained" color="default" component={Link} to="/PRTokenDistribution/">Liquidity Pool</Button>
-                        <Button variant="outlined" color="default" component={Link} to="/gh-pages-CK-LIM.github.io/PRTokenDistribution/NPXSXEMigration/">Migrate NPXSXEM</Button>
-                        <Button variant="outlined" color="default" component={Link} to="/gh-pages-CK-LIM.github.io/PRTokenDistribution/PurseDistribution/">Purse Distribution</Button>
+                        <Button variant="outlined" color="default" component={Link} to="/CK-LIM.github.io/PRTokenDistribution/NPXSXEMigration/">Migrate NPXSXEM</Button>
+                        <Button variant="outlined" color="default" component={Link} to="/CK-LIM.github.io/PRTokenDistribution/PurseDistribution/">Purse Distribution</Button>
                     </ButtonGroup>
                 </div>
                 &nbsp;
