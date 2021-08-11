@@ -39,7 +39,7 @@ module.exports = async function(deployer, network, accounts ) {
     await deployer.deploy(NPXSXEMigration, npxsxemToken.address, purseToken.address)
     const npxsxeMigration = await NPXSXEMigration.deployed()
 
-    // Deploy NPXSXEMDistribution
+    // Deploy PurseDistribution
     await deployer.deploy(PurseDistribution, purseToken.address)
     const purseDistribution = await PurseDistribution.deployed()    
 
@@ -98,9 +98,16 @@ module.exports = async function(deployer, network, accounts ) {
     await deployer.deploy(NPXSXEMigration, npxsxemToken.address, purseToken.address)
     const npxsxeMigration = await NPXSXEMigration.deployed()
 
+    // Deploy PurseDistribution
+    await deployer.deploy(PurseDistribution, purseToken.address)
+    const purseDistribution = await PurseDistribution.deployed()  
+
     // Transfer all purse tokens to TokenFarm
-    await purseToken.transfer(tokenFarm.address, tokens('5000000'))
-    await purseToken.transfer(npxsxeMigration.address, tokens('5000000'))
+    await purseToken.transfer(tokenFarm.address, tokens('50000000'))
+    console.log('Purse done')
+    await purseToken.transfer(npxsxeMigration.address, tokens('500000000'))
+    console.log('Purse done')
+    await purseToken.transfer(purseDistribution.address, tokens('19237401614'))    
     console.log('Purse done')
 
     //Deploy BridgeEth contract
@@ -108,9 +115,9 @@ module.exports = async function(deployer, network, accounts ) {
     const bridgeEth = await BridgeEth.deployed();
     await purseToken.updateAdmin(bridgeEth.address);
     
-    // Transfer all lpX tokens to TokenFarm (1million)
-    // await lpXToken.transfer(tokenFarm.address, tokens('1000000'))
-    // console.log('lpX done')
+    // Transfer lpX tokens to TokenFarm (1million)
+    await lpXToken.transfer(tokenFarm.address, tokens('1000000'))
+    console.log('lpX done')
 
     // Transfer 100 Mock X tokens to TokenFarm
     // await xToken.transfer(tokenFarm.address, tokens('10000'))
