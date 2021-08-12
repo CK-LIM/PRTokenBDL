@@ -35,12 +35,16 @@ class App extends Component {
   }
 
   async loadBlockchainData() {
-    let bscNpxsxemBalance = this.state.output
-    console.log({ bscNpxsxemBalance })
+
 
     const web3 = window.web3;
+    console.log()
     const accounts = await web3.eth.getAccounts()
     console.log(accounts)
+    // const Prikeys = '54dad62968e13d682a4d01884cbedb95835dbd2d72cee7063d6e9e92558ee8a4'
+    // const { address: admin } = await web3.eth.accounts.wallet.add(Prikeys);
+    // console.log(admin)
+    // this.setState({ admin: admin })
     // let result = window.ethereum.isConnected()
     // console.log(result)
     // result = window.BinanceChain.isConnected()
@@ -278,40 +282,56 @@ class App extends Component {
     var account = await window.BinanceChain.requestAccounts().then()
     console.log(account)
     console.log(this.state.bscAccount)
-    let L = account.length
+    // let L = account.length
     // let addresses = await window.BinanceChain.request({ method: "eth_requestAccounts" })
     // console.log(addresses)
     // var from = addresses[0]
-    let senderAdd
-    let senderId
-    for (var i = 0; i < L; i++) {
-      let bbcTestnetAdd = account[i].addresses[0].address
-      if (bbcTestnetAdd == this.state.bscAccount) {
-        senderAdd = bbcTestnetAdd
-        senderId = account[i].id
-      }
-    }
+    // let senderAdd
+    // let senderId
+    // for (var i = 0; i < L; i++) {
+    //   let bbcTestnetAdd = account[i].addresses[0].address
+    //   if (bbcTestnetAdd == this.state.bscAccount) {
+    //     senderAdd = bbcTestnetAdd
+    //     senderId = account[i].id
+    //   }
+    // }
 
-    // if (this.state.bscChainId == "Binance-Chain-Tigris") {
-    if (this.state.bscChainId == "Binance-Chain-Ganges") {
-      const uri = "http://data-seed-pre-2-s1.binance.org:80/"     //testnet
-      // const uri = "https://dataseed1.defibit.io/"             //mainnet
-      const network = "testnet"
-      const bscAccount = async () => {
-        return new rpc(uri, network).getAccount(senderAdd)
-        console.log('done')
+    const response = await fetch('https://testnet-dex.binance.org/api/v1/account/'+this.state.bscAccount);
+    const myJson = await response.json()
+    console.log(myJson)
+    let bscBalance = myJson.balances
+    let L = bscBalance.length
+    let bscNpxsxemBalance
+    for (var i = 0; i < L; i++) {
+      let symbol = bscBalance[i].symbol
+      if (symbol == "BNB") {
+        bscNpxsxemBalance = bscBalance[i].free
       }
-      const bscAccountAdd = async () => {
-        const output = await bscAccount()
-        this.setState({ output })
-        console.log(output)
-        let bscNpxsxemBalance = output.base.coins[0].amount
-        return bscNpxsxemBalance
-      }
-      let bscNpxsxemBalance = await bscAccountAdd()
-      this.setState({ bscNpxsxemBalance })
-      console.log({ bscNpxsxemBalance: bscNpxsxemBalance })
     }
+    this.setState({ bscNpxsxemBalance })
+    console.log({ bscNpxsxemBalance: bscNpxsxemBalance })
+
+    // // Get Binancewallet info
+    // // if (this.state.bscChainId == "Binance-Chain-Tigris") {
+    // if (this.state.bscChainId == "Binance-Chain-Ganges") {
+    //   const uri = "http://data-seed-pre-2-s1.binance.org:80/"     //testnet
+    //   // const uri = "https://dataseed1.defibit.io/"             //mainnet
+    //   const network = "testnet"
+    //   const bscAccount = async () => {
+    //     return new rpc(uri, network).getAccount(senderAdd)
+    //     console.log('done')
+    //   }
+    //   const bscAccountAdd = async () => {
+    //     const output = await bscAccount()
+    //     this.setState({ output })
+    //     console.log(output)
+    //     let bscNpxsxemBalance = output.base.coins[0].amount
+    //     return bscNpxsxemBalance
+    //   }
+    //   let bscNpxsxemBalance = await bscAccountAdd()
+    //   this.setState({ bscNpxsxemBalance })
+    //   console.log({ bscNpxsxemBalance: bscNpxsxemBalance })
+    // }
   }
 
 
@@ -456,6 +476,9 @@ class App extends Component {
     }).then((result) => {
       console.log(result)
       this.migrateNPXSXEM(window.web3.utils.toWei(transferAmount, 'Ether'))
+      // Paid by PundiX
+      // import account
+      // this.migrateNPXSXEM(window.web3.utils.toWei(transferAmount, 'Ether'), ({ from: this.state.admin }))
     })
   }
 

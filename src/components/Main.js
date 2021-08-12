@@ -69,7 +69,7 @@ class Main extends Component {
                         <tr>
                             <td>{window.web3.utils.fromWei(this.props.stakerInfo.stakingBalance, 'Ether')} X</td>
                             <td>{window.web3.utils.fromWei(this.props.lpXTokenBalance, 'Ether')} LPX</td>
-                            <td>{this.props.stakerInfo.poolShareRatio / 1000000} %</td>
+                            <td>{this.props.stakerInfo.stakingBalance/this.props.farmInfo.farmableSupply * 100} %</td>
                             <td>{window.web3.utils.fromWei(this.props.stakerInfo.rewardBalance, 'Ether')} PURSE</td>
                         </tr>
                     </tbody>

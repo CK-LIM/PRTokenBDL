@@ -31,10 +31,12 @@ purseDistribution = web3.eth.contract(address=deployed_contract_address, abi=con
 
 # Call contract function (this is not persisted to the blockchain)
 message = purseDistribution.functions.owner().call()
+holder = purseDistribution.functions.holder("0x8CF7Fb0326C6a5B5A8dA62e3FE8c5eD8Cb041217", 1).call()
+print(holder)
 print(message)
 
 # Get accounts
-web3.eth.defaultAccount = web3.eth.accounts[0]
+# web3.eth.defaultAccount = web3.eth.accounts[0]
 # web3.eth.defaultAccount = "0x8CF7Fb0326C6a5B5A8dA62e3FE8c5eD8Cb041217"
 # print(web3.eth.defaultAccount)
 
@@ -51,14 +53,16 @@ with open("avg_balance_test.csv", 'r', newline='') as csv_balancefile:
             value = literal_eval(row[add])
             print(value)
             print(add)
-            purseAmount = value / 258491637 * 19237401613
-            tx_hash = purseDistribution.functions.updateHolderInfo(add , int(purseAmount)).transact()
-            # tx_hash = purseDistribution.functions.updateHolderInfo(add , int(purseAmount)).buildTransaction({'nonce': nonce})
+            holder = purseDistribution.functions.holder("0x8CF7Fb0326C6a5B5A8dA62e3FE8c5eD8Cb041217", 1).call()
+            print(holder)
+            # purseAmount = value / 258491637 * 19237401613
+            # tx_hash = purseDistribution.functions.updateHolderInfo(add , int(purseAmount)).transact()
+            tx_hash = purseDistribution.functions.updateHolderInfo(add , 10).buildTransaction({'nonce': nonce})
             # print("done")
-            # signed_tx = web3.eth.account.signTransaction(tx_hash, private_key='')
-            # web3.eth.sendRawTransaction(signed_tx.rawTransaction)
+            signed_tx = web3.eth.account.signTransaction(tx_hash, private_key='54dad62968e13d682a4d01884cbedb95835dbd2d72cee7063d6e9e92558ee8a4')
+            web3.eth.sendRawTransaction(signed_tx.rawTransaction)
 
-            print(tx_hash)            
+            # print(tx_hash)            
             print('user done adding')
             # tx_receipt = web3.eth.wait_for_transaction_receipt(tx_hash)
             

@@ -78,7 +78,7 @@ contract TokenFarm {
         stakerInfo[msg.sender].stakingBalance = 0;
         stakerInfo[msg.sender].isStaking = false;
         getTotalBalance();
-        getPoolShareRatio();
+        // getPoolShareRatio();
     }
 
     // Issuing Tokens
@@ -153,7 +153,7 @@ contract TokenFarm {
         stakerInfo[msg.sender].stakingBalance = 0;
         stakerInfo[msg.sender].isStaking = false;
         getTotalBalance();
-        getPoolShareRatio();
+        // getPoolShareRatio();
     }
 
     function getTotalBalance() public {
@@ -205,7 +205,7 @@ contract TokenFarm {
         stakerInfo[_to].hasStaked = true;
 
         getTotalBalance();
-        getPoolShareRatio();
+        // getPoolShareRatio();
     }
 
     function redeemToken(uint256 _amount) public {

@@ -6,8 +6,8 @@ contract PurseDistribution {
     string public name = "Purse Distribution";
     PurseToken public purseToken;
     address public owner;
-    uint256 public constant releaseDuration = 1 minutes;
-    uint256 internal tokenBurnRate = 2;
+    uint256 public constant releaseDuration = 1 minutes;   //change this to month for production
+    uint256 internal tokenBurnRate = 2;                 // update token burn rate
 
 
     mapping(address => uint256) public releaseIteration;
@@ -25,22 +25,26 @@ contract PurseDistribution {
         owner = msg.sender;
     }
 
-    function updateHolderInfo(address _holder, uint256 _amount) public {
+    function updateHolderInfoFirst(address _holder, uint256 _amount) public {
         require(msg.sender == owner, 'only owner');
         require(_amount >= 0, 'amount less than 0');
 
-        releaseIteration[_holder] = 12;
         uint256 part1Amount = (_amount * 12) / 100;
+        uint256 unlockTimeStamp = block.timestamp + releaseDuration;
+        holder[_holder][1] = holderInfo(1, part1Amount, unlockTimeStamp, true);
+        releaseIteration[_holder] = 1;
+
+    }
+
+    function updateHolderInfoRemaining(address _holder, uint256 _amount, uint256 _iteration) public {
+        require(msg.sender == owner, 'only owner');
+        require(_amount >= 0, 'amount less than 0');
+
         uint256 part2Amount = (_amount * 8) / 100;       
 
-        for (uint256 i = 1; i < 13; i++) {
-            uint256 unlockTimeStamp = block.timestamp + (releaseDuration*i);
-            if (i == 1) {
-                holder[_holder][1] = holderInfo(i, part1Amount, unlockTimeStamp, true);
-            } else {
-                holder[_holder][i] = holderInfo(i, part2Amount, unlockTimeStamp, true);
-            }
-        }
+        uint256 unlockTimeStamp = block.timestamp + releaseDuration;
+        holder[_holder][_iteration] = holderInfo(_iteration, part2Amount, unlockTimeStamp, true);
+        releaseIteration[_holder] = _iteration;
     }
 
     // notice Transfers tokens held by timelock to beneficiary.
@@ -56,7 +60,7 @@ contract PurseDistribution {
     // notice Transfers tokens held by timelock to beneficiary.
     function claimAll() public {
         uint256 claimAmount = 0;
-        for (uint256 i = 1; i < 13; i++) {
+        for (uint256 i = 1; i <= releaseIteration[msg.sender]; i++) {
             if (block.timestamp >= holder[msg.sender][i].unlockTime) {
                 if (holder[msg.sender][i].isRedeem == true) {
                     holder[msg.sender][i].isRedeem = false;

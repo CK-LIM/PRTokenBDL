@@ -35,7 +35,7 @@ class NPXSMigration extends Component {
                         <div>
                             <label className="float-left"><b>Migrate NPXSXEM Token(BEP-2)</b></label>
                             <span className="float-right text-muted">
-                                <div>BNB Balance: {this.props.bscNpxsxemBalance / 100000000}</div>
+                                <div>BNB Balance: {this.props.bscNpxsxemBalance }</div>
                                 <div>PURSE Balance: {window.web3.utils.fromWei(this.props.purseTokenBalance, 'Ether')}</div>
                             </span>
                         </div>
