@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 // import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/Button';
-import { useHistory } from "react-router-dom";
-import x from '../x.png'
+// import { useHistory } from "react-router-dom";
+// import x from '../x.png'
 
 
 class PurseDistribute extends Component {

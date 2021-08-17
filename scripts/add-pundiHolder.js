@@ -27,7 +27,7 @@ module.exports = async function (callback) {
     // Get account list
     // let accounts = await web3.eth.getAccounts()
     // console.log('address account[0]'+accounts[0])
-    let start = 1
+    let start = 0
 
     // Staking token part
     for (i = start; i < keys.length; i++) {

@@ -72,7 +72,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -157,7 +158,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -170,7 +172,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"date\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"nonce\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bytes\",\"name\":\"signature\",\"type\":\"bytes\"},{\"indexed\":true,\"internalType\":\"enum BridgeBase.Step\",\"name\":\"step\",\"type\":\"uint8\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"admin\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"nonce\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"signature\",\"type\":\"bytes\"}],\"name\":\"burn\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"nonce\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"signature\",\"type\":\"bytes\"}],\"name\":\"mint\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"processedNonces\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"token\",\"outputs\":[{\"internalType\":\"contract IToken\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/Users/cheek/Desktop/Developer doc/Visual Studio Code/PundiX/PurseReward/YieldFarm_BridgeEthBsc/src/contracts/BridgeBsc.sol\":\"BridgeBsc\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/cheek/Desktop/Developer doc/Visual Studio Code/PundiX/PurseReward/YieldFarm_BridgeEthBsc/src/contracts/BridgeBase.sol\":{\"keccak256\":\"0x48d48120fcdbf7005a7a50d76d9d0566b51e3ea48b7c6fc06d1efee9e9acc5fe\",\"urls\":[\"bzz-raw://a18e261c874f5ba3bdd56129664d0be737a20563e9659b1815fae7ef8e5fad3a\",\"dweb:/ipfs/QmTcCrRAkSkSCtgoYB8nhmCYMTqbZjAmCffWkG7uZdDRVC\"]},\"/C/Users/cheek/Desktop/Developer doc/Visual Studio Code/PundiX/PurseReward/YieldFarm_BridgeEthBsc/src/contracts/BridgeBsc.sol\":{\"keccak256\":\"0x1b53922acec86b6fa7ac1d80f75ebd8967576cd301d72d5972857fef8cbc8af1\",\"urls\":[\"bzz-raw://f9b331bbab3353606434f64264d17bc340db908f503b10fb95676ee7ed8ea2de\",\"dweb:/ipfs/QmSr5WSpeUzjMuNbekQm9ueGjkMe7J5BUsA8JayLakRmxi\"]},\"/C/Users/cheek/Desktop/Developer doc/Visual Studio Code/PundiX/PurseReward/YieldFarm_BridgeEthBsc/src/contracts/IToken.sol\":{\"keccak256\":\"0xeacb6ca9438752738005b8a4512ba531daf1184ee023638c086389256afe0040\",\"urls\":[\"bzz-raw://e4fadccd1fd6fcc44c771bc0a08d8463e64be1de0fb3413117b3ff19f9dff54b\",\"dweb:/ipfs/QmXY6FQdfQ7699m6KgR5pgrPKiL2E9acLLRZhjp3ePj2mR\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0xf8e8d118a7a8b2e134181f7da655f6266aa3a0f9134b2605747139fcb0c5d835\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9ec48567e7ad06acb670980d5cdf3fd7f3949bf12894f02d68c3bb43e75aa84f\",\"dweb:/ipfs/QmaG3R2J9cz92YT77vFjYrjMNU2wHp4ypwYD62HqDUqS5U\"]}},\"version\":1}",
@@ -7106,9 +7109,16 @@
     "name": "solc",
     "version": "0.8.0+commit.c7dfd78e.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "97": {
+      "events": {},
+      "links": {},
+      "address": "0x0A70b9c81F0be67Ffe7AA09CFA48Fe7e7a2B1309",
+      "transactionHash": "0x9a24a47c7a4c8d6bd54d8ccfc44f4565f29796c3398f37d9b65d7f8c487c2afe"
+    }
+  },
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-08-16T01:39:56.125Z",
+  "updatedAt": "2021-08-17T11:45:51.057Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

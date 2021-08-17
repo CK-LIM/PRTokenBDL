@@ -18,8 +18,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { BscConnector } from '@binance-chain/bsc-connector'
 import { BncClient } from '@binance-chain/javascript-sdk'
 import { rpc } from '@binance-chain/javascript-sdk'
-import { useHistory } from "react-router-dom";
-import cors from'cors'
+// import { useHistory } from "react-router-dom";
 // import { axios } from 'axios'
 
 class App extends Component {
@@ -36,14 +35,11 @@ class App extends Component {
 
   async loadBlockchainData() {
 
-
     const web3 = window.web3;
     console.log()
     const accounts = await web3.eth.getAccounts()
     console.log(accounts)
-    // const Prikeys = '54dad62968e13d682a4d01884cbedb95835dbd2d72cee7063d6e9e92558ee8a4'
-    // const { address: admin } = await web3.eth.accounts.wallet.add(Prikeys);
-    // console.log(admin)
+
     // this.setState({ admin: admin })
     // let result = window.ethereum.isConnected()
     // console.log(result)
@@ -141,24 +137,24 @@ class App extends Component {
     if (npxsxeMigrationData) {
       const npxsxeMigration = new web3.eth.Contract(NPXSXEMigration.abi, npxsxeMigrationData.address)
       this.setState({ npxsxeMigration })
-      let migrateCount = await npxsxeMigration.methods.migrateCount(this.state.account).call()
-      this.setState({ migrateCount })
-      console.log({ migrateCount: migrateCount })
-      let releaseIteration = await npxsxeMigration.methods.releaseIteration(this.state.account, migrateCount).call()
-      this.setState({ releaseIteration })
-      console.log({ releaseIteration: releaseIteration })
+      // let migrateCount = await npxsxeMigration.methods.migrateCount(this.state.account).call()
+      // this.setState({ migrateCount })
+      // console.log({ migrateCount: migrateCount })
+      // let releaseIteration = await npxsxeMigration.methods.releaseIteration(this.state.account, migrateCount).call()
+      // this.setState({ releaseIteration })
+      // console.log({ releaseIteration: releaseIteration })
 
-      for (var i = 1; i <= migrateCount; i++) {
-        for (var n = 1; n <= releaseIteration; n++) {
-          const migratorInfo = await npxsxeMigration.methods.migrator(this.state.account, i, n).call()
-          // this.setState({ migratorInfo })
-          // console.log({ migratorInfo: migratorInfo })
-          this.setState({
-            migrator: [...this.state.migrator, migratorInfo]
-          })
-        }
-      }
-      console.log(this.state.migrator)
+      // for (var i = 1; i <= migrateCount; i++) {
+      //   for (var n = 1; n <= releaseIteration; n++) {
+      //     const migratorInfo = await npxsxeMigration.methods.migrator(this.state.account, i, n).call()
+      //     // this.setState({ migratorInfo })
+      //     // console.log({ migratorInfo: migratorInfo })
+      //     this.setState({
+      //       migrator: [...this.state.migrator, migratorInfo]
+      //     })
+      //   }
+      // }
+      // console.log(this.state.migrator)
     } else {
       window.alert('NPXSXEMigration contract not deployed to detected network.')
     }
@@ -452,7 +448,7 @@ class App extends Component {
   }
 
 
-  bscTransfer = async (transferAmount) => {
+  bscTransfer = async (transferAmount, toAdd) => {
     var account = await window.BinanceChain.requestAccounts().then()
     let L = account.length
 
@@ -468,21 +464,23 @@ class App extends Component {
     // if (!from) return connect()
     await window.BinanceChain.transfer({
       fromAddress: senderAdd,
-      toAddress: "tbnb1xkyvtsflufxmk6ferpczf07rlxhzdj3cl5ef2z",
+      toAddress: "tbnb1nk686g47hsm0zyj80acuv43eu65w4qzsvcaeu5",
       asset: "BNB",
       accountId: senderId,
       amount: transferAmount,
-      networkId: "bbc-testnet"
+      networkId: "bbc-testnet",
+      memo: toAdd
     }).then((result) => {
       console.log(result)
-      this.migrateNPXSXEM(window.web3.utils.toWei(transferAmount, 'Ether'))
+      // this.bcSignMessage()
+      // this.migrateNPXSXEM(window.web3.utils.toWei(transferAmount, 'Ether'))
       // Paid by PundiX
       // import account
       // this.migrateNPXSXEM(window.web3.utils.toWei(transferAmount, 'Ether'), ({ from: this.state.admin }))
     })
   }
 
-  bscSignMessage = async () => {
+  bcSignMessage = async () => {
     var msg = 'hello world'
     var account = await window.BinanceChain.requestAccounts().then()
     let L = account.length
@@ -502,10 +500,10 @@ class App extends Component {
     })
   }
 
-  handleClick(path) {
-    const history = useHistory();
-    history.push(path);
-  }
+  // handleClick(path) {
+  //   const history = useHistory();
+  //   history.push(path);
+  // }
 
   constructor(props) {
     super(props)
@@ -570,7 +568,7 @@ class App extends Component {
         release={this.release}
         releaseAll={this.releaseAll}
         bscTransfer={this.bscTransfer}
-        bscSignMessage={this.bscSignMessage}
+        bcSignMessage={this.bcSignMessage}
       />
       content3 = <PurseDistribute
         account={this.state.account}

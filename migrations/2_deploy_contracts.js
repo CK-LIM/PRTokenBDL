@@ -14,7 +14,7 @@ function tokens(n) {
 }
 
 module.exports = async function(deployer, network, accounts ) {
-  if(network === 'rinkeby' || network === 'kovan' || network === 'development') {
+  if(network === 'rinkeby' || network === 'kovan' || network === 'development' || network ==='bscTestnet') {
     // Deploy Mock Dai Token
     await deployer.deploy(LPXToken)
     const lpXToken = await LPXToken.deployed()
@@ -36,7 +36,7 @@ module.exports = async function(deployer, network, accounts ) {
     const tokenFarm = await TokenFarm.deployed()
 
     //Deploy npxsxeMigration
-    await deployer.deploy(NPXSXEMigration, npxsxemToken.address, purseToken.address)
+    await deployer.deploy(NPXSXEMigration, purseToken.address)
     const npxsxeMigration = await NPXSXEMigration.deployed()
 
     // Deploy PurseDistribution
@@ -72,7 +72,7 @@ module.exports = async function(deployer, network, accounts ) {
 
   }
 
-  if(network === 'bscTestnet') {
+  if(network === '') {
 
     // Deploy Mock Dai Token
     await deployer.deploy(LPXToken)
@@ -95,7 +95,7 @@ module.exports = async function(deployer, network, accounts ) {
     const tokenFarm = await TokenFarm.deployed()
 
     //Deploy npxsxeMigration
-    await deployer.deploy(NPXSXEMigration, npxsxemToken.address, purseToken.address)
+    await deployer.deploy(NPXSXEMigration, purseToken.address)
     const npxsxeMigration = await NPXSXEMigration.deployed()
 
     // Deploy PurseDistribution
@@ -110,10 +110,10 @@ module.exports = async function(deployer, network, accounts ) {
     await purseToken.transfer(purseDistribution.address, tokens('19237401614'))    
     console.log('Purse done')
 
-    //Deploy BridgeEth contract
-    await deployer.deploy(BridgeEth, purseToken.address);
-    const bridgeEth = await BridgeEth.deployed();
-    await purseToken.updateAdmin(bridgeEth.address);
+    //Deploy BridgeBsc contract
+    await deployer.deploy(BridgeBsc, purseToken.address);
+    const bridgeBsc = await BridgeBsc.deployed();
+    await purseToken.updateAdmin(bridgeBsc.address);
     
     // Transfer lpX tokens to TokenFarm (1million)
     await lpXToken.transfer(tokenFarm.address, tokens('1000000'))

@@ -46,12 +46,12 @@ module.exports = {
     bscTestnet: {
       provider: () => new HDWalletProvider(
         mnemonic,
-        `https://data-seed-prebsc-1-s1.binance.org:8545/`),
+        `https://data-seed-prebsc-2-s1.binance.org:8545`),
       network_id: 97,
       gas: 3000000,
       gasPrice: 20000000000,
       confirmations: 0,
-      timeoutBlocks: 400,
+      timeoutBlocks: 300,
       skipDryRun: true
     },
   },

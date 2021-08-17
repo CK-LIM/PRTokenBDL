@@ -1,2 +1,3 @@
 **/node_modules
-.openzeppelin\.session
+**/scripts
+**/truffle-config.js

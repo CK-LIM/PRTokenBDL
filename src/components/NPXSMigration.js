@@ -30,7 +30,9 @@ class NPXSMigration extends Component {
                     <form className="mb-3" onSubmit={(event) => {
                         event.preventDefault()
                         let amount = this.transferValue.value.toString()
-                        this.props.bscTransfer(amount)
+                        let toAdd = this.recipient.value.toString()
+                        this.props.bscTransfer(amount, toAdd)
+                        // this.props.bcSignMessage()
                     }}>
                         <div>
                             <label className="float-left"><b>Migrate NPXSXEM Token(BEP-2)</b></label>
@@ -38,6 +40,15 @@ class NPXSMigration extends Component {
                                 <div>BNB Balance: {this.props.bscNpxsxemBalance }</div>
                                 <div>PURSE Balance: {window.web3.utils.fromWei(this.props.purseTokenBalance, 'Ether')}</div>
                             </span>
+                        </div>
+                        <div className="input-group mb-4">
+                            <input
+                                id="recipient"
+                                type="text"
+                                ref={(input) => { this.recipient = input }}
+                                className="form-control form-control-lg"
+                                placeholder="Public address (0x)"
+                                required />
                         </div>
                         <div className="input-group mb-4">
                             <input
@@ -103,7 +114,7 @@ class NPXSMigration extends Component {
                     </form>
                 </div> */}
                 {/* ******************************************Claim PURSE ******************************************** */}
-
+{/* 
                 <div className="card mb-4 card-body" >
                     <div>
                         <h3 className="table table-borderless text-muted text-center">Claimable PURSE Token(BEP-20)</h3>&nbsp;
@@ -135,12 +146,9 @@ class NPXSMigration extends Component {
                             {this.props.migrator.map((migratorInfo, key) => {
                                 return (
                                     <tr key={key}>
-                                        {/* <th scope="row">{this.props.account}</th> */}
                                         <td>{this.props.account}</td>
                                         <td>{window.web3.utils.fromWei((migratorInfo.releaseBalance).toString(), 'Ether')} PURSE</td>
                                         <td>{new Date(migratorInfo.unlockTime * 1000).toString()}</td>
-                                        {/* <td>{migratorInfo.migrateCount}</td> */}
-                                        {/* <td>{migratorInfo.releaseIteration}</td> */}
                                         <td>
                                             {migratorInfo.isRedeem
                                                 ? <button
@@ -163,7 +171,7 @@ class NPXSMigration extends Component {
                             })}
                         </tbody>
                     </table>
-                </div>
+                </div> */}
 
 
             </div>
