@@ -11,7 +11,7 @@ class NPXSMigration extends Component {
             <div id="content" className="mt-3" >
                 <div className="text-center">
                     <ButtonGroup>
-                        <Button variant="outlined" color="default" component={Link} to="/PRTokenDistribution/">Liquidity Pool</Button>
+                        {/* <Button variant="outlined" color="default" component={Link} to="/PRTokenDistribution/">Liquidity Pool</Button> */}
                         <Button variant="contained" color="default" component={Link} to="/PRTokenDistribution/NPXSXEMigration/">Migrate NPXSXEM</Button>
                         <Button variant="outlined" color="default" component={Link} to="/PRTokenDistribution/PurseDistribution/">Purse Distribution</Button>
                     </ButtonGroup>

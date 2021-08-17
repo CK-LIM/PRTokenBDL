@@ -1,16 +1,16 @@
 {
   "main.css": "/PRTokenDistribution/static/css/main.de166e57.chunk.css",
-  "main.js": "/PRTokenDistribution/static/js/main.a4e688b0.chunk.js",
-  "main.js.map": "/PRTokenDistribution/static/js/main.a4e688b0.chunk.js.map",
+  "main.js": "/PRTokenDistribution/static/js/main.da85245f.chunk.js",
+  "main.js.map": "/PRTokenDistribution/static/js/main.da85245f.chunk.js.map",
   "static/css/1.af1ba0a0.chunk.css": "/PRTokenDistribution/static/css/1.af1ba0a0.chunk.css",
-  "static/js/1.2cb6ffaf.chunk.js": "/PRTokenDistribution/static/js/1.2cb6ffaf.chunk.js",
-  "static/js/1.2cb6ffaf.chunk.js.map": "/PRTokenDistribution/static/js/1.2cb6ffaf.chunk.js.map",
+  "static/js/1.1b64e214.chunk.js": "/PRTokenDistribution/static/js/1.1b64e214.chunk.js",
+  "static/js/1.1b64e214.chunk.js.map": "/PRTokenDistribution/static/js/1.1b64e214.chunk.js.map",
   "runtime~main.js": "/PRTokenDistribution/static/js/runtime~main.7ba41ddf.js",
   "runtime~main.js.map": "/PRTokenDistribution/static/js/runtime~main.7ba41ddf.js.map",
   "static/media/pteria.png": "/PRTokenDistribution/static/media/pteria.0c120fa3.png",
-  "static/css/main.de166e57.chunk.css.map": "/PRTokenDistribution/static/css/main.de166e57.chunk.css.map",
   "static/css/1.af1ba0a0.chunk.css.map": "/PRTokenDistribution/static/css/1.af1ba0a0.chunk.css.map",
+  "static/css/main.de166e57.chunk.css.map": "/PRTokenDistribution/static/css/main.de166e57.chunk.css.map",
   "index.html": "/PRTokenDistribution/index.html",
-  "precache-manifest.308fc5d75d2e160b5bf08ffd57873b33.js": "/PRTokenDistribution/precache-manifest.308fc5d75d2e160b5bf08ffd57873b33.js",
+  "precache-manifest.04e40469e427b07d8a263d055064cccb.js": "/PRTokenDistribution/precache-manifest.04e40469e427b07d8a263d055064cccb.js",
   "service-worker.js": "/PRTokenDistribution/service-worker.js"
 }
