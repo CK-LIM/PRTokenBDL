@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/PRTokenDistribution/precache-manifest.bb5490d579a20e9d776a78a884f4043d.js"
+  "/PRTokenBDL/precache-manifest.345bf80b5a8b5e824555f612871e8562.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/PRTokenDistribution/index.html", {
+workbox.routing.registerNavigationRoute("/PRTokenBDL/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
