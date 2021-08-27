@@ -15,6 +15,7 @@ const NPXSXEMigrationMulSig = artifacts.require("NPXSXEMigrationMulSig.sol")
 const PurseDistribution = artifacts.require('PurseDistribution.sol');
 
 
+
 function tokens(n) {
   return web3.utils.toWei(n, 'ether');
 }
@@ -37,6 +38,11 @@ module.exports = async function(deployer, network, accounts ) {
     // Deploy PurseDistribution
     await deployer.deploy(PurseDistribution, purseToken.address)
     const purseDistribution = await PurseDistribution.deployed() 
+
+    await purseToken.transfer(npxsxeMigrationMulSig.address, tokens('500000000'))
+    console.log('Purse done')
+    await purseToken.transfer(purseDistribution.address, tokens('19237401614'))    
+    console.log('Purse done')
 
 
   }

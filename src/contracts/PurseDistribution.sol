@@ -9,7 +9,7 @@ contract PurseDistribution {
     PurseTokenMultiSigUpgradable public purseToken;
     address public owner;
     uint256 public constant releaseDuration = 1 minutes;   //change this to month for production
-    uint256 internal tokenBurnRate = 2;                 // update token burn rate
+
 
 
     mapping(address => uint256) public releaseIteration;
@@ -55,7 +55,7 @@ contract PurseDistribution {
         require(holder[msg.sender][_releaseIteration].isRedeem == true, 'have been redeem');
 
         holder[msg.sender][_releaseIteration].isRedeem = false;
-        uint256 claimAmount = holder[msg.sender][_releaseIteration].distributeAmount * tokenBurnRate;
+        uint256 claimAmount = holder[msg.sender][_releaseIteration].distributeAmount;
         purseToken.transfer(msg.sender, claimAmount);
     }
 
@@ -66,7 +66,7 @@ contract PurseDistribution {
             if (block.timestamp >= holder[msg.sender][i].unlockTime) {
                 if (holder[msg.sender][i].isRedeem == true) {
                     holder[msg.sender][i].isRedeem = false;
-                    uint256 holderAmount = holder[msg.sender][i].distributeAmount * tokenBurnRate;
+                    uint256 holderAmount = holder[msg.sender][i].distributeAmount;
                     claimAmount += holderAmount;                    
                 }
             }

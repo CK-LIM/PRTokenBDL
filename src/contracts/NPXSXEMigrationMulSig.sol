@@ -12,7 +12,6 @@ contract NPXSXEMigrationMulSig {
     
     string public name = "NPXSXEM Migration";
     PurseTokenMultiSigUpgradable public purseToken;
-    uint256 internal tokenBurnRate = 2;
     uint public numConfirmationsRequired;
     uint public transactionIndex;
     address[] public owners;
@@ -107,7 +106,7 @@ contract NPXSXEMigrationMulSig {
 
         require(transactions[_txIndex].numConfirmations >= numConfirmationsRequired, "cannot execute tx");
         transactions[_txIndex].executed = true;
-        uint256 transferAmount = transactions[_txIndex].value * tokenBurnRate;
+        uint256 transferAmount = transactions[_txIndex].value;
         purseToken.transfer(transactions[_txIndex].to, transferAmount);
 
         emit ExecuteTransaction(msg.sender, _txIndex);
@@ -162,7 +161,6 @@ contract NPXSXEMigrationMulSig {
             admins[i] = admins[i+1];
         }
         
-
         admins.pop();
         isAdmin[removeAdmin] = false;
 
