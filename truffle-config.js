@@ -13,7 +13,7 @@ module.exports = {
   networks: {
     development: {
       host: "127.0.0.1",
-      port: 7545,
+      port: 8545,
       network_id: "*", // Match any network id
       // gas: 3000000,
       // gasPrice: 20000000000,
@@ -25,7 +25,7 @@ module.exports = {
         // `https://rinkeby.infura.io/v3/${infuraKey}`,0, 2000),
         `wss://rinkeby.infura.io/ws/v3/${infuraKey}`,0,2000),
       network_id: 4,
-      gas: 3000000,
+      gas: 5712388,
       gasPrice: 20000000000,
       confirmations: 0,
       networkCheckTimeout: 100000000,
@@ -48,7 +48,7 @@ module.exports = {
         mnemonic,
         `https://data-seed-prebsc-2-s1.binance.org:8545`),
       network_id: 97,
-      gas: 3000000,
+      gas: 8712388,
       gasPrice: 20000000000,
       confirmations: 0,
       timeoutBlocks: 300,
@@ -59,7 +59,7 @@ module.exports = {
   contracts_build_directory: './src/abis/',
   compilers: {
     solc: {
-      version: "0.8.0",    // Fetch exact version from solc-bin (default: truffle's version)
+      version: "0.8.3",    // Fetch exact version from solc-bin (default: truffle's version)
       optimizer: {
         enabled: true,
         runs: 200

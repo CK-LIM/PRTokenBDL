@@ -1,10 +1,12 @@
+// SPDX-License-Identifier: UNLICENSED
+
 pragma solidity ^0.8.0;
 
-import "./PurseToken.sol";
+import "./PurseTokenMultiSigUpgradable.sol";
 
 contract PurseDistribution {
     string public name = "Purse Distribution";
-    PurseToken public purseToken;
+    PurseTokenMultiSigUpgradable public purseToken;
     address public owner;
     uint256 public constant releaseDuration = 1 minutes;   //change this to month for production
     uint256 internal tokenBurnRate = 2;                 // update token burn rate
@@ -20,7 +22,7 @@ contract PurseDistribution {
         bool isRedeem;
     }
 
-    constructor(PurseToken _purseToken) public {
+    constructor(PurseTokenMultiSigUpgradable _purseToken) public {
         purseToken = _purseToken;
         owner = msg.sender;
     }

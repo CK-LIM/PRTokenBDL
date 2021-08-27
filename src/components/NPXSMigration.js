@@ -6,6 +6,71 @@ import Button from '@material-ui/core/Button';
 
 class NPXSMigration extends Component {
 
+    constructor(props) {
+        super(props)
+        this.state = {
+            message: ''
+        }
+        this.state = {
+            messageAdd: ''
+        }
+        this.clickHandler = this.clickHandler.bind(this)
+        this.changeHandler = this.changeHandler.bind(this)
+    }
+
+    clickHandler() {
+        console.log("clicked")
+        this.setState({
+            message: ''
+        })
+        // if (result === false) {
+        //     alert ("Not a value")
+        // }
+    }
+    changeHandler(event) {
+        let result = !isNaN(+event); // true if its a number, false if not
+        if (event == "") {
+            this.setState({
+                message: ''
+            })
+        } else if (result == false) {
+            this.setState({
+                message: 'Value need to be number'
+            })
+        } else if (event <= 0) {
+            this.setState({
+                message: 'Value need to be greater than 0'
+            })
+        }
+        else {
+            this.setState({
+                message: ''
+            })
+        }
+    }
+
+    changeHandlerAdd(event) {
+        console.log(event)
+        if (event == "") {
+            this.setState({
+                messageAdd: ''
+            })
+        } else if (event !== "") {
+            let result = window.web3.utils.isAddress(event); // true if its a number, false if not
+            console.log(result)
+            if (result == false) {
+                this.setState({
+                    messageAdd: 'Not a valid BEP-20 Address'
+                })
+            } else {
+                this.setState({
+                    messageAdd: ''
+                })
+            }
+        }
+
+    }
+
     render() {
         return (
             <div id="content" className="mt-3" >
@@ -17,12 +82,6 @@ class NPXSMigration extends Component {
                     </ButtonGroup>
                 </div>
                 &nbsp;
-                {/* <a className="nav-links float">
-                    <Link className="text-dark  text-center" to='/YieldFarm_BridgeEthBsc/'><li>Liquidity Pool</li></Link>
-                    <Link className="text-dark text-center" to='/YieldFarm_BridgeEthBsc/NPXSXEMigration'><li>Migrate NPXSXEM </li></Link>
-                    <Link className="text-dark text-center" to='/YieldFarm_BridgeEthBsc/PurseDistribution'><li>Purse Distribution </li></Link>
-                </a>&nbsp; */}
-
                 {/* ******************************************Migrate NPXSXEM on Binance Chain BEP2******************************************** */}
                 <h2 className="table table-borderless text-muted text-center">Migrate NPXSXEM Token!</h2>&nbsp;
 
@@ -32,12 +91,11 @@ class NPXSMigration extends Component {
                         let amount = this.transferValue.value.toString()
                         let toAdd = this.recipient.value.toString()
                         this.props.bscTransfer(amount, toAdd)
-                        // this.props.bcSignMessage()
                     }}>
                         <div>
                             <label className="float-left"><b>Migrate NPXSXEM Token(BEP-2)</b></label>
                             <span className="float-right text-muted">
-                                <div>BNB Balance: {this.props.bscNpxsxemBalance }</div>
+                                <div>BNB Balance: {this.props.bscNpxsxemBalance}</div>
                                 <div>PURSE Balance: {window.web3.utils.fromWei(this.props.purseTokenBalance, 'Ether')}</div>
                             </span>
                         </div>
@@ -48,8 +106,15 @@ class NPXSMigration extends Component {
                                 ref={(input) => { this.recipient = input }}
                                 className="form-control form-control-lg"
                                 placeholder="Public address (0x)"
+                                onChange={(e) => {
+                                    const value = e.target.value;
+                                    console.log(value)
+                                    this.changeHandlerAdd(value)
+                                }
+                                }
                                 required />
                         </div>
+                        <div style={{ color: 'red' }}>{this.state.messageAdd}</div>
                         <div className="input-group mb-4">
                             <input
                                 id="transferValue"
@@ -57,6 +122,12 @@ class NPXSMigration extends Component {
                                 ref={(input) => { this.transferValue = input }}
                                 className="form-control form-control-lg"
                                 placeholder="0"
+                                onChange={(e) => {
+                                    const value = e.target.value;
+                                    console.log(value)
+                                    this.changeHandler(value)
+                                }
+                                }                    
                                 required />
                             <div className="input-group-append">
                                 <div className="input-group-text">
@@ -65,118 +136,16 @@ class NPXSMigration extends Component {
                                 </div>
                             </div>
                         </div>
-                        {/* <div className="input-group mb-4">
-                            <input
-                                id="transferAddress"
-                                type="text"
-                                ref={(input) => { this.transferAddress = input }}
-                                className="form-control form-control-lg"
-                                placeholder="BSC Address(0x)"
-                                required />
-                        </div> */}
-                        <button type="submit" className="btn btn-primary btn-block btn-lg">MIGRATE</button>
+                        <div style={{ color: 'red' }}>{this.state.message}</div>
+                        <button type="submit" className="btn btn-primary btn-block btn-lg"
+                        onClick={this.clickHandler}>MIGRATE</button>
                     </form>
                 </div>
-
-                {/* ******************************************Migrate NPXSXEM on same network********************************************
-
-                <div className="card mb-4 card-body" >
-                    <form className="mb-3" onSubmit={(event) => {
-                        event.preventDefault()
-                        let amount
-                        amount = this.migrateValue.value.toString()
-                        amount = window.web3.utils.toWei(amount, 'Ether')
-                        this.props.migrateNPXSXEM(amount)
-                    }}>
-                        <div>
-                            <label className="float-left"><b>Migrate NPXSXEM Token</b></label>
-                            <span className="float-right text-muted">
-                                <div>NPXSXEM Balance: {window.web3.utils.fromWei(this.props.npxsxemTokenBalance, 'Ether')}</div>
-                                <div>PURSE Balance: {window.web3.utils.fromWei(this.props.purseTokenBalance, 'Ether')}</div>
-                            </span>
-                        </div>
-                        <div className="input-group mb-4">
-                            <input
-                                id="migrateValue"
-                                type="text"
-                                ref={(input) => { this.migrateValue = input }}
-                                className="form-control form-control-lg"
-                                placeholder="0"
-                                required />
-                            <div className="input-group-append">
-                                <div className="input-group-text">
-                                    <img src={x} height='32' alt="" />
-                                    &nbsp;&nbsp;&nbsp; NPXSXEM
-                                </div>
-                            </div>
-                        </div>
-                        <button type="submit" className="btn btn-primary btn-block btn-lg">MIGRATE</button>
-                    </form>
-                </div> */}
-                {/* ******************************************Claim PURSE ******************************************** */}
-{/* 
-                <div className="card mb-4 card-body" >
-                    <div>
-                        <h3 className="table table-borderless text-muted text-center">Claimable PURSE Token(BEP-20)</h3>&nbsp;
-                        <span className="float-right text-muted">
-                            <button
-                                type="submit"
-                                className="btn btn-primary btn-block btn-sm"
-                                style={{ maxWidth: '100px' }}
-                                onClick={(event) => {
-                                    event.preventDefault()
-                                    this.props.releaseAll()
-                                }}>
-                                Claim All
-                            </button>&nbsp;
-                        </span>
-                    </div>
-                    <table className="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Address</th>
-                                <th scope="col">Amount</th>
-                                <th scope="col">Unlock date (GMT)</th>
-                                <th scope="col"></th>
-                            </tr>
-                        </thead>
-
-
-                        <tbody id="claimList">
-                            {this.props.migrator.map((migratorInfo, key) => {
-                                return (
-                                    <tr key={key}>
-                                        <td>{this.props.account}</td>
-                                        <td>{window.web3.utils.fromWei((migratorInfo.releaseBalance).toString(), 'Ether')} PURSE</td>
-                                        <td>{new Date(migratorInfo.unlockTime * 1000).toString()}</td>
-                                        <td>
-                                            {migratorInfo.isRedeem
-                                                ? <button
-                                                    count={migratorInfo.migrateCount.toString()}
-                                                    iteration={migratorInfo.releaseIteration.toString()}
-                                                    onClick={(event) => {
-                                                        console.log("clicked...")
-                                                        console.log(event.target.count)
-                                                        console.log(event.target.iteration)
-                                                        // this.props.release('1', '1')
-                                                        this.props.release(migratorInfo.migrateCount, migratorInfo.releaseIteration)
-                                                    }}>
-                                                    Claim
-                                                </button>
-                                                : <button type="button" disabled>Claimed</button>
-                                            }
-                                        </td>
-                                    </tr>
-                                )
-                            })}
-                        </tbody>
-                    </table>
-                </div> */}
-
 
             </div>
         );
     }
 }
+
 
 export default NPXSMigration;
