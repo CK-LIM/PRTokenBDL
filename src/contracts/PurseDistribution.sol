@@ -31,9 +31,8 @@ contract PurseDistribution {
         require(msg.sender == owner, 'only owner');
         require(_amount >= 0, 'amount less than 0');
 
-        uint256 part1Amount = (_amount * 12) / 100;
         uint256 unlockTimeStamp = block.timestamp + releaseDuration;
-        holder[_holder][1] = holderInfo(1, part1Amount, unlockTimeStamp, true);
+        holder[_holder][1] = holderInfo(1, _amount, unlockTimeStamp, true);
         releaseIteration[_holder] = 1;
 
     }
@@ -42,10 +41,8 @@ contract PurseDistribution {
         require(msg.sender == owner, 'only owner');
         require(_amount >= 0, 'amount less than 0');
 
-        uint256 part2Amount = (_amount * 8) / 100;       
-
         uint256 unlockTimeStamp = block.timestamp + releaseDuration;
-        holder[_holder][_iteration] = holderInfo(_iteration, part2Amount, unlockTimeStamp, true);
+        holder[_holder][_iteration] = holderInfo(_iteration, _amount, unlockTimeStamp, true);
         releaseIteration[_holder] = _iteration;
     }
 
