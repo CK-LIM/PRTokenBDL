@@ -49,7 +49,7 @@ class PurseDistribute extends Component {
                     <div>
                         <label className="float-left"><b>Redeem PURSE reward</b></label>
                         <span className="float-right text-muted">
-                            <div>PURSE Balance: {window.web3.utils.fromWei(this.props.purseTokenBalance, 'Ether')}</div>
+                            <div>PURSE Balance ({this.props.account}) : {window.web3.utils.fromWei(this.props.purseTokenBalance, 'Ether')}</div>
                         </span>
                     </div>
                     <table className="table">

@@ -2,25 +2,15 @@
   "manifestVersion": "3.2",
   "proxies": [
     {
-      "address": "0xEebB08F67C6C1973F1D70a38867fF68f38E8D50b",
-      "txHash": "0xd6f061484bd0e24ce477f3b155e4fe6a38a16f4439c78c2c068c54fe944a369d",
-      "kind": "uups"
-    },
-    {
-      "address": "0x2079E22948fE38eA72EaBa44E99Ce574Eb5bdC99",
-      "txHash": "0x7f3967a82763d12ef34a6ca4c80f074a822020581dd74ba2327837100f7a9268",
-      "kind": "uups"
-    },
-    {
-      "address": "0x9B6A315E6020c811452a68196AEc80683294d1d7",
-      "txHash": "0x4c0f7c16f067e283b0e7bca70ffd137ee95b0dccff08da223e3d88ed6b714191",
+      "address": "0x797eb9b402CD8c587823B906cCF5DB0F4dC97950",
+      "txHash": "0x920bbd5fd61f17919584eb41ec6e7455cf9a994e50bf08d057da91fa80776a14",
       "kind": "uups"
     }
   ],
   "impls": {
     "20fadb9b97b8c7a9c378ec8ef23989d38ca20aa1990d08829a86742e4e48da77": {
-      "address": "0xCFD25914762e9927fe1a234fd810D9Cd53413295",
-      "txHash": "0x340eccd1bd1ba47e7165d7d9e4a4c4c64ea99229a5328cf2c748443c6e0c91e4",
+      "address": "0xe4BD7B9AEe132057e9FA9750BcDb52C80eE770A6",
+      "txHash": "0xfbe9ab42b29477558d5421cf589b70db7cde52fe7aa58c8f66920142da696b25",
       "layout": {
         "storage": [
           {
@@ -164,7 +154,7 @@
           {
             "contract": "PurseTokenMultiSigUpgradable",
             "label": "mints",
-            "type": "t_mapping(t_uint256,t_struct(MintInfo)1348_storage)",
+            "type": "t_mapping(t_uint256,t_struct(MintInfo)1375_storage)",
             "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\PurseReward\\YieldFarm_BridgeEthBsc\\src\\contracts\\PurseTokenMultiSigUpgradable.sol:57"
           },
           {
@@ -208,10 +198,10 @@
           "t_mapping(t_uint256,t_bool)": {
             "label": "mapping(uint256 => bool)"
           },
-          "t_mapping(t_uint256,t_struct(MintInfo)1348_storage)": {
+          "t_mapping(t_uint256,t_struct(MintInfo)1375_storage)": {
             "label": "mapping(uint256 => struct PurseTokenMultiSigUpgradable.MintInfo)"
           },
-          "t_struct(MintInfo)1348_storage": {
+          "t_struct(MintInfo)1375_storage": {
             "label": "struct PurseTokenMultiSigUpgradable.MintInfo",
             "members": [
               {

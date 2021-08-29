@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import x from '../x.png'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import Button from '@material-ui/core/Button';
+import { BsFillQuestionCircleFill } from 'react-icons/bs';
 
 class NPXSMigration extends Component {
 
@@ -14,8 +15,15 @@ class NPXSMigration extends Component {
         this.state = {
             messageAdd: ''
         }
+        this.state = {
+            messageNonce: ''
+        }
+        this.state = {
+            txValid: false,
+        }
         this.clickHandler = this.clickHandler.bind(this)
-        this.changeHandler = this.changeHandler.bind(this)
+        this.clickHandlerInfo = this.clickHandlerInfo.bind(this)
+        // this.changeHandler = this.changeHandler.bind(this)
     }
 
     clickHandler() {
@@ -27,24 +35,95 @@ class NPXSMigration extends Component {
         //     alert ("Not a value")
         // }
     }
+
+    clickHandlerInfo() {
+        console.log("clicked")
+        this.setState({
+            messageInfo: 'This Nonce value is to identify each migration from the same address. Please input unique value(Max: 4 digits) for each migration.'
+        })
+    }
+
     changeHandler(event) {
         let result = !isNaN(+event); // true if its a number, false if not
         if (event == "") {
             this.setState({
                 message: ''
             })
+            this.setState({
+                txValid: false
+            })
         } else if (result == false) {
             this.setState({
                 message: 'Value need to be number'
             })
+            this.setState({
+                txValid: false
+            })
+            console.log(this.state.txValid)
         } else if (event <= 0) {
             this.setState({
                 message: 'Value need to be greater than 0'
+            })
+            this.setState({
+                txValid: false
             })
         }
         else {
             this.setState({
                 message: ''
+            })
+            this.setState({
+                txValid: true
+            })
+        }
+    }
+
+    changeHandlerNonce(event) {
+        let result = !isNaN(+event); // true if its a number, false if not
+        if (event == "") {
+            this.setState({
+                messageNonce: ''
+            })
+            this.setState({
+                txValid: false
+            })
+        } else if (result == false) {
+            this.setState({
+                messageNonce: 'Nonce need to be number'
+            })
+            this.setState({
+                txValid: false
+            })
+        } else if (event <= 0) {
+            this.setState({
+                messageNonce: 'Nonce need to be greater than 0'
+            })
+            this.setState({
+                txValid: false
+            })
+        }
+        else if (event.length >= 5) {
+            this.setState({
+                messageNonce: 'Nonce need to be less than 4 digits'
+            })
+            this.setState({
+                txValid: false
+            })
+        }
+        else if (event.charAt(0) == 0) {
+            this.setState({
+                messageNonce: 'First character cannot be 0'
+            })
+            this.setState({
+                txValid: false
+            })
+        }
+        else {
+            this.setState({
+                messageNonce: ''
+            })
+            this.setState({
+                txValid: true
             })
         }
     }
@@ -62,9 +141,15 @@ class NPXSMigration extends Component {
                 this.setState({
                     messageAdd: 'Not a valid BEP-20 Address'
                 })
+                this.setState({
+                    txValid: false
+                })
             } else {
                 this.setState({
                     messageAdd: ''
+                })
+                this.setState({
+                    txValid: true
                 })
             }
         }
@@ -90,22 +175,31 @@ class NPXSMigration extends Component {
                         event.preventDefault()
                         let amount = this.transferValue.value.toString()
                         let toAdd = this.recipient.value.toString()
-                        this.props.bscTransfer(amount, toAdd)
+                        let nonce = this.nonce.value.toString()
+                        let memo = toAdd + nonce
+                        console.log(memo)
+                        if (this.state.txValid === false) {
+                            alert("Invalid input! PLease check your input again")
+                        } else {
+                            this.props.bscTransfer(amount, memo)
+                        }
                     }}>
                         <div>
                             <label className="float-left"><b>Migrate NPXSXEM Token(BEP-2)</b></label>
                             <span className="float-right text-muted">
-                                <div>BNB Balance: {this.props.bscNpxsxemBalance}</div>
-                                <div>PURSE Balance: {window.web3.utils.fromWei(this.props.purseTokenBalance, 'Ether')}</div>
+                                <div>BNB Balance ({this.props.bscAccount}) : {this.props.bscNpxsxemBalance}</div>
+                                <div>PURSE Balance ({this.props.account}) : {window.web3.utils.fromWei(this.props.purseTokenBalance, 'Ether')}</div>
                             </span>
                         </div>
+                        <br /><br />
+                        <div><label className="float-left">&nbsp;Recipient Address:</label></div>
                         <div className="input-group mb-4">
                             <input
                                 id="recipient"
                                 type="text"
                                 ref={(input) => { this.recipient = input }}
                                 className="form-control form-control-lg"
-                                placeholder="Public address (0x)"
+                                placeholder="0x"
                                 onChange={(e) => {
                                     const value = e.target.value;
                                     console.log(value)
@@ -115,6 +209,8 @@ class NPXSMigration extends Component {
                                 required />
                         </div>
                         <div style={{ color: 'red' }}>{this.state.messageAdd}</div>
+
+                        <div><label className="float-left">&nbsp;Migrate Amount:</label></div>
                         <div className="input-group mb-4">
                             <input
                                 id="transferValue"
@@ -127,7 +223,7 @@ class NPXSMigration extends Component {
                                     console.log(value)
                                     this.changeHandler(value)
                                 }
-                                }                    
+                                }
                                 required />
                             <div className="input-group-append">
                                 <div className="input-group-text">
@@ -137,8 +233,26 @@ class NPXSMigration extends Component {
                             </div>
                         </div>
                         <div style={{ color: 'red' }}>{this.state.message}</div>
-                        <button type="submit" className="btn btn-primary btn-block btn-lg"
-                        onClick={this.clickHandler}>MIGRATE</button>
+
+                        <div><label className="float-left">&nbsp;Nonce:&nbsp;<BsFillQuestionCircleFill onClick={this.clickHandlerInfo} />&nbsp;</label></div>
+                        <div style={{ color: 'black' }}>{this.state.messageInfo}</div>
+                        <div className="input-group mb-4">
+                            <input
+                                id="nonce"
+                                type="text"
+                                ref={(input) => { this.nonce = input }}
+                                className="form-control form-control-lg"
+                                placeholder="0"
+                                onChange={(e) => {
+                                    const value = e.target.value;
+                                    console.log(value)
+                                    this.changeHandlerNonce(value)
+                                }
+                                }
+                                required />
+                        </div>
+                        <div style={{ color: 'red' }}>{this.state.messageNonce}</div>
+                        <button type="submit" className="btn btn-primary btn-block btn-lg">MIGRATE</button>
                     </form>
                 </div>
 

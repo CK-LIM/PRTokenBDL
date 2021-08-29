@@ -15,13 +15,13 @@ class Navbar extends Component {
           rel="noopener noreferrer"
         >
           <img src={farmer} width="30" height="30" className="d-inline-block align-top" alt="" />
-          &nbsp; X Token Farm
+          &nbsp; Purse Reward Token
         </a>
 
         <ul className="navbar-nav px-3">
           <li className="nav-item text-nowrap-small d-none d-sm-none d-sm-block">
             <a className="text-light">
-              <a id="account">{this.props.account}</a>
+              <a id="account">{this.props.bscAccount}</a>
             </a>
           </li>
         </ul>

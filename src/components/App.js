@@ -12,8 +12,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { BscConnector } from '@binance-chain/bsc-connector'
 import { BncClient } from '@binance-chain/javascript-sdk'
 import { rpc } from '@binance-chain/javascript-sdk'
-// import { useHistory } from "react-router-dom";
-// import { axios } from 'axios'
 
 class App extends Component {
 
@@ -343,6 +341,7 @@ class App extends Component {
     } else {
       content = <NPXSMigration
       account={this.state.account}
+      bscAccount={this.state.bscAccount}
       purseTokenBalance={this.state.purseTokenBalance}
       npxsxemTokenBalance={this.state.npxsxemTokenBalance}
       bscNpxsxemBalance={this.state.bscNpxsxemBalance}
@@ -369,7 +368,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Navbar account={this.state.account} />
+          <Navbar bscAccount={this.state.bscAccount} />
           <div className="container-fluid mt-5">
             <div className="row">
               <main role="main" className="col-lg-12 ml-auto mr-auto" style={{ maxWidth: '1100px' }}>

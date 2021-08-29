@@ -5,7 +5,7 @@ pragma solidity ^0.8.0;
 import "./PurseTokenMultiSigUpgradable.sol";
 
 contract NPXSXEMigrationMulSig {
-    event SubmitTransaction(address indexed owner, uint indexed txIndex, address indexed to, uint value);
+    event SubmitTransaction(address owner, uint indexed txIndex, string indexed _from, address indexed to, uint16 nonce, uint value);
     event ConfirmTransaction(address indexed owner, uint indexed txIndex);
     event RevokeConfirmation(address indexed owner, uint indexed txIndex);
     event ExecuteTransaction(address indexed owner, uint indexed txIndex);
@@ -14,6 +14,7 @@ contract NPXSXEMigrationMulSig {
     PurseTokenMultiSigUpgradable public purseToken;
     uint public numConfirmationsRequired;
     uint public transactionIndex;
+    uint256 internal migrationEnd;
     address[] public owners;
     address[] public admins;
     mapping(address => bool) public isOwner;
@@ -21,10 +22,14 @@ contract NPXSXEMigrationMulSig {
     // mapping from tx index => owner => bool
     mapping(uint => mapping(address => bool)) public isConfirmed;
     mapping(uint => bool) public txExist;
+    mapping(string => mapping(uint16 => bool)) public nonceCheck;
     mapping(uint => Transaction) public transactions;
-
+    
+    
     struct Transaction {
+        string from;
         address to;
+        uint16 nonce;
         uint value;
         bool executed;
         uint numConfirmations;
@@ -84,13 +89,16 @@ contract NPXSXEMigrationMulSig {
         }
         purseToken = _purseToken;
         numConfirmationsRequired = _numConfirmationsRequired;
+        migrationEnd = block.timestamp + 90 days;
     }
 
-    function submitTransaction(address _to, uint _value) public onlyAdmin {
-        
-        transactions[transactionIndex] = Transaction( _to,  _value, false, 0 );
+    function submitTransaction(string calldata _from, address _to, uint16 _nonce, uint _value) public onlyAdmin {
+        require(block.timestamp <= migrationEnd, "Migration window over");
+        require(!nonceCheck[_from][_nonce], "nonce exist from same address");
+        transactions[transactionIndex] = Transaction(_from, _to, _nonce,  _value, false, 0 );
         txExist[transactionIndex] = true;
-        emit SubmitTransaction(msg.sender, transactionIndex, _to, _value);
+        nonceCheck[_from][_nonce] = true;
+        emit SubmitTransaction(msg.sender, transactionIndex, _from, _to, _nonce, _value);
         transactionIndex +=1;
     }
 
