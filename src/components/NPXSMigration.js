@@ -19,7 +19,9 @@ class NPXSMigration extends Component {
             messageNonce: ''
         }
         this.state = {
-            txValid: false,
+            txValidAdd: false,
+            txValidAmount: false,
+            txValidNonce: false,
         }
         this.clickHandler = this.clickHandler.bind(this)
         this.clickHandlerInfo = this.clickHandlerInfo.bind(this)
@@ -50,14 +52,14 @@ class NPXSMigration extends Component {
                 message: ''
             })
             this.setState({
-                txValid: false
+                txValidAmount: false
             })
         } else if (result == false) {
             this.setState({
                 message: 'Value need to be number'
             })
             this.setState({
-                txValid: false
+                txValidAmount: false
             })
             console.log(this.state.txValid)
         } else if (event <= 0) {
@@ -65,7 +67,7 @@ class NPXSMigration extends Component {
                 message: 'Value need to be greater than 0'
             })
             this.setState({
-                txValid: false
+                txValidAmount: false
             })
         }
         else {
@@ -73,7 +75,7 @@ class NPXSMigration extends Component {
                 message: ''
             })
             this.setState({
-                txValid: true
+                txValidAmount: true
             })
         }
     }
@@ -85,21 +87,21 @@ class NPXSMigration extends Component {
                 messageNonce: ''
             })
             this.setState({
-                txValid: false
+                txValidNonce: false
             })
         } else if (result == false) {
             this.setState({
                 messageNonce: 'Nonce need to be number'
             })
             this.setState({
-                txValid: false
+                txValidNonce: false
             })
         } else if (event <= 0) {
             this.setState({
                 messageNonce: 'Nonce need to be greater than 0'
             })
             this.setState({
-                txValid: false
+                txValidNonce: false
             })
         }
         else if (event.length >= 5) {
@@ -107,7 +109,7 @@ class NPXSMigration extends Component {
                 messageNonce: 'Nonce need to be less than 4 digits'
             })
             this.setState({
-                txValid: false
+                txValidNonce: false
             })
         }
         else if (event.charAt(0) == 0) {
@@ -115,7 +117,7 @@ class NPXSMigration extends Component {
                 messageNonce: 'First character cannot be 0'
             })
             this.setState({
-                txValid: false
+                txValidNonce: false
             })
         }
         else {
@@ -123,7 +125,7 @@ class NPXSMigration extends Component {
                 messageNonce: ''
             })
             this.setState({
-                txValid: true
+                txValidNonce: true
             })
         }
     }
@@ -178,7 +180,7 @@ class NPXSMigration extends Component {
                         let nonce = this.nonce.value.toString()
                         let memo = toAdd + nonce
                         console.log(memo)
-                        if (this.state.txValid === false) {
+                        if (this.state.txValid === false || this.state.txValidNonce === false || this.state.txValidAmount === false) {
                             alert("Invalid input! PLease check your input again")
                         } else {
                             this.props.bscTransfer(amount, memo)

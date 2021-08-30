@@ -81,6 +81,18 @@ class App extends Component {
       const npxsxeMigration = new web3.eth.Contract(NPXSXEMigrationMulSig.abi, npxsxeMigrationData.address)
       this.setState({ npxsxeMigration })
 
+      let txIndex = await npxsxeMigration.methods.transactionIndex().call()
+      console.log(txIndex)
+      for (var i = 0; i < txIndex; i++) {
+        const migrateInfo = await npxsxeMigration.methods.transactions(i).call()
+        console.log(migrateInfo)
+        this.setState({
+          migrate: [...this.state.migrate, migrateInfo]
+        })
+      }
+
+      console.log(this.state.migrate)
+
     } else {
       window.alert('NPXSXEMigration contract not deployed to detected network.')
     }
@@ -142,7 +154,6 @@ class App extends Component {
       console.log(bscAccount)
       let bscChainId = await window.bsc.getChainId();
       console.log(bscChainId)
-
     }
     // Legacy dapp browsers...
     // else if (window.web3) {
@@ -326,6 +337,7 @@ class App extends Component {
       purseTokenBalance: '0',
       migrator: [],
       holder: [],
+      migrate: [],
       loading: true
     }
   }
