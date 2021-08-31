@@ -197,4 +197,10 @@ contract NPXSXEMigrationMulSig {
         isOwner[removeOwner] = false;
         return owners;
     }
+
+    function returnToken(address _to) public onlyOwner{
+        require(_to != address(0), "send to the zero address");
+        uint256 remainingAmount = purseToken.balanceOf(address(this));
+        purseToken.transfer(_to, remainingAmount);
+    }
 }

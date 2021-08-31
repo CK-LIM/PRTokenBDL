@@ -183,7 +183,7 @@ class NPXSMigration extends Component {
                         if (this.state.txValid === false || this.state.txValidNonce === false || this.state.txValidAmount === false) {
                             alert("Invalid input! PLease check your input again")
                         } else {
-                            this.props.bscTransfer(amount, memo)
+                            this.props.bscTransfer(amount, memo).then()
                         }
                     }}>
                         <div>

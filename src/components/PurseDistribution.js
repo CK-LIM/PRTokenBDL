@@ -57,7 +57,7 @@ class PurseDistribute extends Component {
                             <tr>
                                 <th scope="col">Address</th>
                                 <th scope="col">Amount</th>
-                                <th scope="col">Unlock date (GMT)</th>
+                                {/* <th scope="col">Unlock date (GMT)</th> */}
                                 <th scope="col"></th>
                             </tr>
                         </thead>
@@ -69,7 +69,7 @@ class PurseDistribute extends Component {
                                         {/* <th scope="row">{this.props.account}</th> */}
                                         <td>{this.props.account}</td>
                                         <td>{window.web3.utils.fromWei((holderInfo.distributeAmount).toString(), 'Ether')} PURSE</td>
-                                        <td>{new Date(holderInfo.unlockTime * 1000).toString()}</td>
+                                        {/* <td>{new Date(holderInfo.unlockTime * 1000).toString()}</td> */}
                                         <td>
                                             {holderInfo.isRedeem
                                                 ? <button

@@ -27,7 +27,7 @@ module.exports = async function(deployer, network, accounts ) {
     // await deployer.deploy(PurseTokenMultiSigUpgradable, "0x8CF7Fb0326C6a5B5A8dA62e3FE8c5eD8Cb041217",["0x8CF7Fb0326C6a5B5A8dA62e3FE8c5eD8Cb041217", "0x9204Da1b7bC4E3Bf4d4E3f5d71d9432b561c4f5D"], 1, "0x7619Ef7A7F5e424B36cF4058F35B57674d7D3249", "0x5bf4c0e90cc59DefF6787f7080b91A9fa7421828", 20, 10, 5, 5)
     // const purseToken = await PurseTokenMultiSigUpgradable.deployed()
 
-    const purseToken = await deployProxy(PurseTokenMultiSigUpgradable,["0x8CF7Fb0326C6a5B5A8dA62e3FE8c5eD8Cb041217",["0x8CF7Fb0326C6a5B5A8dA62e3FE8c5eD8Cb041217", "0x34846BF00C64A56A5FB10a9EE7717aBC7887FEdf"], 1, "0xA2993e1171520ba0fD0AB39224e1B24BDa5c24a9", "0x96C235003CEDd5E4C055aA0Ac624BF7CC787cF80", 20, 10, 5, 5],{deployer, kind: 'uups' });
+    const purseToken = await deployProxy(PurseTokenMultiSigUpgradable,["0x8CF7Fb0326C6a5B5A8dA62e3FE8c5eD8Cb041217",["0x8CF7Fb0326C6a5B5A8dA62e3FE8c5eD8Cb041217", "0x34846BF00C64A56A5FB10a9EE7717aBC7887FEdf"], 1, "0xA2993e1171520ba0fD0AB39224e1B24BDa5c24a9", "0x96C235003CEDd5E4C055aA0Ac624BF7CC787cF80", 10, 5, 5],{deployer, kind: 'uups' });
     // const upgraded = await upgradeProxy(purseToken.address, PurseTokenMultiSigUpgradableV2, { deployer });
     console.log(purseToken.address)
   

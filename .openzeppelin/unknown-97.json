@@ -2,15 +2,20 @@
   "manifestVersion": "3.2",
   "proxies": [
     {
-      "address": "0x797eb9b402CD8c587823B906cCF5DB0F4dC97950",
-      "txHash": "0x920bbd5fd61f17919584eb41ec6e7455cf9a994e50bf08d057da91fa80776a14",
+      "address": "0x96ad752ED38Dc5EEaA979c890cE8F8E1698ED9a5",
+      "txHash": "0x4eec17121ae774bc03c82865dd7bc1ab3b78a166a0838aea5d9ae79e688c44a7",
+      "kind": "uups"
+    },
+    {
+      "address": "0x38B07007e507680912D7d44e70b92fA4BB158DA3",
+      "txHash": "0x79e382097a2e176a97f6c4775ac1a7d2793232479ab13960dc40dd0802c9ecbd",
       "kind": "uups"
     }
   ],
   "impls": {
-    "20fadb9b97b8c7a9c378ec8ef23989d38ca20aa1990d08829a86742e4e48da77": {
-      "address": "0xe4BD7B9AEe132057e9FA9750BcDb52C80eE770A6",
-      "txHash": "0xfbe9ab42b29477558d5421cf589b70db7cde52fe7aa58c8f66920142da696b25",
+    "85ec8d970da547642733fe70fc2b5f1a4d0f697cbf01f50f3b552a628545601c": {
+      "address": "0x07702741EA1aCd4e489E8084D0F4e5238c095B98",
+      "txHash": "0x591fafc90b5c9ce098b98e5309fe273260e86a8d8d762a8d0e5836010f14268a",
       "layout": {
         "storage": [
           {
@@ -99,67 +104,67 @@
           },
           {
             "contract": "PurseTokenMultiSigUpgradable",
-            "label": "deductPercent",
+            "label": "burnPercent",
             "type": "t_uint256",
             "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\PurseReward\\YieldFarm_BridgeEthBsc\\src\\contracts\\PurseTokenMultiSigUpgradable.sol:17"
           },
           {
             "contract": "PurseTokenMultiSigUpgradable",
-            "label": "burnPercent",
+            "label": "liqPercent",
             "type": "t_uint256",
             "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\PurseReward\\YieldFarm_BridgeEthBsc\\src\\contracts\\PurseTokenMultiSigUpgradable.sol:18"
           },
           {
             "contract": "PurseTokenMultiSigUpgradable",
-            "label": "liqPercent",
+            "label": "redPercent",
             "type": "t_uint256",
             "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\PurseReward\\YieldFarm_BridgeEthBsc\\src\\contracts\\PurseTokenMultiSigUpgradable.sol:19"
           },
           {
             "contract": "PurseTokenMultiSigUpgradable",
-            "label": "redPercent",
-            "type": "t_uint256",
-            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\PurseReward\\YieldFarm_BridgeEthBsc\\src\\contracts\\PurseTokenMultiSigUpgradable.sol:20"
-          },
-          {
-            "contract": "PurseTokenMultiSigUpgradable",
             "label": "balanceOf",
             "type": "t_mapping(t_address,t_uint256)",
-            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\PurseReward\\YieldFarm_BridgeEthBsc\\src\\contracts\\PurseTokenMultiSigUpgradable.sol:51"
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\PurseReward\\YieldFarm_BridgeEthBsc\\src\\contracts\\PurseTokenMultiSigUpgradable.sol:50"
           },
           {
             "contract": "PurseTokenMultiSigUpgradable",
             "label": "allowance",
             "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
-            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\PurseReward\\YieldFarm_BridgeEthBsc\\src\\contracts\\PurseTokenMultiSigUpgradable.sol:52"
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\PurseReward\\YieldFarm_BridgeEthBsc\\src\\contracts\\PurseTokenMultiSigUpgradable.sol:51"
           },
           {
             "contract": "PurseTokenMultiSigUpgradable",
             "label": "isOwner",
             "type": "t_mapping(t_address,t_bool)",
-            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\PurseReward\\YieldFarm_BridgeEthBsc\\src\\contracts\\PurseTokenMultiSigUpgradable.sol:53"
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\PurseReward\\YieldFarm_BridgeEthBsc\\src\\contracts\\PurseTokenMultiSigUpgradable.sol:52"
           },
           {
             "contract": "PurseTokenMultiSigUpgradable",
             "label": "mintIsConfirmed",
             "type": "t_mapping(t_uint256,t_mapping(t_address,t_bool))",
-            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\PurseReward\\YieldFarm_BridgeEthBsc\\src\\contracts\\PurseTokenMultiSigUpgradable.sol:55"
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\PurseReward\\YieldFarm_BridgeEthBsc\\src\\contracts\\PurseTokenMultiSigUpgradable.sol:54"
           },
           {
             "contract": "PurseTokenMultiSigUpgradable",
             "label": "mintExist",
             "type": "t_mapping(t_uint256,t_bool)",
-            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\PurseReward\\YieldFarm_BridgeEthBsc\\src\\contracts\\PurseTokenMultiSigUpgradable.sol:56"
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\PurseReward\\YieldFarm_BridgeEthBsc\\src\\contracts\\PurseTokenMultiSigUpgradable.sol:55"
           },
           {
             "contract": "PurseTokenMultiSigUpgradable",
             "label": "mints",
-            "type": "t_mapping(t_uint256,t_struct(MintInfo)1375_storage)",
+            "type": "t_mapping(t_uint256,t_struct(MintInfo)1381_storage)",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\PurseReward\\YieldFarm_BridgeEthBsc\\src\\contracts\\PurseTokenMultiSigUpgradable.sol:56"
+          },
+          {
+            "contract": "PurseTokenMultiSigUpgradable",
+            "label": "isWhitelistedTo",
+            "type": "t_mapping(t_address,t_bool)",
             "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\PurseReward\\YieldFarm_BridgeEthBsc\\src\\contracts\\PurseTokenMultiSigUpgradable.sol:57"
           },
           {
             "contract": "PurseTokenMultiSigUpgradable",
-            "label": "isWhitelisted",
+            "label": "isWhitelistedFrom",
             "type": "t_mapping(t_address,t_bool)",
             "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\PurseReward\\YieldFarm_BridgeEthBsc\\src\\contracts\\PurseTokenMultiSigUpgradable.sol:58"
           }
@@ -198,10 +203,10 @@
           "t_mapping(t_uint256,t_bool)": {
             "label": "mapping(uint256 => bool)"
           },
-          "t_mapping(t_uint256,t_struct(MintInfo)1375_storage)": {
+          "t_mapping(t_uint256,t_struct(MintInfo)1381_storage)": {
             "label": "mapping(uint256 => struct PurseTokenMultiSigUpgradable.MintInfo)"
           },
-          "t_struct(MintInfo)1375_storage": {
+          "t_struct(MintInfo)1381_storage": {
             "label": "struct PurseTokenMultiSigUpgradable.MintInfo",
             "members": [
               {

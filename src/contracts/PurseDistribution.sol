@@ -8,9 +8,6 @@ contract PurseDistribution {
     string public name = "Purse Distribution";
     PurseTokenMultiSigUpgradable public purseToken;
     address public owner;
-    uint256 public constant releaseDuration = 1 minutes;   //change this to month for production
-
-
 
     mapping(address => uint256) public releaseIteration;
     mapping(address => mapping (uint256 => holderInfo)) public holder;  //address->index   
@@ -18,7 +15,6 @@ contract PurseDistribution {
     struct holderInfo {
         uint256 releaseIteration;
         uint256 distributeAmount;
-        uint256 unlockTime;
         bool isRedeem;
     }
 
@@ -27,28 +23,28 @@ contract PurseDistribution {
         owner = msg.sender;
     }
 
-    function updateHolderInfoFirst(address _holder, uint256 _amount) public {
+    function updateHolderInfoFirst(address[] calldata _holder, uint256 [] calldata _amount) public {
         require(msg.sender == owner, 'only owner');
-        require(_amount >= 0, 'amount less than 0');
-
-        uint256 unlockTimeStamp = block.timestamp + releaseDuration;
-        holder[_holder][1] = holderInfo(1, _amount, unlockTimeStamp, true);
-        releaseIteration[_holder] = 1;
-
+        // require(_amount >= 0, 'amount less than 0');
+        // holder[_holder][1] = holderInfo(1, _amount, true);
+        // releaseIteration[_holder] = 1;
+        uint256 i = 0;
+        for (i; i < _holder.length; i++) {
+            holder[_holder[i]][1] = holderInfo(1, _amount[i], true);
+            releaseIteration[_holder[i]] = 1;     
+        }
     }
 
     function updateHolderInfoRemaining(address _holder, uint256 _amount, uint256 _iteration) public {
         require(msg.sender == owner, 'only owner');
         require(_amount >= 0, 'amount less than 0');
 
-        uint256 unlockTimeStamp = block.timestamp + releaseDuration;
-        holder[_holder][_iteration] = holderInfo(_iteration, _amount, unlockTimeStamp, true);
+        holder[_holder][_iteration] = holderInfo(_iteration, _amount, true);
         releaseIteration[_holder] = _iteration;
     }
 
     // notice Transfers tokens held by timelock to beneficiary.
     function claim(uint256 _releaseIteration) public {
-        require(block.timestamp >= holder[msg.sender][_releaseIteration].unlockTime, 'locked period');
         require(holder[msg.sender][_releaseIteration].isRedeem == true, 'have been redeem');
 
         holder[msg.sender][_releaseIteration].isRedeem = false;
@@ -60,13 +56,11 @@ contract PurseDistribution {
     function claimAll() public {
         uint256 claimAmount = 0;
         for (uint256 i = 1; i <= releaseIteration[msg.sender]; i++) {
-            if (block.timestamp >= holder[msg.sender][i].unlockTime) {
                 if (holder[msg.sender][i].isRedeem == true) {
                     holder[msg.sender][i].isRedeem = false;
                     uint256 holderAmount = holder[msg.sender][i].distributeAmount;
                     claimAmount += holderAmount;                    
                 }
-            }
         }
         if (claimAmount > 0) {
             purseToken.transfer(msg.sender, claimAmount);

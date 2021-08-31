@@ -14,7 +14,6 @@ contract PurseTokenMultiSigUpgradable is Initializable, UUPSUpgradeable {
     address public liqPool;
     address public redPool;
     uint256 public mintIndex;
-    uint256 public deductPercent;
     uint256 public burnPercent;
     uint256 public liqPercent;
     uint256 public redPercent;
@@ -55,7 +54,8 @@ contract PurseTokenMultiSigUpgradable is Initializable, UUPSUpgradeable {
     mapping(uint256 => mapping(address => bool)) public mintIsConfirmed;
     mapping(uint256 => bool) public mintExist;
     mapping(uint256 => MintInfo) public mints;
-    mapping(address => bool) public isWhitelisted;
+    mapping(address => bool) public isWhitelistedTo;
+    mapping(address => bool) public isWhitelistedFrom;
 
     struct MintInfo {
         address to;
@@ -65,33 +65,48 @@ contract PurseTokenMultiSigUpgradable is Initializable, UUPSUpgradeable {
     }
 
     function addOwner(address newOwner) external onlyOwner {
-        require(newOwner != address(0), "invalid owner");
-        require(!isOwner[newOwner], "owner not unique");
+        require(newOwner != address(0));
+        require(!isOwner[newOwner]);
 
         isOwner[newOwner] = true;
         owners.push(newOwner);
     }
 
-    function setWhitelisted(address newWhitelist) external onlyOwner {
-        require(newWhitelist != address(0), "invalid whitelist");
-        require(!isWhitelisted[newWhitelist], "whitelist not unique");
+    function setWhitelistedTo(address newWhitelist) external onlyOwner {
+        require(newWhitelist != address(0));
+        require(!isWhitelistedTo[newWhitelist]);
 
-        isWhitelisted[newWhitelist] = true;
+        isWhitelistedTo[newWhitelist] = true;
     }
 
-    function removeWhitelisted(address newWhitelist) external onlyOwner {
-        require(newWhitelist != address(0), "invalid whitelist");
-        require(isWhitelisted[newWhitelist], "whitelist not unique");
+    function removeWhitelistedTo(address newWhitelist) external onlyOwner {
+        require(newWhitelist != address(0));
+        require(isWhitelistedTo[newWhitelist]);
 
-        isWhitelisted[newWhitelist] = false;
+        isWhitelistedTo[newWhitelist] = false;
+    }
+
+    function setWhitelistedFrom(address newWhitelist) external onlyOwner {
+        require(newWhitelist != address(0));
+        require(!isWhitelistedFrom[newWhitelist]);
+
+        isWhitelistedFrom[newWhitelist] = true;
+    }
+
+    function removeWhitelistedFrom(address newWhitelist) external onlyOwner {
+        require(newWhitelist != address(0));
+        require(isWhitelistedFrom[newWhitelist]);
+
+        isWhitelistedFrom[newWhitelist] = false;
     }
 
     function transfer(address _to, uint256 _value)
         public
         returns (bool success)
     {
+        require(_value >= 0);
         require(balanceOf[msg.sender] >= _value);
-        if (isWhitelisted[_to]) {
+        if (isWhitelistedTo[_to] || isWhitelistedFrom[msg.sender]) {
             balanceOf[msg.sender] -= _value;
             balanceOf[_to] += _value;
 
@@ -121,16 +136,16 @@ contract PurseTokenMultiSigUpgradable is Initializable, UUPSUpgradeable {
         address _to,
         uint256 _value
     ) public returns (bool success) {
-
+        require(_value >= 0);
         require(_value <= balanceOf[_from]);
         require(_value <= allowance[_from][msg.sender]);
-        if (isWhitelisted[_to]) {
+        if (isWhitelistedTo[_to] || isWhitelistedFrom[msg.sender]) {
             allowance[_from][msg.sender] -= _value;
             balanceOf[_from] -= _value;
             balanceOf[_to] += _value;
             emit Transfer(_from, _to, _value);
             return true;
-        }else {
+        } else {
             allowance[_from][msg.sender] -= _value;
             uint256 transferValue = _partialBurn(_value, _from);
             balanceOf[_from] -= transferValue;
@@ -141,7 +156,7 @@ contract PurseTokenMultiSigUpgradable is Initializable, UUPSUpgradeable {
     }
 
     function mint(address _account, uint256 _amount) internal onlyOwner {
-        require(_account != address(0), "ERC20: mint to the zero address");
+        require(_account != address(0));
 
         balanceOf[_account] += _amount;
         totalSupply += _amount;
@@ -174,10 +189,7 @@ contract PurseTokenMultiSigUpgradable is Initializable, UUPSUpgradeable {
         mintExists(_mintIndex)
         mintNotExecuted(_mintIndex)
     {
-        require(
-            mints[_mintIndex].numConfirmations >= numConfirmationsRequired,
-            "cannot execute tx"
-        );
+        require(mints[_mintIndex].numConfirmations >= numConfirmationsRequired);
         mints[_mintIndex].executed = true;
         mint(mints[_mintIndex].to, mints[_mintIndex].value);
 
@@ -190,7 +202,7 @@ contract PurseTokenMultiSigUpgradable is Initializable, UUPSUpgradeable {
         mintExists(_mintIndex)
         mintNotExecuted(_mintIndex)
     {
-        require(mintIsConfirmed[_mintIndex][msg.sender], "tx not confirmed");
+        require(mintIsConfirmed[_mintIndex][msg.sender]);
 
         mints[_mintIndex].numConfirmations -= 1;
         mintIsConfirmed[_mintIndex][msg.sender] = false;
@@ -199,12 +211,9 @@ contract PurseTokenMultiSigUpgradable is Initializable, UUPSUpgradeable {
     }
 
     function burn(address _account, uint256 _amount) public onlyOwner {
-        require(_account != address(0), "ERC20: burn from the zero address");
+        require(_account != address(0));
         uint256 accountBalance = balanceOf[_account];
-        require(
-            accountBalance >= _amount,
-            "ERC20: burn amount exceeds balance"
-        );
+        require(accountBalance >= _amount);
         balanceOf[_account] -= _amount;
         totalSupply -= _amount;
         emit Burn(_account, address(0), _amount);
@@ -215,19 +224,17 @@ contract PurseTokenMultiSigUpgradable is Initializable, UUPSUpgradeable {
         returns (uint256)
     {
         uint256 transferAmount = 0;
-        uint256 deductAmount;
         uint256 burnAmount;
         uint256 liqAmount;
         uint256 redAmount;
         (
-            deductAmount,
             burnAmount,
             liqAmount,
             redAmount
         ) = _calculateDeductAmount(_amount);
 
-        if (deductAmount > 0) {
-            burnPrivate(_from, deductAmount, burnAmount, liqAmount, redAmount);
+        if (burnAmount >= 0 || liqAmount >= 0 || redAmount >= 0) {
+            burnPrivate(_from, burnAmount, liqAmount, redAmount);
         }
         transferAmount = _amount - burnAmount - liqAmount - redAmount;
 
@@ -240,17 +247,14 @@ contract PurseTokenMultiSigUpgradable is Initializable, UUPSUpgradeable {
         returns (
             uint256,
             uint256,
-            uint256,
             uint256
         )
     {
-        uint256 deductAmount;
         uint256 burnAmount;
         uint256 liqAmount;
         uint256 redAmount;
-        // burn amount calculations
+
         if (totalSupply > minimumSupply) {
-            deductAmount = (_amount * deductPercent) / 100;
             burnAmount = (_amount * burnPercent) / 100;
             liqAmount = (_amount * liqPercent) / 100;
             redAmount = (_amount * redPercent) / 100;
@@ -259,22 +263,19 @@ contract PurseTokenMultiSigUpgradable is Initializable, UUPSUpgradeable {
                 burnAmount = availableBurn;
             }
         }
-        return (deductAmount, burnAmount, liqAmount, redAmount);
+        return (burnAmount, liqAmount, redAmount);
     }
 
     function burnPrivate(
         address _account,
-        uint256 _deductAmount,
         uint256 _burnAmount,
         uint256 _liqAmount,
         uint256 _redAmount
     ) private {
-        require(_account != address(0), "ERC20: burn from the zero address");
+        require(_account != address(0));
         uint256 accountBalance = balanceOf[_account];
-        require(
-            accountBalance >= _deductAmount,
-            "ERC20: deduct amount exceeds balance"
-        );
+        uint256 deductAmount = _burnAmount + _liqAmount + _redAmount;
+        require(accountBalance >= deductAmount);
         balanceOf[_account] -= _burnAmount;
         balanceOf[_account] -= _liqAmount;
         balanceOf[_account] -= _redAmount;
@@ -292,43 +293,36 @@ contract PurseTokenMultiSigUpgradable is Initializable, UUPSUpgradeable {
     }
 
     function updateLPoolAdd(address _newLPool) public onlyOwner {
-        require(_newLPool != address(0), "invalid owner");
-        require(_newLPool != liqPool, "owner not unique");
+        require(_newLPool != address(0));
+        require(_newLPool != liqPool);
 
         liqPool = _newLPool;
     }
 
     function updateRPoolAdd(address _newRPool) public onlyOwner {
-        require(_newRPool != address(0), "invalid owner");
-        require(_newRPool != redPool, "owner not unique");
+        require(_newRPool != address(0));
+        require(_newRPool != redPool);
 
         redPool = _newRPool;
     }
 
-    function updateDeductPercent(uint256 _newDeductPercent) public onlyOwner {
-        require(_newDeductPercent >= 0, "smalller than zero");
-        require(_newDeductPercent != deductPercent, "percentage not unique");
-
-        deductPercent = _newDeductPercent;
-    }
-
     function updateBurnPercent(uint256 _newBurnPercent) public onlyOwner {
-        require(_newBurnPercent >= 0, "smalller than zero");
-        require(_newBurnPercent != burnPercent, "percentage not unique");
+        require(_newBurnPercent >= 0 && _newBurnPercent <= 100);
+        require(_newBurnPercent != burnPercent);
 
         burnPercent = _newBurnPercent;
     }
 
     function updateLiqPercent(uint256 _newLiqPercent) public onlyOwner {
-        require(_newLiqPercent >= 0, "smalller than zero");
-        require(_newLiqPercent != liqPercent, "percentage not unique");
+        require(_newLiqPercent >= 0 && _newLiqPercent <= 100);
+        require(_newLiqPercent != liqPercent);
 
         liqPercent = _newLiqPercent;
     }
 
     function updateRedPercent(uint256 _newRedPercent) public onlyOwner {
-        require(_newRedPercent >= 0, "smalller than zero");
-        require(_newRedPercent != redPercent, "percentage not unique");
+        require(_newRedPercent >= 0 && _newRedPercent <= 100);
+        require(_newRedPercent != redPercent);
 
         redPercent = _newRedPercent;
     }
@@ -341,7 +335,6 @@ contract PurseTokenMultiSigUpgradable is Initializable, UUPSUpgradeable {
         uint8 _numConfirmationsRequired,
         address _lPool,
         address _rPool,
-        uint256 _deductPercent,
         uint256 _burnPercent,
         uint256 _liqPercent,
         uint256 _redPercent
@@ -352,24 +345,19 @@ contract PurseTokenMultiSigUpgradable is Initializable, UUPSUpgradeable {
         decimals = 18;
         minimumSupply = 20000 * (10**18);
 
-        require(_owners.length > 0, "owners required");
-        require(_lPool != address(0), "invalid liqPool address");
-        require(_rPool != address(0), "invalid redPool address");
-        require(_deductPercent >= 0, "deduct percentage less than 0");
-        require(_burnPercent >= 0, "burn percentage less than 0");
-        require(_liqPercent >= 0, "liq percentage less than 0");
-        require(_redPercent >= 0, "red percentage less than 0");
-        require(
-            _numConfirmationsRequired > 0 &&
-                _numConfirmationsRequired <= _owners.length,
-            "invalid number of required confirmations"
-        );
+        require(_owners.length > 0);
+        require(_lPool != address(0));
+        require(_rPool != address(0));
+        require(_burnPercent >= 0);
+        require(_liqPercent >= 0);
+        require(_redPercent >= 0);
+        require(_numConfirmationsRequired > 0 && _numConfirmationsRequired <= _owners.length);
 
         for (uint256 i = 0; i < _owners.length; i++) {
             address owner = _owners[i];
 
-            require(owner != address(0), "invalid owner");
-            require(!isOwner[owner], "owner not unique");
+            require(owner != address(0));
+            require(!isOwner[owner]);
 
             isOwner[owner] = true;
             owners.push(owner);
@@ -378,7 +366,6 @@ contract PurseTokenMultiSigUpgradable is Initializable, UUPSUpgradeable {
         numConfirmationsRequired = _numConfirmationsRequired;
         liqPool = _lPool;
         redPool = _rPool;
-        deductPercent = _deductPercent;
         burnPercent = _burnPercent;
         liqPercent = _liqPercent;
         redPercent = _redPercent;
