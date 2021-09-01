@@ -612,28 +612,28 @@
     "absolutePath": "/C/Users/cheek/Desktop/Developer doc/Visual Studio Code/PundiX/PurseReward/YieldFarm_BridgeEthBsc/src/contracts/NPXSXEMigrationMulSig.sol",
     "exportedSymbols": {
       "AddressUpgradeable": [
-        3367
+        3228
       ],
       "ERC1967UpgradeUpgradeable": [
-        2989
+        2850
       ],
       "IBeaconUpgradeable": [
-        2999
+        2860
       ],
       "Initializable": [
-        3045
+        2906
       ],
       "NPXSXEMigrationMulSig": [
         919
       ],
       "PurseTokenMultiSigUpgradable": [
-        2591
+        2452
       ],
       "StorageSlotUpgradeable": [
-        3427
+        3288
       ],
       "UUPSUpgradeable": [
-        3122
+        2983
       ]
     },
     "id": 920,
@@ -658,7 +658,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 920,
-        "sourceUnit": 2592,
+        "sourceUnit": 2453,
         "src": "69:44:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1135,7 +1135,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2591",
+              "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2452",
               "typeString": "contract PurseTokenMultiSigUpgradable"
             },
             "typeName": {
@@ -1145,13 +1145,13 @@
                 "id": 96,
                 "name": "PurseTokenMultiSigUpgradable",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 2591,
+                "referencedDeclaration": 2452,
                 "src": "571:28:1"
               },
-              "referencedDeclaration": 2591,
+              "referencedDeclaration": 2452,
               "src": "571:28:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2591",
+                "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2452",
                 "typeString": "contract PurseTokenMultiSigUpgradable"
               }
             },
@@ -4381,7 +4381,7 @@
                       "referencedDeclaration": 98,
                       "src": "3015:10:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2591",
+                        "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2452",
                         "typeString": "contract PurseTokenMultiSigUpgradable"
                       }
                     },
@@ -4395,13 +4395,13 @@
                       "referencedDeclaration": 224,
                       "src": "3028:11:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2591",
+                        "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2452",
                         "typeString": "contract PurseTokenMultiSigUpgradable"
                       }
                     },
                     "src": "3015:24:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2591",
+                      "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2452",
                       "typeString": "contract PurseTokenMultiSigUpgradable"
                     }
                   },
@@ -4569,7 +4569,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2591",
+                    "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2452",
                     "typeString": "contract PurseTokenMultiSigUpgradable"
                   },
                   "typeName": {
@@ -4579,13 +4579,13 @@
                       "id": 222,
                       "name": "PurseTokenMultiSigUpgradable",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 2591,
+                      "referencedDeclaration": 2452,
                       "src": "1974:28:1"
                     },
-                    "referencedDeclaration": 2591,
+                    "referencedDeclaration": 2452,
                     "src": "1974:28:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2591",
+                      "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2452",
                       "typeString": "contract PurseTokenMultiSigUpgradable"
                     }
                   },
@@ -6534,7 +6534,7 @@
                         "referencedDeclaration": 98,
                         "src": "4392:10:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2591",
+                          "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2452",
                           "typeString": "contract PurseTokenMultiSigUpgradable"
                         }
                       },
@@ -6545,7 +6545,7 @@
                       "lValueRequested": false,
                       "memberName": "transfer",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1607,
+                      "referencedDeclaration": 1468,
                       "src": "4392:19:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
@@ -11257,7 +11257,7 @@
                         "referencedDeclaration": 98,
                         "src": "7234:10:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2591",
+                          "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2452",
                           "typeString": "contract PurseTokenMultiSigUpgradable"
                         }
                       },
@@ -11268,7 +11268,7 @@
                       "lValueRequested": false,
                       "memberName": "balanceOf",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1323,
+                      "referencedDeclaration": 1184,
                       "src": "7234:20:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
@@ -11340,7 +11340,7 @@
                         "referencedDeclaration": 98,
                         "src": "7280:10:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2591",
+                          "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2452",
                           "typeString": "contract PurseTokenMultiSigUpgradable"
                         }
                       },
@@ -11351,7 +11351,7 @@
                       "lValueRequested": false,
                       "memberName": "transfer",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1607,
+                      "referencedDeclaration": 1468,
                       "src": "7280:19:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
@@ -11459,28 +11459,28 @@
     "absolutePath": "/C/Users/cheek/Desktop/Developer doc/Visual Studio Code/PundiX/PurseReward/YieldFarm_BridgeEthBsc/src/contracts/NPXSXEMigrationMulSig.sol",
     "exportedSymbols": {
       "AddressUpgradeable": [
-        3367
+        3228
       ],
       "ERC1967UpgradeUpgradeable": [
-        2989
+        2850
       ],
       "IBeaconUpgradeable": [
-        2999
+        2860
       ],
       "Initializable": [
-        3045
+        2906
       ],
       "NPXSXEMigrationMulSig": [
         919
       ],
       "PurseTokenMultiSigUpgradable": [
-        2591
+        2452
       ],
       "StorageSlotUpgradeable": [
-        3427
+        3288
       ],
       "UUPSUpgradeable": [
-        3122
+        2983
       ]
     },
     "id": 920,
@@ -11505,7 +11505,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 920,
-        "sourceUnit": 2592,
+        "sourceUnit": 2453,
         "src": "69:44:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -11982,7 +11982,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2591",
+              "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2452",
               "typeString": "contract PurseTokenMultiSigUpgradable"
             },
             "typeName": {
@@ -11992,13 +11992,13 @@
                 "id": 96,
                 "name": "PurseTokenMultiSigUpgradable",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 2591,
+                "referencedDeclaration": 2452,
                 "src": "571:28:1"
               },
-              "referencedDeclaration": 2591,
+              "referencedDeclaration": 2452,
               "src": "571:28:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2591",
+                "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2452",
                 "typeString": "contract PurseTokenMultiSigUpgradable"
               }
             },
@@ -15228,7 +15228,7 @@
                       "referencedDeclaration": 98,
                       "src": "3015:10:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2591",
+                        "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2452",
                         "typeString": "contract PurseTokenMultiSigUpgradable"
                       }
                     },
@@ -15242,13 +15242,13 @@
                       "referencedDeclaration": 224,
                       "src": "3028:11:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2591",
+                        "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2452",
                         "typeString": "contract PurseTokenMultiSigUpgradable"
                       }
                     },
                     "src": "3015:24:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2591",
+                      "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2452",
                       "typeString": "contract PurseTokenMultiSigUpgradable"
                     }
                   },
@@ -15416,7 +15416,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2591",
+                    "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2452",
                     "typeString": "contract PurseTokenMultiSigUpgradable"
                   },
                   "typeName": {
@@ -15426,13 +15426,13 @@
                       "id": 222,
                       "name": "PurseTokenMultiSigUpgradable",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 2591,
+                      "referencedDeclaration": 2452,
                       "src": "1974:28:1"
                     },
-                    "referencedDeclaration": 2591,
+                    "referencedDeclaration": 2452,
                     "src": "1974:28:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2591",
+                      "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2452",
                       "typeString": "contract PurseTokenMultiSigUpgradable"
                     }
                   },
@@ -17381,7 +17381,7 @@
                         "referencedDeclaration": 98,
                         "src": "4392:10:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2591",
+                          "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2452",
                           "typeString": "contract PurseTokenMultiSigUpgradable"
                         }
                       },
@@ -17392,7 +17392,7 @@
                       "lValueRequested": false,
                       "memberName": "transfer",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1607,
+                      "referencedDeclaration": 1468,
                       "src": "4392:19:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
@@ -22104,7 +22104,7 @@
                         "referencedDeclaration": 98,
                         "src": "7234:10:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2591",
+                          "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2452",
                           "typeString": "contract PurseTokenMultiSigUpgradable"
                         }
                       },
@@ -22115,7 +22115,7 @@
                       "lValueRequested": false,
                       "memberName": "balanceOf",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1323,
+                      "referencedDeclaration": 1184,
                       "src": "7234:20:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_uint256_$",
@@ -22187,7 +22187,7 @@
                         "referencedDeclaration": 98,
                         "src": "7280:10:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2591",
+                          "typeIdentifier": "t_contract$_PurseTokenMultiSigUpgradable_$2452",
                           "typeString": "contract PurseTokenMultiSigUpgradable"
                         }
                       },
@@ -22198,7 +22198,7 @@
                       "lValueRequested": false,
                       "memberName": "transfer",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1607,
+                      "referencedDeclaration": 1468,
                       "src": "7280:19:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
@@ -22411,12 +22411,12 @@
         }
       },
       "links": {},
-      "address": "0x6EDFe0B8f1cA88Ad645D260D23A9Bcf9b214c6aC",
-      "transactionHash": "0xe0a636b19bbca5eb56954a48757ddb5745609fa5c8617ef18a4a6391f58db6ee"
+      "address": "0xdEB5A05d7a1115e71D698860c3fB240D1FB7005C",
+      "transactionHash": "0xd6eea6fbe7a77f8d1f127c79704bf0307b85830545d179056f7a8e3a035592e3"
     }
   },
   "schemaVersion": "3.2.3",
-  "updatedAt": "2021-08-31T07:51:38.296Z",
+  "updatedAt": "2021-08-31T09:33:12.077Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

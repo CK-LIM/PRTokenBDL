@@ -49,7 +49,7 @@ module.exports = {
         `https://data-seed-prebsc-2-s1.binance.org:8545`),
       network_id: 97,
       gas: 8712388,
-      gasPrice: 15000000000,
+      gasPrice: 20000000000,
       confirmations: 0,
       timeoutBlocks: 300,
       skipDryRun: true

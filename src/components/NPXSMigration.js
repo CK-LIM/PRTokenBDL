@@ -183,14 +183,14 @@ class NPXSMigration extends Component {
                         if (this.state.txValid === false || this.state.txValidNonce === false || this.state.txValidAmount === false) {
                             alert("Invalid input! PLease check your input again")
                         } else {
-                            this.props.bscTransfer(amount, memo).then()
+                            this.props.bscTransfer(amount, memo)
                         }
                     }}>
                         <div>
                             <label className="float-left"><b>Migrate NPXSXEM Token(BEP-2)</b></label>
                             <span className="float-right text-muted">
-                                <div>BNB Balance ({this.props.bscAccount}) : {this.props.bscNpxsxemBalance}</div>
-                                <div>PURSE Balance ({this.props.account}) : {window.web3.utils.fromWei(this.props.purseTokenBalance, 'Ether')}</div>
+                                <div>BNB Balance ({this.props.first4bscAccount}...{this.props.last4bscAccount}) : {this.props.bscNpxsxemBalance}</div>
+                                <div>PURSE Balance ({this.props.first4Account}...{this.props.last4Account}) : {window.web3.utils.fromWei(this.props.purseTokenBalance, 'Ether')}</div>
                             </span>
                         </div>
                         <br /><br />

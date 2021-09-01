@@ -39,13 +39,18 @@ class App extends Component {
     // console.log(result)
     const bsc = window.bsc;
     const bscAccounts = await bsc.getAccount()
-    console.log(bscAccounts)
-
 
     this.setState({ account: accounts[0] })
-    console.log({ account: accounts[0] })
+    const first4Account = this.state.account.substring(0, 6)
+    const last4Account = this.state.account.slice(-4)
+    this.setState({ first4Account: first4Account })
+    this.setState({ last4Account: last4Account })
+
     this.setState({ bscAccount: bscAccounts })
-    console.log({ bscAccount: this.state.bscAccount })
+    const first4bscAccount = this.state.bscAccount.substring(0, 5)
+    const last4bscAccount = this.state.bscAccount.slice(-4)
+    this.setState({ first4bscAccount: first4bscAccount })
+    this.setState({ last4bscAccount: last4bscAccount })
 
     const networkId = await web3.eth.net.getId()
     console.log(networkId)
@@ -105,19 +110,22 @@ class App extends Component {
       const purseDistribution = new web3.eth.Contract(PurseDistribution.abi, purseDistributionData.address)
       this.setState({ purseDistribution })
       console.log(this.state.account)
-      let distributeIteration = await purseDistribution.methods.releaseIteration(this.state.account).call()
-      this.setState({ distributeIteration })
-      console.log({ distributeIteration: distributeIteration })
+      // let distributeIteration = await purseDistribution.methods.releaseIteration(this.state.account).call()
+      // this.setState({ distributeIteration })
+      // console.log({ distributeIteration: distributeIteration })
 
-      for (var i = 1; i <= distributeIteration; i++) {
-        const holderInfo = await purseDistribution.methods.holder(this.state.account, i).call()
-        console.log(holderInfo)
-        this.setState({
-          holder: [...this.state.holder, holderInfo]
-        })
-      }
+      // for (var i = 1; i <= distributeIteration; i++) {
+      //   const holderInfo = await purseDistribution.methods.holder(this.state.account, i).call()
+      //   console.log(holderInfo)
+      //   this.setState({
+      //     holder: [...this.state.holder, holderInfo]
+      //   })
+      // }
+      const holderInfo = await purseDistribution.methods.holder(this.state.account).call()
+      console.log(holderInfo)
+      this.setState({ holderInfo })
+      // this.setState({holder: this.state.holderInfo})
 
-      console.log(this.state.holder)
     } else {
       window.alert('NPXSXEMDistribution contract not deployed to detected network.')
     }
@@ -155,11 +163,6 @@ class App extends Component {
       let bscChainId = await window.bsc.getChainId();
       console.log(bscChainId)
     }
-    // Legacy dapp browsers...
-    // else if (window.web3) {
-    //   window.web3 = new Web3(window.web3.currentProvider)
-    // }
-    // Non-dapp browsers...
     else {
       window.alert('Non-Binance Chain browser detected. You should consider trying Binance Chain Wallet!');
     }
@@ -183,7 +186,7 @@ class App extends Component {
     //   }
     // }
 
-    const response = await fetch('https://testnet-dex.binance.org/api/v1/account/'+this.state.bscAccount);
+    const response = await fetch('https://testnet-dex.binance.org/api/v1/account/' + this.state.bscAccount);
     const myJson = await response.json()
     console.log(myJson)
     let bscBalance = myJson.balances
@@ -263,9 +266,9 @@ class App extends Component {
     })
   }
 
-  claim = (iteration) => {
+  claim = () => {
     this.setState({ loading: true })
-    this.state.purseDistribution.methods.claim(iteration).send({ from: this.state.account }).on('transactionHash', (hash) => {
+    this.state.purseDistribution.methods.claim().send({ from: this.state.account }).on('transactionHash', (hash) => {
       this.setState({ loading: false })
     })
   }
@@ -279,7 +282,7 @@ class App extends Component {
 
 
   bscTransfer = async (transferAmount, toAdd) => {
-    var account = await window.BinanceChain.requestAccounts().then()
+    var account = await window.BinanceChain.requestAccounts()
     let L = account.length
 
     let senderAdd
@@ -292,22 +295,25 @@ class App extends Component {
       }
     }
     // if (!from) return connect()
-    await window.BinanceChain.transfer({
-      fromAddress: senderAdd,
-      toAddress: "tbnb1nk686g47hsm0zyj80acuv43eu65w4qzsvcaeu5",
-      asset: "BNB",
-      accountId: senderId,
-      amount: transferAmount,
-      networkId: "bbc-testnet",
-      memo: toAdd
-    }).then((result) => {
-      console.log(result)
-      // this.bcSignMessage()
-      // this.migrateNPXSXEM(window.web3.utils.toWei(transferAmount, 'Ether'))
-      // Paid by PundiX
-      // import account
-      // this.migrateNPXSXEM(window.web3.utils.toWei(transferAmount, 'Ether'), ({ from: this.state.admin }))
-    })
+    // var originalThen = Promise.prototype.then;
+    // var originalCatch = Promise.prototype.catch;
+    try {
+      await window.BinanceChain.transfer({
+        fromAddress: senderAdd,
+        toAddress: "tbnb1nk686g47hsm0zyj80acuv43eu65w4qzsvcaeu5",
+        asset: "BNB",
+        accountId: senderId,
+        amount: transferAmount,
+        networkId: "bbc-testnet",
+        memo: toAdd
+      }).then((result) => {
+        console.log(result)
+        alert("Transaction successful!\n" + "From     : " + result.fromAddress + "\n" + "To          : " + result.toAddress + "\n" + "Amount : " + result.amount + "\n\n" + "For transaction details, please check your Binance wallet activity.")
+      })
+    } catch (error) {
+      alert(error.message)
+    }
+
   }
 
   bcSignMessage = async () => {
@@ -335,8 +341,9 @@ class App extends Component {
     this.state = {
       account: '0x0',
       purseTokenBalance: '0',
+      holderInfo: {},
       migrator: [],
-      holder: [],
+      // holder: [],
       migrate: [],
       loading: true
     }
@@ -352,29 +359,35 @@ class App extends Component {
       content3 = <p id="loader" className="text-center">Loading...</p>
     } else {
       content = <NPXSMigration
-      account={this.state.account}
-      bscAccount={this.state.bscAccount}
-      purseTokenBalance={this.state.purseTokenBalance}
-      npxsxemTokenBalance={this.state.npxsxemTokenBalance}
-      bscNpxsxemBalance={this.state.bscNpxsxemBalance}
-      migrator={this.state.migrator}
-      migrateNPXSXEM={this.migrateNPXSXEM}
-      signMessage={this.signMessage}
-      release={this.release}
-      releaseAll={this.releaseAll}
-      bscTransfer={this.bscTransfer}
-      bcSignMessage={this.bcSignMessage}
+        account={this.state.account}
+        bscAccount={this.state.bscAccount}
+        purseTokenBalance={this.state.purseTokenBalance}
+        npxsxemTokenBalance={this.state.npxsxemTokenBalance}
+        bscNpxsxemBalance={this.state.bscNpxsxemBalance}
+        migrator={this.state.migrator}
+        first4Account={this.state.first4Account}
+        last4Account={this.state.last4Account}
+        first4bscAccount={this.state.first4bscAccount}
+        last4bscAccount={this.state.last4bscAccount}
+        migrateNPXSXEM={this.migrateNPXSXEM}
+        signMessage={this.signMessage}
+        release={this.release}
+        releaseAll={this.releaseAll}
+        bscTransfer={this.bscTransfer}
+        bcSignMessage={this.bcSignMessage}
       />
       content2 = <PurseDistribute
-      account={this.state.account}
-      purseTokenBalance={this.state.purseTokenBalance}
-      holder={this.state.holder}
-      claimAll={this.claimAll}
-      claim={this.claim}
-      handleClick={this.handleClick}
+        account={this.state.account}
+        first4Account={this.state.first4Account}
+        last4Account={this.state.last4Account}
+        purseTokenBalance={this.state.purseTokenBalance}
+        holderInfo={this.state.holderInfo}
+        claimAll={this.claimAll}
+        claim={this.claim}
+        handleClick={this.handleClick}
       />
       content3 = <PurseDistribute
-    />
+      />
     }
 
     return (

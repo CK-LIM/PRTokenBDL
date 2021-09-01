@@ -1,5 +1,4 @@
 const { deployProxy, upgradeProxy } = require('@openzeppelin/truffle-upgrades');
-
 // const LPXToken = artifacts.require("LPXToken.sol");
 // const XToken = artifacts.require("XToken.sol");
 // const PurseToken = artifacts.require("PurseToken.sol")
@@ -39,6 +38,8 @@ module.exports = async function(deployer, network, accounts ) {
     await deployer.deploy(PurseDistribution, purseToken.address)
     const purseDistribution = await PurseDistribution.deployed() 
 
+    await purseToken.setWhitelistedFrom(npxsxeMigrationMulSig.address)
+    await purseToken.setWhitelistedFrom(purseDistribution.address)
     await purseToken.transfer(npxsxeMigrationMulSig.address, tokens('500000000'))
     console.log('Purse done')
     await purseToken.transfer(purseDistribution.address, tokens('19237401614'))    
