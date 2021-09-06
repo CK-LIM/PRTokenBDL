@@ -21,7 +21,7 @@ class Navbar extends Component {
         <ul className="navbar-nav px-3">
           <li className="nav-item text-nowrap-small d-none d-sm-none d-sm-block">
             <a className="text-light">
-              <a id="account">{this.props.bscAccount}</a>
+              <a id="account">{this.props.account}</a>
             </a>
           </li>
         </ul>

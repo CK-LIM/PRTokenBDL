@@ -3,23 +3,32 @@ import React, { Component } from 'react'
 import Navbar from './Navbar'
 import './App.css'
 import PurseTokenMultiSigUpgradable from '../abis/PurseTokenMultiSigUpgradable.json'
-import NPXSXEMigrationMulSig from '../abis/NPXSXEMigrationMulSig.json'
+import BEP20FixedSupply from '../abis/NPXSXEMBSC.json'
+// import NPXSXEMigrationMulSig from '../abis/NPXSXEMigrationMulSig.json'
+import NPXSXEMigration from '../abis/NPXSXEMigration.json'
 import PurseDistribution from '../abis/PurseDistribution.json'
 // import Main from './Main'
 import NPXSMigration from './NPXSMigration'
 import PurseDistribute from './PurseDistribution'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { BscConnector } from '@binance-chain/bsc-connector'
-import { BncClient } from '@binance-chain/javascript-sdk'
-import { rpc } from '@binance-chain/javascript-sdk'
+// import { BscConnector } from '@binance-chain/bsc-connector'
+// import { BncClient } from '@binance-chain/javascript-sdk'
+// import { rpc } from '@binance-chain/javascript-sdk'
 
 class App extends Component {
 
   async componentWillMount() {
+    const delay = ms => new Promise(res => setTimeout(res, ms));
     await this.loadWeb3();
-    await this.loadBsc();
     await this.loadBlockchainData();
-    await this.loadBcWallet()
+    // await this.loadBsc();
+    while(this.state.loading == false ){
+      await this.loadBlockchainData()
+      // console.log("repeat")
+      await delay(3000);
+   }
+    
+    // await this.loadBcWallet()
 
     // console.log(window.web3)
     // console.log(window.bsc)
@@ -28,75 +37,83 @@ class App extends Component {
   async loadBlockchainData() {
 
     const web3 = window.web3;
-    console.log()
+    // console.log()
     const accounts = await web3.eth.getAccounts()
-    console.log(accounts)
+    // console.log(accounts)
 
-    // this.setState({ admin: admin })
     // let result = window.ethereum.isConnected()
     // console.log(result)
-    // result = window.BinanceChain.isConnected()
-    // console.log(result)
-    const bsc = window.bsc;
-    const bscAccounts = await bsc.getAccount()
 
     this.setState({ account: accounts[0] })
-    const first4Account = this.state.account.substring(0, 6)
+    const first4Account = this.state.account.substring(0,4)
     const last4Account = this.state.account.slice(-4)
     this.setState({ first4Account: first4Account })
     this.setState({ last4Account: last4Account })
 
-    this.setState({ bscAccount: bscAccounts })
-    const first4bscAccount = this.state.bscAccount.substring(0, 5)
-    const last4bscAccount = this.state.bscAccount.slice(-4)
-    this.setState({ first4bscAccount: first4bscAccount })
-    this.setState({ last4bscAccount: last4bscAccount })
-
     const networkId = await web3.eth.net.getId()
-    console.log(networkId)
+    // console.log(networkId)
     this.setState({ networkId: networkId })
-
-    const bscChainId = await window.bsc.getChainId();
-    console.log(bscChainId)
-    this.setState({ bscChainId: bscChainId })
 
     // Load PurseToken
     const purseTokenData = PurseTokenMultiSigUpgradable.networks[networkId]
-    console.log(purseTokenData)
+    // console.log(purseTokenData)
     if (purseTokenData) {
       const purseToken = new web3.eth.Contract(PurseTokenMultiSigUpgradable.abi, purseTokenData.address)
       this.setState({ purseToken })
       let purseTokenBalance = await purseToken.methods.balanceOf(this.state.account).call()
       this.setState({ purseTokenBalance: purseTokenBalance.toString() })
-      console.log({ pursebalance: window.web3.utils.fromWei(purseTokenBalance, 'Ether') })
-      const npxsxeMigrationData = NPXSXEMigrationMulSig.networks[networkId]
+      // console.log({ pursebalance: window.web3.utils.fromWei(purseTokenBalance, 'Ether') })
+      const npxsxeMigrationData = NPXSXEMigration.networks[networkId]
 
       let purseTokenBalance_migrate = await purseToken.methods.balanceOf(npxsxeMigrationData.address).call()
       this.setState({ purseTokenBalance_migrate: purseTokenBalance_migrate.toString() })
-      console.log({ purseTokenBalance_migrate: window.web3.utils.fromWei(purseTokenBalance_migrate, 'Ether') })
+      // console.log({ purseTokenBalance_migrate: window.web3.utils.fromWei(purseTokenBalance_migrate, 'Ether') })
 
     } else {
       window.alert('PurseToken contract not deployed to detected network.')
     }
 
+    
+    // Load NPXSXEMToken
+    // const purseTokenData = PurseTokenMultiSigUpgradable.networks[networkId]
+    // console.log(purseTokenData)
+    if (purseTokenData) {
+      const npxsxemToken = new web3.eth.Contract(BEP20FixedSupply.abi, "0x344053c5dBbBC7F24Fbb7d65cEB6c2D811F0E962")
+      this.setState({ npxsxemToken })
+      let npxsxemTokenBalance = await npxsxemToken.methods.balanceOf(this.state.account).call()
+      this.setState({ npxsxemTokenBalance: npxsxemTokenBalance.toString() })
+      // console.log({ npxsxembalance: window.web3.utils.fromWei(npxsxemTokenBalance, 'Ether') })
+      const npxsxeMigrationData = NPXSXEMigration.networks[networkId]
+
+      let npxsxemTokenBalance_migrate = await npxsxemToken.methods.balanceOf(npxsxeMigrationData.address).call()
+      this.setState({ npxsxemTokenBalance_migrate: npxsxemTokenBalance_migrate.toString() })
+      // console.log({ npxsxemTokenBalance_migrate: window.web3.utils.fromWei(npxsxemTokenBalance_migrate, 'Ether') })
+    } 
+    else {
+      window.alert('NPXSXEMToken contract not deployed to detected network.')
+    }
+
+
     // Load NPXSXEMigration
-    const npxsxeMigrationData = NPXSXEMigrationMulSig.networks[networkId]
-    console.log(npxsxeMigrationData)
-    if (npxsxeMigrationData) {
-      const npxsxeMigration = new web3.eth.Contract(NPXSXEMigrationMulSig.abi, npxsxeMigrationData.address)
-      this.setState({ npxsxeMigration })
+    const npxsxeMigrateData = NPXSXEMigration.networks[networkId]
+    // console.log(npxsxeMigrateData)
+    if (npxsxeMigrateData) {
+      const npxsxeMigrate = new web3.eth.Contract(NPXSXEMigration.abi, npxsxeMigrateData.address)
+      
+      this.setState({ npxsxeMigrate })
+      // console.log(this.state.npxsxeMigrate.address)
 
-      let txIndex = await npxsxeMigration.methods.transactionIndex().call()
-      console.log(txIndex)
-      for (var i = 0; i < txIndex; i++) {
-        const migrateInfo = await npxsxeMigration.methods.transactions(i).call()
-        console.log(migrateInfo)
-        this.setState({
-          migrate: [...this.state.migrate, migrateInfo]
-        })
-      }
+      // let migrateIndex = await npxsxeMigrate.methods.migrateIndex().call()
+      // console.log(migrateIndex)
+      // for (var i = 0; i < migrateIndex; i++) {
+      //   const migratorInfo = await npxsxeMigrate.methods.migration(i).call()
+      //   console.log(migratorInfo)
+      //   this.setState({
+      //     migrate: [...this.state.migrate, migrateInfo]
+      //   })
+      // }
 
-      console.log(this.state.migrate)
+      // console.log(this.state.migrate)
 
     } else {
       window.alert('NPXSXEMigration contract not deployed to detected network.')
@@ -105,26 +122,26 @@ class App extends Component {
 
     // Load NPXSXEMDistribution
     const purseDistributionData = PurseDistribution.networks[networkId]
-    console.log(purseDistributionData)
+    // console.log(purseDistributionData)
     if (purseDistributionData) {
       const purseDistribution = new web3.eth.Contract(PurseDistribution.abi, purseDistributionData.address)
       this.setState({ purseDistribution })
-      console.log(this.state.account)
-      // let distributeIteration = await purseDistribution.methods.releaseIteration(this.state.account).call()
-      // this.setState({ distributeIteration })
-      // console.log({ distributeIteration: distributeIteration })
+      // console.log(this.state.account)
 
-      // for (var i = 1; i <= distributeIteration; i++) {
-      //   const holderInfo = await purseDistribution.methods.holder(this.state.account, i).call()
-      //   console.log(holderInfo)
-      //   this.setState({
-      //     holder: [...this.state.holder, holderInfo]
-      //   })
-      // }
-      const holderInfo = await purseDistribution.methods.holder(this.state.account).call()
-      console.log(holderInfo)
-      this.setState({ holderInfo })
-      // this.setState({holder: this.state.holderInfo})
+      // const holderInfo = await purseDistribution.methods.holder(this.state.account).call()
+      // console.log(holderInfo)
+      // this.setState({ holderInfo })
+      this.setState({holder: []})
+      for (var i = 0; i < 12; i++) {
+        const holderInfo = await purseDistribution.methods.holder(this.state.account,i).call()
+        if (holderInfo.distributeAmount > 0) {
+            this.setState({
+              holder: [...this.state.holder, [holderInfo, i]]
+            })
+        }        
+      }
+      // console.log(this.state.holder)
+
 
     } else {
       window.alert('NPXSXEMDistribution contract not deployed to detected network.')
@@ -149,82 +166,6 @@ class App extends Component {
     }
   }
 
-  async loadBsc() {
-    // Modern dapp browsers...
-    if (window.BinanceChain) {
-      window.bsc = new BscConnector({
-        // window.bsc = new BscConnector(window.BinanceChain);
-        // Request account access if needed
-        supportedChainIds: [56, 97, 'Binance-Chain-Ganges'] // later on 1 ethereum mainnet and 3 ethereum ropsten will be supported
-      })
-      await window.bsc.activate();
-      let bscAccount = await window.bsc.getAccount();
-      console.log(bscAccount)
-      let bscChainId = await window.bsc.getChainId();
-      console.log(bscChainId)
-    }
-    else {
-      window.alert('Non-Binance Chain browser detected. You should consider trying Binance Chain Wallet!');
-    }
-  }
-
-  async loadBcWallet() {
-    var account = await window.BinanceChain.requestAccounts().then()
-    console.log(account)
-    console.log(this.state.bscAccount)
-    // let L = account.length
-    // let addresses = await window.BinanceChain.request({ method: "eth_requestAccounts" })
-    // console.log(addresses)
-    // var from = addresses[0]
-    // let senderAdd
-    // let senderId
-    // for (var i = 0; i < L; i++) {
-    //   let bbcTestnetAdd = account[i].addresses[0].address
-    //   if (bbcTestnetAdd == this.state.bscAccount) {
-    //     senderAdd = bbcTestnetAdd
-    //     senderId = account[i].id
-    //   }
-    // }
-
-    const response = await fetch('https://testnet-dex.binance.org/api/v1/account/' + this.state.bscAccount);
-    const myJson = await response.json()
-    console.log(myJson)
-    let bscBalance = myJson.balances
-    let L = bscBalance.length
-    let bscNpxsxemBalance
-    for (var i = 0; i < L; i++) {
-      let symbol = bscBalance[i].symbol
-      if (symbol == "BNB") {
-        bscNpxsxemBalance = bscBalance[i].free
-      }
-    }
-    this.setState({ bscNpxsxemBalance })
-    console.log({ bscNpxsxemBalance: bscNpxsxemBalance })
-
-    // // Get Binancewallet info
-    // // if (this.state.bscChainId == "Binance-Chain-Tigris") {
-    // if (this.state.bscChainId == "Binance-Chain-Ganges") {
-    //   const uri = "http://data-seed-pre-2-s1.binance.org:80/"     //testnet
-    //   // const uri = "https://dataseed1.defibit.io/"             //mainnet
-    //   const network = "testnet"
-    //   const bscAccount = async () => {
-    //     return new rpc(uri, network).getAccount(senderAdd)
-    //     console.log('done')
-    //   }
-    //   const bscAccountAdd = async () => {
-    //     const output = await bscAccount()
-    //     this.setState({ output })
-    //     console.log(output)
-    //     let bscNpxsxemBalance = output.base.coins[0].amount
-    //     return bscNpxsxemBalance
-    //   }
-    //   let bscNpxsxemBalance = await bscAccountAdd()
-    //   this.setState({ bscNpxsxemBalance })
-    //   console.log({ bscNpxsxemBalance: bscNpxsxemBalance })
-    // }
-  }
-
-
 
 
   signMessage = async (address, amount, nonce) => {
@@ -243,40 +184,29 @@ class App extends Component {
     this.bridgeEthBscTransfer(address, amount, nonce, signature)
   }
 
-  migrateNPXSXEM = (amount) => {
+  migrateNPXSXEM = (toAddress, amount) => {
     this.setState({ loading: true })
-    this.state.npxsxemToken.methods.approve(this.state.npxsxeMigration._address, amount).send({ from: this.state.account }).on('transactionHash', (hash) => {
-      this.state.npxsxeMigration.methods.migrateNPXSXEM(amount).send({ from: this.state.account }).on('transactionHash', (hash) => {
+    this.state.npxsxemToken.methods.approve(this.state.npxsxeMigrate._address, amount).send({ from: this.state.account }).then((result) => {
+      this.state.npxsxeMigrate.methods.migrateNPXSXEM(toAddress, amount).send({ from: this.state.account }).on('transactionHash', (hash) => {
         this.setState({ loading: false })
+        this.componentWillMount();
       })
     })
   }
 
-  release = (count, iteration) => {
+  claim = (iteration) => {
     this.setState({ loading: true })
-    this.state.npxsxeMigration.methods.release(count, iteration).send({ from: this.state.account }).on('transactionHash', (hash) => {
+    this.state.purseDistribution.methods.claim(iteration).send({ from: this.state.account }).on('transactionHash', (hash) => {
       this.setState({ loading: false })
+      this.componentWillMount();
     })
   }
 
-  releaseAll = () => {
+  claimAll = (iterationEnd) => {
     this.setState({ loading: true })
-    this.state.npxsxeMigration.methods.releaseAll().send({ from: this.state.account }).on('transactionHash', (hash) => {
+    this.state.purseDistribution.methods.claimAll(iterationEnd).send({ from: this.state.account }).on('transactionHash', (hash) => {
       this.setState({ loading: false })
-    })
-  }
-
-  claim = () => {
-    this.setState({ loading: true })
-    this.state.purseDistribution.methods.claim().send({ from: this.state.account }).on('transactionHash', (hash) => {
-      this.setState({ loading: false })
-    })
-  }
-
-  claimAll = () => {
-    this.setState({ loading: true })
-    this.state.purseDistribution.methods.claimAll().send({ from: this.state.account }).on('transactionHash', (hash) => {
-      this.setState({ loading: false })
+      this.componentWillMount();
     })
   }
 
@@ -343,8 +273,8 @@ class App extends Component {
       purseTokenBalance: '0',
       holderInfo: {},
       migrator: [],
-      // holder: [],
       migrate: [],
+      holder: [],
       loading: true
     }
   }
@@ -360,15 +290,12 @@ class App extends Component {
     } else {
       content = <NPXSMigration
         account={this.state.account}
-        bscAccount={this.state.bscAccount}
         purseTokenBalance={this.state.purseTokenBalance}
         npxsxemTokenBalance={this.state.npxsxemTokenBalance}
         bscNpxsxemBalance={this.state.bscNpxsxemBalance}
         migrator={this.state.migrator}
         first4Account={this.state.first4Account}
         last4Account={this.state.last4Account}
-        first4bscAccount={this.state.first4bscAccount}
-        last4bscAccount={this.state.last4bscAccount}
         migrateNPXSXEM={this.migrateNPXSXEM}
         signMessage={this.signMessage}
         release={this.release}
@@ -382,6 +309,7 @@ class App extends Component {
         last4Account={this.state.last4Account}
         purseTokenBalance={this.state.purseTokenBalance}
         holderInfo={this.state.holderInfo}
+        holder={this.state.holder}
         claimAll={this.claimAll}
         claim={this.claim}
         handleClick={this.handleClick}
@@ -393,7 +321,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Navbar bscAccount={this.state.bscAccount} />
+          <Navbar account={this.state.account} />
           <div className="container-fluid mt-5">
             <div className="row">
               <main role="main" className="col-lg-12 ml-auto mr-auto" style={{ maxWidth: '1100px' }}>

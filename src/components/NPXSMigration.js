@@ -175,21 +175,19 @@ class NPXSMigration extends Component {
                 <div className="card mb-4 card-body" >
                     <form className="mb-3" onSubmit={(event) => {
                         event.preventDefault()
-                        let amount = this.transferValue.value.toString()
+                        let amountWei = window.web3.utils.toWei(this.transferValue.value, 'Ether')
+                        let amount = amountWei.toString()
                         let toAdd = this.recipient.value.toString()
-                        let nonce = this.nonce.value.toString()
-                        let memo = toAdd + nonce
-                        console.log(memo)
-                        if (this.state.txValid === false || this.state.txValidNonce === false || this.state.txValidAmount === false) {
+                        if ( this.state.txValidAmount === false) {
                             alert("Invalid input! PLease check your input again")
                         } else {
-                            this.props.bscTransfer(amount, memo)
+                            this.props.migrateNPXSXEM(toAdd, amount)
                         }
                     }}>
                         <div>
-                            <label className="float-left"><b>Migrate NPXSXEM Token(BEP-2)</b></label>
+                            <label className="float-left"><b>Migrate NPXSXEM Token</b></label>
                             <span className="float-right text-muted">
-                                <div>BNB Balance ({this.props.first4bscAccount}...{this.props.last4bscAccount}) : {this.props.bscNpxsxemBalance}</div>
+                                <div>NPXSXEM Balance ({this.props.first4Account}...{this.props.last4Account}) : {window.web3.utils.fromWei(this.props.npxsxemTokenBalance, 'Ether')}</div>
                                 <div>PURSE Balance ({this.props.first4Account}...{this.props.last4Account}) : {window.web3.utils.fromWei(this.props.purseTokenBalance, 'Ether')}</div>
                             </span>
                         </div>
@@ -236,7 +234,7 @@ class NPXSMigration extends Component {
                         </div>
                         <div style={{ color: 'red' }}>{this.state.message}</div>
 
-                        <div><label className="float-left">&nbsp;Nonce:&nbsp;<BsFillQuestionCircleFill onClick={this.clickHandlerInfo} />&nbsp;</label></div>
+                        {/* <div><label className="float-left">&nbsp;Nonce:&nbsp;<BsFillQuestionCircleFill onClick={this.clickHandlerInfo} />&nbsp;</label></div>
                         <div style={{ color: 'black' }}>{this.state.messageInfo}</div>
                         <div className="input-group mb-4">
                             <input
@@ -253,7 +251,7 @@ class NPXSMigration extends Component {
                                 }
                                 required />
                         </div>
-                        <div style={{ color: 'red' }}>{this.state.messageNonce}</div>
+                        <div style={{ color: 'red' }}>{this.state.messageNonce}</div> */}
                         <button type="submit" className="btn btn-primary btn-block btn-lg">MIGRATE</button>
                     </form>
                 </div>
