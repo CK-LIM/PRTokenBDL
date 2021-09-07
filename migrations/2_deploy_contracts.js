@@ -2,11 +2,11 @@
 
 const { deployProxy, upgradeProxy } = require('@openzeppelin/truffle-upgrades');
 
+const NPXSXEMBSC = artifacts.require("NPXSXEMBSC.sol")
+
 const PurseTokenMultiSigUpgradable = artifacts.require("PurseTokenMultiSigUpgradable.sol")
 // const PurseTokenMultiSigUpgradableV2 = artifacts.require("PurseTokenMultiSigUpgradableV2.sol")
-// const BEP20FixedSupply = artifacts.require("NPXSXEMBSC.sol")
 const NPXSXEMigration = artifacts.require("NPXSXEMigration.sol")
-// const NPXSXEMigrationMulSig = artifacts.require("NPXSXEMigrationMulSig.sol")
 const PurseDistribution = artifacts.require('PurseDistribution.sol');
 
 
@@ -18,20 +18,16 @@ module.exports = async function(deployer, network, accounts ) {
   if(network === 'rinkeby' || network === 'kovan' || network ==='bscTestnet') {
 
     //Deploy PurseToken
-    // await deployer.deploy(PurseTokenMultiSigUpgradable, "0x8CF7Fb0326C6a5B5A8dA62e3FE8c5eD8Cb041217",["0x8CF7Fb0326C6a5B5A8dA62e3FE8c5eD8Cb041217", "0x9204Da1b7bC4E3Bf4d4E3f5d71d9432b561c4f5D"], 1, "0x7619Ef7A7F5e424B36cF4058F35B57674d7D3249", "0x5bf4c0e90cc59DefF6787f7080b91A9fa7421828", 20, 10, 5, 5)
-    // const purseToken = await PurseTokenMultiSigUpgradable.deployed()
-
     const purseToken = await deployProxy(PurseTokenMultiSigUpgradable,["0x8CF7Fb0326C6a5B5A8dA62e3FE8c5eD8Cb041217", "0xA2993e1171520ba0fD0AB39224e1B24BDa5c24a9", "0x96C235003CEDd5E4C055aA0Ac624BF7CC787cF80", 10, 5, 5],{deployer, kind: 'uups' });
-    // const upgraded = await upgradeProxy(purseToken.address, PurseTokenMultiSigUpgradableV2, { deployer });
-    // console.log(purseToken.address)
+    // const upgrade = await upgradeProxy(purseToken.address, PurseTokenMultiSigUpgradableV2, { deployer }); //Upgrade smart contract
+    console.log(purseToken.address)
+    // console.log(upgrade.address)
 
-    // await deployer.deploy(BEP20FixedSupply)
-    // const nPXSXEMBSC = await BEP20FixedSupply.deployed() 
-    //Deploy NPXSXEMigrationMulSig
-    // await deployer.deploy(NPXSXEMigrationMulSig, purseToken.address, ["0x8CF7Fb0326C6a5B5A8dA62e3FE8c5eD8Cb041217", "0x34846BF00C64A56A5FB10a9EE7717aBC7887FEdf"],["0x8CF7Fb0326C6a5B5A8dA62e3FE8c5eD8Cb041217", "0x34846BF00C64A56A5FB10a9EE7717aBC7887FEdf"], 1)
-    // const npxsxeMigrationMulSig = await NPXSXEMigrationMulSig.deployed()    
+    await deployer.deploy(NPXSXEMBSC)
+    const nPXSXEMBSC = await NPXSXEMBSC.deployed()
+    
     //Deploy NPXSXEMigration
-    await deployer.deploy(NPXSXEMigration, "0x344053c5dBbBC7F24Fbb7d65cEB6c2D811F0E962", purseToken.address)
+    await deployer.deploy(NPXSXEMigration, "0x2B77737bCBebe7bA5d50f49016232B0c9F0AD477", purseToken.address)
     const nPXSXEMigration = await NPXSXEMigration.deployed()    
 
     // Deploy PurseDistribution
@@ -53,7 +49,7 @@ module.exports = async function(deployer, network, accounts ) {
     // await deployer.deploy(PurseTokenMultiSigUpgradable, "0x8CF7Fb0326C6a5B5A8dA62e3FE8c5eD8Cb041217",["0x8CF7Fb0326C6a5B5A8dA62e3FE8c5eD8Cb041217", "0x9204Da1b7bC4E3Bf4d4E3f5d71d9432b561c4f5D"], 1, "0x7619Ef7A7F5e424B36cF4058F35B57674d7D3249", "0x5bf4c0e90cc59DefF6787f7080b91A9fa7421828", 20, 10, 5, 5)
     // const purseToken = await PurseTokenMultiSigUpgradable.deployed()
 
-    const purseToken = await deployProxy(PurseTokenMultiSigUpgradable,["0x861eB8923dbeB383015864395891638Bd694C712",["0x861eB8923dbeB383015864395891638Bd694C712", "0x34846BF00C64A56A5FB10a9EE7717aBC7887FEdf"], 1, "0xA2993e1171520ba0fD0AB39224e1B24BDa5c24a9", "0x96C235003CEDd5E4C055aA0Ac624BF7CC787cF80", 10, 5, 5],{deployer, kind: 'uups' });
+    const purseToken = await deployProxy(PurseTokenMultiSigUpgradable,["0x861eB8923dbeB383015864395891638Bd694C712", "0xA2993e1171520ba0fD0AB39224e1B24BDa5c24a9", "0x96C235003CEDd5E4C055aA0Ac624BF7CC787cF80", 10, 5, 5],{deployer, kind: 'uups' });
     // const upgraded = await upgradeProxy(purseToken.address, PurseTokenMultiSigUpgradableV2, { deployer });
     console.log(purseToken.address)
   

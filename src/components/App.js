@@ -24,7 +24,7 @@ class App extends Component {
     // await this.loadBsc();
     while(this.state.loading == false ){
       await this.loadBlockchainData()
-      // console.log("repeat")
+      console.log("repeat")
       await delay(3000);
    }
     

@@ -14,7 +14,7 @@ abstract contract ERC20Interface {
 
 }
 
-contract PurseTokenMultiSigUpgradable is Initializable, UUPSUpgradeable, PausableUpgradeable {
+contract PurseTokenMultiSigUpgradableV2 is Initializable, UUPSUpgradeable, PausableUpgradeable {
     string public name;
     string public symbol;
     uint256 public totalSupply;
@@ -341,11 +341,11 @@ contract PurseTokenMultiSigUpgradable is Initializable, UUPSUpgradeable, Pausabl
         disPercent = _disPercent;
         owner = msg.sender;
         admins = [msg.sender];
-        __Pausable_init();
-        __UUPSUpgradeable_init();
 
         balanceOf[_to] = totalSupply;
         emit Mint(address(0), _to, totalSupply);
 
+        __Pausable_init();
+        __UUPSUpgradeable_init();
     }
 }

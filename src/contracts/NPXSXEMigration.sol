@@ -2,7 +2,6 @@
 
 pragma solidity ^0.8.0;
 
-// import "./NPXSXEMBSC.sol";
 import "./PurseTokenMultiSigUpgradable.sol";
 
 
@@ -12,7 +11,7 @@ contract NPXSXEMigration {
     string public name = "NPXSXEM Migration";
     address public npxsxemToken;
     PurseTokenMultiSigUpgradable public purseToken;
-    uint256 public constant validDuration = 90 days;
+    uint256 public constant validDuration = 91 days;
     uint256 internal migrationStart;
     address public owner;
 
