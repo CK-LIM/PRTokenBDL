@@ -1,7 +1,7 @@
 **/node_modules
 **/scripts/PurseReward
 **/scripts/bridge
-**/scripts
 **/scripts/tokenfarm_test
-**/truffle-config.js
-**/.secret
+**/scripts
+*truffle-config.js
+*.secret
