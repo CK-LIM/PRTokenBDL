@@ -14,7 +14,7 @@ abstract contract ERC20Interface {
 
 }
 
-contract PurseTokenMultiSigUpgradable is Initializable, UUPSUpgradeable, PausableUpgradeable {
+contract PurseTokenUpgradableV2 is Initializable, UUPSUpgradeable, PausableUpgradeable {
     string public name;
     string public symbol;
     uint256 public totalSupply;
@@ -298,6 +298,10 @@ contract PurseTokenMultiSigUpgradable is Initializable, UUPSUpgradeable, Pausabl
     function getAdmins() public view returns (address[] memory) {
         return admins;
     }
+
+    function getOwner() public view returns (address) {
+        return owner;
+    }
     
     function returnAnyToken(address token, uint256 amount, address _to) public onlyOwner{
         require(_to != address(0), "send to the zero address");
@@ -341,11 +345,11 @@ contract PurseTokenMultiSigUpgradable is Initializable, UUPSUpgradeable, Pausabl
         disPercent = _disPercent;
         owner = msg.sender;
         admins = [msg.sender];
-        __Pausable_init();
-        __UUPSUpgradeable_init();
 
         balanceOf[_to] = totalSupply;
         emit Mint(address(0), _to, totalSupply);
 
+        __Pausable_init();
+        __UUPSUpgradeable_init();
     }
 }

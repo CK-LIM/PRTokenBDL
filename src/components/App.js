@@ -2,9 +2,8 @@ import Web3 from 'web3'
 import React, { Component } from 'react'
 import Navbar from './Navbar'
 import './App.css'
-import PurseTokenMultiSigUpgradable from '../abis/PurseTokenMultiSigUpgradable.json'
+import PurseTokenUpgradable from '../abis/PurseTokenUpgradable.json'
 import BEP20FixedSupply from '../abis/NPXSXEMBSC.json'
-// import NPXSXEMigrationMulSig from '../abis/NPXSXEMigrationMulSig.json'
 import NPXSXEMigration from '../abis/NPXSXEMigration.json'
 import PurseDistribution from '../abis/PurseDistribution.json'
 // import Main from './Main'
@@ -29,7 +28,6 @@ class App extends Component {
    }
     
     // await this.loadBcWallet()
-
     // console.log(window.web3)
     // console.log(window.bsc)
   }
@@ -55,10 +53,10 @@ class App extends Component {
     this.setState({ networkId: networkId })
 
     // Load PurseToken
-    const purseTokenData = PurseTokenMultiSigUpgradable.networks[networkId]
+    const purseTokenData = PurseTokenUpgradable.networks[networkId]
     // console.log(purseTokenData)
     if (purseTokenData) {
-      const purseToken = new web3.eth.Contract(PurseTokenMultiSigUpgradable.abi, purseTokenData.address)
+      const purseToken = new web3.eth.Contract(PurseTokenUpgradable.abi, purseTokenData.address)
       this.setState({ purseToken })
       let purseTokenBalance = await purseToken.methods.balanceOf(this.state.account).call()
       this.setState({ purseTokenBalance: purseTokenBalance.toString() })

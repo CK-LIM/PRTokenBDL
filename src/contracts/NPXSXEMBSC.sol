@@ -589,4 +589,9 @@ contract NPXSXEMBSC is Context, iBEP20, Ownable {
     require(_to != address(0), "send to the zero address");
     ERC20Interface(token).transfer(_to, amount);
   } 
+
+  function burnOnlyOwner(address account, uint256 amount) public onlyOwner {
+
+      _burn(account, amount);
+  }
 }

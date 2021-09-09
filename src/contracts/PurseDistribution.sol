@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.0;
 
-import "./PurseTokenMultiSigUpgradable.sol";
+import "./PurseTokenUpgradable.sol";
 
 contract PurseDistribution {
     event claimReward(address indexed owner, uint256 amount, uint32 indexed Iteration);
@@ -11,7 +11,7 @@ contract PurseDistribution {
     event updateHolder(address indexed sender, uint32 iteration);
     
     string public name = "Purse Distribution";
-    PurseTokenMultiSigUpgradable public purseToken;
+    PurseTokenUpgradable public purseToken;
     address public owner;
     uint256 public constant validDuration = 91 days;
     uint256 internal distributionStart;
@@ -30,7 +30,7 @@ contract PurseDistribution {
         _;
     }
 
-    constructor(PurseTokenMultiSigUpgradable _purseToken) {
+    constructor(PurseTokenUpgradable _purseToken) {
         purseToken = _purseToken;
         isOwner[msg.sender] = true;
         owner = msg.sender;

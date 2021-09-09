@@ -1,10 +1,10 @@
 // migrations/3_prepare_upgrade_contract.js
-const PurseTokenMultiSigUpgradable = artifacts.require("PurseTokenMultiSigUpgradable.sol")
-const PurseTokenMultiSigUpgradableV2 = artifacts.require("PurseTokenMultiSigUpgradableV2.sol")
+const PurseTokenUpgradable = artifacts.require("PurseTokenUpgradable.sol")
+const PurseTokenUpgradableV2 = artifacts.require("PurseTokenUpgradableV2.sol")
  
 const { prepareUpgrade } = require('@openzeppelin/truffle-upgrades');
  
 module.exports = async function (deployer) {
-  const purseTokenMultiSigUpgradable = await PurseTokenMultiSigUpgradable.deployed();
-  await prepareUpgrade(purseTokenMultiSigUpgradable.address, PurseTokenMultiSigUpgradableV2, { deployer });
+  const purseTokenUpgradable = await PurseTokenUpgradable.deployed();
+  await prepareUpgrade(purseTokenUpgradable.address, PurseTokenUpgradableV2, { deployer });
 };

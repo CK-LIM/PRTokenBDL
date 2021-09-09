@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.0;
 
-import "./PurseTokenMultiSigUpgradable.sol";
+import "./PurseTokenUpgradable.sol";
 
 
 contract NPXSXEMigration {
@@ -10,7 +10,7 @@ contract NPXSXEMigration {
 
     string public name = "NPXSXEM Migration";
     address public npxsxemToken;
-    PurseTokenMultiSigUpgradable public purseToken;
+    PurseTokenUpgradable public purseToken;
     uint256 public constant validDuration = 91 days;
     uint256 internal migrationStart;
     address public owner;
@@ -31,7 +31,7 @@ contract NPXSXEMigration {
         _;
     }
 
-    constructor(address _npxsxemToken, PurseTokenMultiSigUpgradable _purseToken) {
+    constructor(address _npxsxemToken, PurseTokenUpgradable _purseToken) {
         isOwner[msg.sender] = true;
         owner = msg.sender;
         npxsxemToken = _npxsxemToken;
