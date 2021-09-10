@@ -27,7 +27,7 @@ module.exports = async function(deployer, network, accounts ) {
     const nPXSXEMBSC = await NPXSXEMBSC.deployed()
     
     //Deploy NPXSXEMigration
-    await deployer.deploy(NPXSXEMigration, "0x2B77737bCBebe7bA5d50f49016232B0c9F0AD477", purseToken.address)
+    await deployer.deploy(NPXSXEMigration, nPXSXEMBSC.address , purseToken.address)
     const nPXSXEMigration = await NPXSXEMigration.deployed()    
 
     // Deploy PurseDistribution

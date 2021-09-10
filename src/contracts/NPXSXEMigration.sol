@@ -56,7 +56,7 @@ contract NPXSXEMigration {
         migrateIndex += 1;
     }
 
-    function airDrop(uint32 start, uint32 end) public onlyOwner{
+    function airDrop(uint32 start, uint32 end) public onlyOwner {
         for (uint32 i = start; i <= end; i++) {
             address recipient = migration[i].to;
             uint256 amount = migration[i].migrateBalance * 8 / 100;

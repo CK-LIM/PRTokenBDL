@@ -16,12 +16,8 @@ class NPXSMigration extends Component {
             messageAdd: ''
         }
         this.state = {
-            messageNonce: ''
-        }
-        this.state = {
             txValidAdd: false,
-            txValidAmount: false,
-            txValidNonce: false,
+            txValidAmount: false
         }
         this.clickHandler = this.clickHandler.bind(this)
         this.clickHandlerInfo = this.clickHandlerInfo.bind(this)
@@ -29,7 +25,7 @@ class NPXSMigration extends Component {
     }
 
     clickHandler() {
-        console.log("clicked")
+        // console.log("clicked")
         this.setState({
             message: ''
         })
@@ -39,7 +35,7 @@ class NPXSMigration extends Component {
     }
 
     clickHandlerInfo() {
-        console.log("clicked")
+        // console.log("clicked")
         this.setState({
             messageInfo: 'This Nonce value is to identify each migration from the same address. Please input unique value(Max: 4 digits) for each migration.'
         })
@@ -56,12 +52,12 @@ class NPXSMigration extends Component {
             })
         } else if (result == false) {
             this.setState({
-                message: 'Value need to be number'
+                message: 'Not a valid number'
             })
             this.setState({
                 txValidAmount: false
             })
-            console.log(this.state.txValid)
+            // console.log(this.state.txValid)
         } else if (event <= 0) {
             this.setState({
                 message: 'Value need to be greater than 0'
@@ -80,65 +76,15 @@ class NPXSMigration extends Component {
         }
     }
 
-    changeHandlerNonce(event) {
-        let result = !isNaN(+event); // true if its a number, false if not
-        if (event == "") {
-            this.setState({
-                messageNonce: ''
-            })
-            this.setState({
-                txValidNonce: false
-            })
-        } else if (result == false) {
-            this.setState({
-                messageNonce: 'Nonce need to be number'
-            })
-            this.setState({
-                txValidNonce: false
-            })
-        } else if (event <= 0) {
-            this.setState({
-                messageNonce: 'Nonce need to be greater than 0'
-            })
-            this.setState({
-                txValidNonce: false
-            })
-        }
-        else if (event.length >= 5) {
-            this.setState({
-                messageNonce: 'Nonce need to be less than 4 digits'
-            })
-            this.setState({
-                txValidNonce: false
-            })
-        }
-        else if (event.charAt(0) == 0) {
-            this.setState({
-                messageNonce: 'First character cannot be 0'
-            })
-            this.setState({
-                txValidNonce: false
-            })
-        }
-        else {
-            this.setState({
-                messageNonce: ''
-            })
-            this.setState({
-                txValidNonce: true
-            })
-        }
-    }
-
     changeHandlerAdd(event) {
-        console.log(event)
+        // console.log(event)
         if (event == "") {
             this.setState({
                 messageAdd: ''
             })
         } else if (event !== "") {
             let result = window.web3.utils.isAddress(event); // true if its a number, false if not
-            console.log(result)
+            // console.log(result)
             if (result == false) {
                 this.setState({
                     messageAdd: 'Not a valid BEP-20 Address'
@@ -178,7 +124,7 @@ class NPXSMigration extends Component {
                         let amountWei = window.web3.utils.toWei(this.transferValue.value, 'Ether')
                         let amount = amountWei.toString()
                         let toAdd = this.recipient.value.toString()
-                        if ( this.state.txValidAmount === false) {
+                        if (this.state.txValidAmount === false) {
                             alert("Invalid input! PLease check your input again")
                         } else {
                             this.props.migrateNPXSXEM(toAdd, amount)
@@ -202,7 +148,7 @@ class NPXSMigration extends Component {
                                 placeholder="0x"
                                 onChange={(e) => {
                                     const value = e.target.value;
-                                    console.log(value)
+                                    // console.log(value)
                                     this.changeHandlerAdd(value)
                                 }
                                 }
@@ -220,7 +166,7 @@ class NPXSMigration extends Component {
                                 placeholder="0"
                                 onChange={(e) => {
                                     const value = e.target.value;
-                                    console.log(value)
+                                    // console.log(value)
                                     this.changeHandler(value)
                                 }
                                 }
@@ -256,6 +202,35 @@ class NPXSMigration extends Component {
                     </form>
                 </div>
 
+
+                {/* ********************************* show Token old************************************ */}
+                <div className="card mb-4 card-body" >
+                <table className="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Migrator Address</th>
+                            <th scope="col">Recipient Address</th>
+                            <th scope="col">Amount</th>
+                            {/* <th scope="col">Unlock date (GMT)</th> */}
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="claimList">
+                        {this.props.migrator.map((migratorInfo, key) => {
+                            return (
+                                <tr key={key}>
+                                    <td>{migratorInfo.migrator}</td>
+                                    <td>{migratorInfo.to}</td>
+                                    <td>{window.web3.utils.fromWei((migratorInfo.migrateBalance).toString(), 'Ether')} NPXSXEM</td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                            )
+                        })}
+                    </tbody>
+                </table>
+                </div>
             </div>
         );
     }

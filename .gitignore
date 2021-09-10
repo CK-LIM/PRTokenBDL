@@ -3,5 +3,5 @@
 **/scripts/bridge
 **/scripts/tokenfarm_test
 **/scripts
-*truffle-config.js
-*.secret
+**truffle-config.js
+**.secret
