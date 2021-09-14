@@ -11,13 +11,12 @@ contract NPXSXEMigration {
     string public name = "NPXSXEM Migration";
     address public npxsxemToken;
     PurseTokenUpgradable public purseToken;
-    uint256 public constant validDuration = 91 days;
-    uint256 internal migrationStart;
+    uint256 public migrationStart;
+    uint256 public migrationEnd;
     address public owner;
 
     uint32 public migrateIndex;
-    mapping(uint32 => MigratorInfo) public migration;  //index->times   
-    mapping(address => bool) public isOwner;    
+    mapping(uint32 => MigratorInfo) public migration;  //index->times    
 
     struct MigratorInfo {
         uint32 migrateIndex;
@@ -27,30 +26,31 @@ contract NPXSXEMigration {
     }
 
     modifier onlyOwner() {
-        require(isOwner[msg.sender], "not owner");
+        require(owner == msg.sender, "not owner");
         _;
     }
 
     constructor(address _npxsxemToken, PurseTokenUpgradable _purseToken) {
-        isOwner[msg.sender] = true;
-        owner = msg.sender;
+        require(_npxsxemToken != address(0), "invalid npxsxem token address");
+        require(address(_purseToken) != address(0), "invalid purse token address");
         npxsxemToken = _npxsxemToken;
         purseToken = _purseToken;
         migrationStart = block.timestamp;
+        migrationEnd = block.timestamp + 91 days;
+        owner = msg.sender;
     }
 
-    function migrateNPXSXEM(address _to, uint256 _amount) public {     
-        uint256 remainingAmount = purseToken.balanceOf(address(this)); 
-        uint256 end = migrationStart + validDuration;
-        require(block.timestamp <= end, "Migration window over");
+    function migrateNPXSXEM(address _to, uint256 _amount) public {      
+        require(block.timestamp <= migrationEnd, "Migration window over");
         require(_amount > 0);
+        uint256 remainingAmount = purseToken.balanceOf(address(this));
         require(remainingAmount >=_amount);
 
+        require(ERC20Interface(npxsxemToken).transferFrom(msg.sender, address(this), _amount), "transferFrom error");
+
         uint256 transferAmount = (_amount * 12) / 100;
-        ERC20Interface(npxsxemToken).transferFrom(msg.sender, address(this), _amount);
-        // npxsxemToken.transferFrom(msg.sender, address(this), _amount);      // Migrate npxsxem token   
         purseToken.transfer(_to, transferAmount);
-        migration[migrateIndex] = MigratorInfo(migrateIndex, msg.sender, _to, _amount );
+        migration[migrateIndex] = MigratorInfo(migrateIndex, msg.sender, _to, _amount);
         
         emit Migrate(migrateIndex, msg.sender, _to, _amount);
         migrateIndex += 1;
@@ -78,7 +78,6 @@ contract NPXSXEMigration {
     function updateOwner(address _owner) public onlyOwner{
         require(_owner != address(0), "not valid address");
         require(_owner != owner, "same owner address");
-        isOwner[_owner] = true;
         owner = _owner;
     } 
 }
