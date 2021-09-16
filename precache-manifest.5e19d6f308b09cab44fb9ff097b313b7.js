@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "eddd78e76878b6504fc1",
+    "revision": "d9984e4b2f0fb5502c57",
     "url": "/PRTokenBDL/static/css/main.8d497950.chunk.css"
   },
   {
-    "revision": "eddd78e76878b6504fc1",
-    "url": "/PRTokenBDL/static/js/main.eddd78e7.chunk.js"
+    "revision": "d9984e4b2f0fb5502c57",
+    "url": "/PRTokenBDL/static/js/main.d9984e4b.chunk.js"
   },
   {
     "revision": "9932bc13c9132289157d",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/PRTokenBDL/static/js/runtime~main.0e58fc94.js"
   },
   {
-    "revision": "b67b9748985501ef55362219a664b1e3",
+    "revision": "117397b856dbcb572a0ee9105d46765b",
     "url": "/PRTokenBDL/index.html"
   }
 ];
