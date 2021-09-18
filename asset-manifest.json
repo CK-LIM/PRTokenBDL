@@ -1,7 +1,7 @@
 {
   "main.css": "/PRTokenBDL/static/css/main.8d497950.chunk.css",
-  "main.js": "/PRTokenBDL/static/js/main.fe9db8da.chunk.js",
-  "main.js.map": "/PRTokenBDL/static/js/main.fe9db8da.chunk.js.map",
+  "main.js": "/PRTokenBDL/static/js/main.257cccf2.chunk.js",
+  "main.js.map": "/PRTokenBDL/static/js/main.257cccf2.chunk.js.map",
   "static/css/1.1a9f5a68.chunk.css": "/PRTokenBDL/static/css/1.1a9f5a68.chunk.css",
   "static/js/1.e92d410c.chunk.js": "/PRTokenBDL/static/js/1.e92d410c.chunk.js",
   "static/js/1.e92d410c.chunk.js.map": "/PRTokenBDL/static/js/1.e92d410c.chunk.js.map",
@@ -10,6 +10,6 @@
   "static/css/1.1a9f5a68.chunk.css.map": "/PRTokenBDL/static/css/1.1a9f5a68.chunk.css.map",
   "static/css/main.8d497950.chunk.css.map": "/PRTokenBDL/static/css/main.8d497950.chunk.css.map",
   "index.html": "/PRTokenBDL/index.html",
-  "precache-manifest.18ce744d242e4f961b82eb8005696948.js": "/PRTokenBDL/precache-manifest.18ce744d242e4f961b82eb8005696948.js",
+  "precache-manifest.ff893fdbf929ce2330f11cf440d8f122.js": "/PRTokenBDL/precache-manifest.ff893fdbf929ce2330f11cf440d8f122.js",
   "service-worker.js": "/PRTokenBDL/service-worker.js"
 }
