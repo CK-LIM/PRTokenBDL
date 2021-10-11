@@ -114,7 +114,7 @@ class NPXSMigration extends Component {
                 &nbsp;
                 {/* ******************************************Migrate NPXSXEM on Binance Chain BEP2******************************************** */}
                 <h2 className="table table-borderless text-muted text-center">Migrate NPXSXEM Token!</h2>                
-                <h6 className="table table-borderless text-muted text-center">Migration End-Date : {this.props.date.toString()}</h6>
+                <h6 className="table table-borderless text-muted text-center">Migration End-Date : {this.props.endMigrateDate.toString()}</h6>
                 {/* <br/> */}
                 <div className="card mb-4 card-body" >
                     <form className="mb-3" onSubmit={(event) => {

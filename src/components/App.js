@@ -70,11 +70,11 @@ class App extends Component {
       this.setState({ startMigrate })
       let endMigrate = await npxsxeMigrate.methods.endMigration().call()
       if (endMigrate == 0) {
-        var date = ''
-        this.setState({ date })
+        var endMigrateDate = ''
+        this.setState({ endMigrateDate })
       } else {
-        var date = new Date(endMigrate * 1000)
-        this.setState({ date })
+        var endMigrateDate = new Date(endMigrate * 1000)
+        this.setState({ endMigrateDate })
       }
 
 
@@ -179,13 +179,14 @@ class App extends Component {
       this.setState({ npxsxeMigrate })
       let startMigrate = await npxsxeMigrate.methods.isMigrationStart().call()
       this.setState({ startMigrate })
+      console.log(startMigrate)
       let endMigrate = await npxsxeMigrate.methods.endMigration().call()
       if (endMigrate == 0) {
-        var date = ''
-        this.setState({ date })
+        var endMigratDdate = ''
+        this.setState({ endMigratDdate })
       } else {
-        var date = new Date(endMigrate * 1000)
-        this.setState({ date })
+        var endMigratDdate = new Date(endMigrate * 1000)
+        this.setState({ endMigratDdate })
       }
 
       let migrateIndexNew = await npxsxeMigrate.methods.migrateIndex().call()
@@ -267,7 +268,9 @@ class App extends Component {
 
   migrateNPXSXEM = async (toAddress, amount) => {
     var today = new Date();
-    if (this.state.startMigrate == false || this.state.endDistributeDate < today) {
+    console.log(today)
+    console.log(this.state.endMigrateDate)
+    if (this.state.startMigrate == false || this.state.endMigrateDate < today) {
       alert("Migration is not available")
     } else if (this.state.npxsxemTokenBalance < parseInt(amount)) {
       alert("Insuffient funds")
@@ -362,7 +365,7 @@ class App extends Component {
       purseTokenBalance: '0',
       startMigrate: '0',
       endDistributeDate: '0',
-      date: '0',
+      endMigrateDate: '0',
       holderInfo: {},
       migrator: [],
       holder: [],
@@ -385,7 +388,7 @@ class App extends Component {
         migrator={this.state.migrator}
         first4Account={this.state.first4Account}
         last4Account={this.state.last4Account}
-        date={this.state.date}
+        endMigrateDate={this.state.endMigrateDate}
         migrateNPXSXEM={this.migrateNPXSXEM}
         release={this.release}
         releaseAll={this.releaseAll}
