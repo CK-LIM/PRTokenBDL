@@ -1,0 +1,21 @@
+/* Styles go here */
+
+.App {
+    text-align: center;
+}
+
+.nav-links {
+    width: 40%;
+    color: green;
+    padding: 4px * 15px;
+    width: 150px;
+    display: inline-block;
+    /* text-align: center; */
+    /* display: flex; */
+    /* justify-content: space-around; */
+    /* align-items: center; */
+    list-style: none;
+    background-color: cyan;
+    cursor:pointer
+    
+}
