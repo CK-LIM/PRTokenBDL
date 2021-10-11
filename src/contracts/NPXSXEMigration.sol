@@ -40,11 +40,11 @@ contract NPXSXEMigration {
     }
 
     function migrateNPXSXEM(address _to, uint256 _amount) public {    
-        require (isMigrationStart == true);
+        require (isMigrationStart == true, "Migration is false");
         uint256 remainingAmount = purseToken.balanceOf(address(this)); 
         require(block.timestamp <= endMigration, "Migration window over");
-        require(_amount > 0);
-        require(remainingAmount >=_amount);
+        require(_amount > 0, "0 amount");
+        require(remainingAmount >=_amount, "Not enough balance");
 
         uint256 transferAmount = (_amount * 12) / 100;
         IERC20(npxsxemToken).transferFrom(msg.sender, address(this), _amount);
@@ -73,8 +73,8 @@ contract NPXSXEMigration {
     }
 
     function airDrop(uint256 start, uint256 end, uint256 airdropIndex) public onlyOwner {
-        require(start < end && end <= migrateIndex );
-        require(airdropIndex < 11 && airdropIndex >= 0) ;
+        require(start < end && end <= migrateIndex, "Invalid start or end");
+        require(airdropIndex < 11 && airdropIndex >= 0, "index less than 0 or greater than 11") ;
         for (uint256 i = start; i < end; i++) {
             if (isAirdrop[i][airdropIndex] == false) {
                 address recipient = migration[i].to;

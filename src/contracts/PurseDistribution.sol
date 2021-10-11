@@ -84,9 +84,9 @@ contract PurseDistribution {
 
     // Notice Transfers tokens held by timelock to beneficiary.
     function claim(uint256 iteration) public {
-        require (isClaimStart == true);
+        require (isClaimStart == true, "Claim is false");
         require(block.timestamp < endDistribution, "Distribution window over");
-        require(holder[msg.sender][iteration].isRedeem == false, 'have been redeem');
+        require(holder[msg.sender][iteration].isRedeem == false, 'Have been redeem');
 
         holder[msg.sender][iteration].isRedeem = true;
         uint256 claimAmount = holder[msg.sender][iteration].distributeAmount;
@@ -95,7 +95,7 @@ contract PurseDistribution {
     }
 
     function claimAll(uint256 iteration_end) public {
-        require (isClaimStart == true);
+        require (isClaimStart == true, "Claim is false");
         require(block.timestamp < endDistribution, "Distribution window over");
         uint256 claimAmount = 0;
         for (uint256 i = 0; i <= iteration_end; i++) {
