@@ -15,6 +15,51 @@
       "address": "0x1eE79aF8647973f748A7ff7Ebd610bB93Eb0bd6c",
       "txHash": "0xe04cc40235ff76d4a02e3d807e1da2c52c18a0d2a254276148380f04ee8eae91",
       "kind": "uups"
+    },
+    {
+      "address": "0x1216c54c4c1Bd3378e4Cd49C61C893dBf6bCE6c9",
+      "txHash": "0xff285faba57ab55f0fbad0e2a12fe417e2692fd9ee72c7643519a1d1ddc75c1e",
+      "kind": "uups"
+    },
+    {
+      "address": "0x2a2c87d0E13B989fD21435e58cA0a882BE8B6dE5",
+      "txHash": "0xcb4e29793ea06b69c8c47bb4d95d851e58053ed411990e181f0c685f1cb8a7cd",
+      "kind": "uups"
+    },
+    {
+      "address": "0x23091A85E21De42198C470004D6E4a04121481D8",
+      "txHash": "0xd61434275ea64e92b4da729031ba960a882e91c58694915ddcca94313acb2cba",
+      "kind": "uups"
+    },
+    {
+      "address": "0x054Ab7f13828d64B3a0Cc3E4c8bC7A7d756deA33",
+      "txHash": "0xee3a1fd4f49049400b85b4a8a9d9e7514faf0522101292c07c6839ce47786961",
+      "kind": "uups"
+    },
+    {
+      "address": "0xac5D5872005AA45561EAB4E134B3463A6eC8938A",
+      "txHash": "0xcf01e49f1dac8581ed123392620ea2d5946fc45d8f037876276a085c234c001d",
+      "kind": "uups"
+    },
+    {
+      "address": "0x8cf6Aa4A8C38ee601eec6937BA171EFE1Bd4c7bB",
+      "txHash": "0x143abd456faafe225baa8a3dbdeec76586a98b167ab007ae5bfb7d55186745f4",
+      "kind": "uups"
+    },
+    {
+      "address": "0x8A4b7e7da9dA6d9Eda037AB830A023C7639DAC10",
+      "txHash": "0xdbdaebb9f1de22b4ec6f67908430eda7ab5923813e4ceb2838a0c3b8e681f894",
+      "kind": "uups"
+    },
+    {
+      "address": "0x24Ad6c6f00a5c99bC050c70ea53498E0dcee7510",
+      "txHash": "0x964d29be987a6968e04b70f7da0d314e31e8b2f8bc31b2974a4b3cd53da3b73a",
+      "kind": "uups"
+    },
+    {
+      "address": "0xfc65086f16405D334f3e4b0901d0490A572bAc1f",
+      "txHash": "0xdc644f01c11c584989f022d266a2132d981a2029d4901543bbdce74c484b6670",
+      "kind": "uups"
     }
   ],
   "impls": {
@@ -348,151 +393,151 @@
             "contract": "PurseTokenUpgradable",
             "label": "name",
             "type": "t_string_storage",
-            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:20"
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:21"
           },
           {
             "contract": "PurseTokenUpgradable",
             "label": "symbol",
             "type": "t_string_storage",
-            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:21"
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:22"
           },
           {
             "contract": "PurseTokenUpgradable",
             "label": "totalSupply",
             "type": "t_uint256",
-            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:22"
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:23"
           },
           {
             "contract": "PurseTokenUpgradable",
             "label": "decimals",
             "type": "t_uint8",
-            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:23"
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:24"
           },
           {
             "contract": "PurseTokenUpgradable",
             "label": "minimumSupply",
             "type": "t_uint256",
-            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:24"
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:25"
           },
           {
             "contract": "PurseTokenUpgradable",
             "label": "admins",
             "type": "t_array(t_address)dyn_storage",
-            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:25"
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:26"
           },
           {
             "contract": "PurseTokenUpgradable",
             "label": "liqPool",
             "type": "t_address",
-            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:26"
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:27"
           },
           {
             "contract": "PurseTokenUpgradable",
             "label": "disPool",
             "type": "t_address",
-            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:27"
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:28"
           },
           {
             "contract": "PurseTokenUpgradable",
             "label": "burnPercent",
             "type": "t_uint256",
-            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:28"
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:29"
           },
           {
             "contract": "PurseTokenUpgradable",
             "label": "liqPercent",
             "type": "t_uint256",
-            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:29"
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:30"
           },
           {
             "contract": "PurseTokenUpgradable",
             "label": "disPercent",
             "type": "t_uint256",
-            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:30"
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:31"
           },
           {
             "contract": "PurseTokenUpgradable",
             "label": "_averageInterval",
             "type": "t_uint256",
-            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:32"
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:33"
           },
           {
             "contract": "PurseTokenUpgradable",
             "label": "_getRewardEndTime",
             "type": "t_uint256",
-            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:33"
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:34"
           },
           {
             "contract": "PurseTokenUpgradable",
             "label": "_getRewardStartTime",
             "type": "t_uint256",
-            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:34"
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:35"
           },
           {
             "contract": "PurseTokenUpgradable",
             "label": "_numOfDaysPerMth",
             "type": "t_uint256",
-            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:35"
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:36"
           },
           {
             "contract": "PurseTokenUpgradable",
             "label": "_monthlyDistributePr",
             "type": "t_uint256",
-            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:36"
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:37"
           },
           {
             "contract": "PurseTokenUpgradable",
             "label": "_percentageDistribute",
             "type": "t_uint256",
-            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:37"
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:38"
           },
           {
             "contract": "PurseTokenUpgradable",
             "label": "_lastRewardStartTime",
             "type": "t_uint256",
-            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:38"
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:39"
           },
           {
             "contract": "PurseTokenUpgradable",
             "label": "_totalSupply",
             "type": "t_uint256",
-            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:39"
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:40"
           },
           {
             "contract": "PurseTokenUpgradable",
             "label": "balanceOf",
             "type": "t_mapping(t_address,t_uint256)",
-            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:41"
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:42"
           },
           {
             "contract": "PurseTokenUpgradable",
             "label": "allowance",
             "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
-            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:42"
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:43"
           },
           {
             "contract": "PurseTokenUpgradable",
             "label": "isAdmin",
             "type": "t_mapping(t_address,t_bool)",
-            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:43"
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:44"
           },
           {
             "contract": "PurseTokenUpgradable",
             "label": "isWhitelistedTo",
             "type": "t_mapping(t_address,t_bool)",
-            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:44"
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:45"
           },
           {
             "contract": "PurseTokenUpgradable",
             "label": "isWhitelistedFrom",
             "type": "t_mapping(t_address,t_bool)",
-            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:45"
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:46"
           },
           {
             "contract": "PurseTokenUpgradable",
             "label": "accAmount",
-            "type": "t_mapping(t_address,t_struct(AccAmount)2207_storage)",
-            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:46"
+            "type": "t_mapping(t_address,t_struct(AccAmount)2310_storage)",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradable.sol:47"
           }
         ],
         "types": {
@@ -523,11 +568,1346 @@
           "t_bool": {
             "label": "bool"
           },
-          "t_mapping(t_address,t_struct(AccAmount)2207_storage)": {
+          "t_mapping(t_address,t_struct(AccAmount)2310_storage)": {
             "label": "mapping(address => struct PurseTokenUpgradable.AccAmount)"
           },
-          "t_struct(AccAmount)2207_storage": {
+          "t_struct(AccAmount)2310_storage": {
             "label": "struct PurseTokenUpgradable.AccAmount",
+            "members": [
+              {
+                "label": "amount",
+                "type": "t_uint256"
+              },
+              {
+                "label": "accReward",
+                "type": "t_uint256"
+              },
+              {
+                "label": "lastUpdateTime",
+                "type": "t_uint256"
+              }
+            ]
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          }
+        }
+      }
+    },
+    "5e5b767a29d26a89639d96503eff1180a6fbb11431c203121fb6f63ff8b4ef4c": {
+      "address": "0x3b90275dfD74572B62Ff0986A60bf0b7f2b0E2F0",
+      "txHash": "0xc35ed83578463a0270338b87f8d383733ab02ecbbd3556a0106c054558680d2a",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:21"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:26"
+          },
+          {
+            "contract": "ERC1967UpgradeUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\proxy\\ERC1967\\ERC1967UpgradeUpgradeable.sol:214"
+          },
+          {
+            "contract": "UUPSUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\proxy\\utils\\UUPSUpgradeable.sol:64"
+          },
+          {
+            "contract": "ContextUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:30"
+          },
+          {
+            "contract": "PausableUpgradeable",
+            "label": "_paused",
+            "type": "t_bool",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\security\\PausableUpgradeable.sol:28"
+          },
+          {
+            "contract": "PausableUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\security\\PausableUpgradeable.sol:96"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "_owner",
+            "type": "t_address",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:21"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:77"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "name",
+            "type": "t_string_storage",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:21"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "symbol",
+            "type": "t_string_storage",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:22"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "totalSupply",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:23"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "decimals",
+            "type": "t_uint8",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:24"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "minimumSupply",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:25"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "admins",
+            "type": "t_array(t_address)dyn_storage",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:26"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "liqPool",
+            "type": "t_address",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:27"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "disPool",
+            "type": "t_address",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:28"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "burnPercent",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:29"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "liqPercent",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:30"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "disPercent",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:31"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_averageInterval",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:33"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_getRewardEndTime",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:34"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_getRewardStartTime",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:35"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_numOfDaysPerMth",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:36"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_monthlyDistributePr",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:37"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_percentageDistribute",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:38"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_lastRewardStartTime",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:39"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_totalSupply",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:40"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "balanceOf",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:42"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "allowance",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:43"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "isAdmin",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:44"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "isWhitelistedTo",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:45"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "isWhitelistedFrom",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:46"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "accAmount",
+            "type": "t_mapping(t_address,t_struct(AccAmount)4059_storage)",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:47"
+          }
+        ],
+        "types": {
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_uint8": {
+            "label": "uint8"
+          },
+          "t_array(t_address)dyn_storage": {
+            "label": "address[]"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_mapping(t_address,t_struct(AccAmount)4059_storage)": {
+            "label": "mapping(address => struct PurseTokenUpgradableV2.AccAmount)"
+          },
+          "t_struct(AccAmount)4059_storage": {
+            "label": "struct PurseTokenUpgradableV2.AccAmount",
+            "members": [
+              {
+                "label": "amount",
+                "type": "t_uint256"
+              },
+              {
+                "label": "accReward",
+                "type": "t_uint256"
+              },
+              {
+                "label": "lastUpdateTime",
+                "type": "t_uint256"
+              }
+            ]
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          }
+        }
+      }
+    },
+    "e3b411849af2fef384c7543befcefa6fca524a670f14b965049889c6d660036e": {
+      "address": "0xddC43f2661C04a9418a0c37a71C8a10fc17576BF",
+      "txHash": "0xf52a848dc927c38ded2f47bc9651e8f24112d4bc5c3bda8fe2558a4f7cb4695f",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:21"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:26"
+          },
+          {
+            "contract": "ERC1967UpgradeUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\proxy\\ERC1967\\ERC1967UpgradeUpgradeable.sol:214"
+          },
+          {
+            "contract": "UUPSUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\proxy\\utils\\UUPSUpgradeable.sol:64"
+          },
+          {
+            "contract": "ContextUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:30"
+          },
+          {
+            "contract": "PausableUpgradeable",
+            "label": "_paused",
+            "type": "t_bool",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\security\\PausableUpgradeable.sol:28"
+          },
+          {
+            "contract": "PausableUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\security\\PausableUpgradeable.sol:96"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "_owner",
+            "type": "t_address",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:21"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:77"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "name",
+            "type": "t_string_storage",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:21"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "symbol",
+            "type": "t_string_storage",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:22"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "totalSupply",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:23"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "decimals",
+            "type": "t_uint8",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:24"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "minimumSupply",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:25"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "admins",
+            "type": "t_array(t_address)dyn_storage",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:26"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "liqPool",
+            "type": "t_address",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:27"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "disPool",
+            "type": "t_address",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:28"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "burnPercent",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:29"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "liqPercent",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:30"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "disPercent",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:31"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_averageInterval",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:33"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_getRewardEndTime",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:34"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_getRewardStartTime",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:35"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_numOfDaysPerMth",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:36"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_monthlyDistributePr",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:37"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_percentageDistribute",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:38"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_lastRewardStartTime",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:39"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_totalSupply",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:40"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "balanceOf",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:42"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "allowance",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:43"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "isAdmin",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:44"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "isWhitelistedTo",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:45"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "isWhitelistedFrom",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:46"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "accAmount",
+            "type": "t_mapping(t_address,t_struct(AccAmount)4059_storage)",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:47"
+          }
+        ],
+        "types": {
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_uint8": {
+            "label": "uint8"
+          },
+          "t_array(t_address)dyn_storage": {
+            "label": "address[]"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_mapping(t_address,t_struct(AccAmount)4059_storage)": {
+            "label": "mapping(address => struct PurseTokenUpgradableV2.AccAmount)"
+          },
+          "t_struct(AccAmount)4059_storage": {
+            "label": "struct PurseTokenUpgradableV2.AccAmount",
+            "members": [
+              {
+                "label": "amount",
+                "type": "t_uint256"
+              },
+              {
+                "label": "accReward",
+                "type": "t_uint256"
+              },
+              {
+                "label": "lastUpdateTime",
+                "type": "t_uint256"
+              }
+            ]
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          }
+        }
+      }
+    },
+    "ef0e5a3c2d7c58d30df92b62217f3bdc346b9f2bdafae692c6153252c19cc700": {
+      "address": "0x0Ed3e495b25aCA1728087A37F976C3a70f0E3087",
+      "txHash": "0xecf8aec1730d5d4b5c664c8ca79b9e863d2f260e432575c6b505de28f7445fa3",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:21"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:26"
+          },
+          {
+            "contract": "ERC1967UpgradeUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\proxy\\ERC1967\\ERC1967UpgradeUpgradeable.sol:214"
+          },
+          {
+            "contract": "UUPSUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\proxy\\utils\\UUPSUpgradeable.sol:64"
+          },
+          {
+            "contract": "ContextUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:30"
+          },
+          {
+            "contract": "PausableUpgradeable",
+            "label": "_paused",
+            "type": "t_bool",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\security\\PausableUpgradeable.sol:28"
+          },
+          {
+            "contract": "PausableUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\security\\PausableUpgradeable.sol:96"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "_owner",
+            "type": "t_address",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:21"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:77"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "name",
+            "type": "t_string_storage",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:21"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "symbol",
+            "type": "t_string_storage",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:22"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "totalSupply",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:23"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "decimals",
+            "type": "t_uint8",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:24"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "minimumSupply",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:25"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "admins",
+            "type": "t_array(t_address)dyn_storage",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:26"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "liqPool",
+            "type": "t_address",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:27"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "disPool",
+            "type": "t_address",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:28"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "burnPercent",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:29"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "liqPercent",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:30"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "disPercent",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:31"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_averageInterval",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:33"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_getRewardEndTime",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:34"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_getRewardStartTime",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:35"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_numOfDaysPerMth",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:36"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_monthlyDistributePr",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:37"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_percentageDistribute",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:38"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_lastRewardStartTime",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:39"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_totalSupply",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:40"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "balanceOf",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:42"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "allowance",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:43"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "isAdmin",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:44"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "isWhitelistedTo",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:45"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "isWhitelistedFrom",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:46"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "accAmount",
+            "type": "t_mapping(t_address,t_struct(AccAmount)4059_storage)",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:47"
+          }
+        ],
+        "types": {
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_uint8": {
+            "label": "uint8"
+          },
+          "t_array(t_address)dyn_storage": {
+            "label": "address[]"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_mapping(t_address,t_struct(AccAmount)4059_storage)": {
+            "label": "mapping(address => struct PurseTokenUpgradableV2.AccAmount)"
+          },
+          "t_struct(AccAmount)4059_storage": {
+            "label": "struct PurseTokenUpgradableV2.AccAmount",
+            "members": [
+              {
+                "label": "amount",
+                "type": "t_uint256"
+              },
+              {
+                "label": "accReward",
+                "type": "t_uint256"
+              },
+              {
+                "label": "lastUpdateTime",
+                "type": "t_uint256"
+              }
+            ]
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          }
+        }
+      }
+    },
+    "19e08a3e5be85d54ed4f0122acb1df76a48842430a4bd9d625d454da678187e1": {
+      "address": "0x2DD7c129EFAF09FDD50a3ecf9e19c4767cA49338",
+      "txHash": "0x32bfb5010f331bf1776684b04414da0fde5bc664ab016448071f5f918aca9009",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:21"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:26"
+          },
+          {
+            "contract": "ERC1967UpgradeUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\proxy\\ERC1967\\ERC1967UpgradeUpgradeable.sol:214"
+          },
+          {
+            "contract": "UUPSUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\proxy\\utils\\UUPSUpgradeable.sol:64"
+          },
+          {
+            "contract": "ContextUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:30"
+          },
+          {
+            "contract": "PausableUpgradeable",
+            "label": "_paused",
+            "type": "t_bool",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\security\\PausableUpgradeable.sol:28"
+          },
+          {
+            "contract": "PausableUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\security\\PausableUpgradeable.sol:96"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "_owner",
+            "type": "t_address",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:21"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:77"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "name",
+            "type": "t_string_storage",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:21"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "symbol",
+            "type": "t_string_storage",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:22"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "totalSupply",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:23"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "decimals",
+            "type": "t_uint8",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:24"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "minimumSupply",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:25"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "admins",
+            "type": "t_array(t_address)dyn_storage",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:26"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "liqPool",
+            "type": "t_address",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:27"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "disPool",
+            "type": "t_address",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:28"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "burnPercent",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:29"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "liqPercent",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:30"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "disPercent",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:31"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_averageInterval",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:33"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_getRewardEndTime",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:34"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_getRewardStartTime",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:35"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_numOfDaysPerMth",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:36"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_monthlyDistributePr",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:37"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_percentageDistribute",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:38"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_lastRewardStartTime",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:39"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_totalSupply",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:40"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "balanceOf",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:42"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "allowance",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:43"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "isAdmin",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:44"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "isWhitelistedTo",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:45"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "isWhitelistedFrom",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:46"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "accAmount",
+            "type": "t_mapping(t_address,t_struct(AccAmount)4059_storage)",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:47"
+          }
+        ],
+        "types": {
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_uint8": {
+            "label": "uint8"
+          },
+          "t_array(t_address)dyn_storage": {
+            "label": "address[]"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_mapping(t_address,t_struct(AccAmount)4059_storage)": {
+            "label": "mapping(address => struct PurseTokenUpgradableV2.AccAmount)"
+          },
+          "t_struct(AccAmount)4059_storage": {
+            "label": "struct PurseTokenUpgradableV2.AccAmount",
+            "members": [
+              {
+                "label": "amount",
+                "type": "t_uint256"
+              },
+              {
+                "label": "accReward",
+                "type": "t_uint256"
+              },
+              {
+                "label": "lastUpdateTime",
+                "type": "t_uint256"
+              }
+            ]
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          }
+        }
+      }
+    },
+    "7e56c87d911788036325a8ecd0f085e65e7fd66d75658ff4f4adaa3c7f7dcc36": {
+      "address": "0xd80EcF25fC3C521B58D998796B387B36e65496d3",
+      "txHash": "0x494688a1091ab19c721580273fa0cdd0c118f3d69b5358463a21e3bdb635a242",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:21"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:26"
+          },
+          {
+            "contract": "ERC1967UpgradeUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\proxy\\ERC1967\\ERC1967UpgradeUpgradeable.sol:214"
+          },
+          {
+            "contract": "UUPSUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\proxy\\utils\\UUPSUpgradeable.sol:64"
+          },
+          {
+            "contract": "ContextUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\utils\\ContextUpgradeable.sol:30"
+          },
+          {
+            "contract": "PausableUpgradeable",
+            "label": "_paused",
+            "type": "t_bool",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\security\\PausableUpgradeable.sol:28"
+          },
+          {
+            "contract": "PausableUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\security\\PausableUpgradeable.sol:96"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "_owner",
+            "type": "t_address",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:21"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "..\\..\\@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:77"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "name",
+            "type": "t_string_storage",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:21"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "symbol",
+            "type": "t_string_storage",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:22"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "totalSupply",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:23"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "decimals",
+            "type": "t_uint8",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:24"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "minimumSupply",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:25"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "admins",
+            "type": "t_array(t_address)dyn_storage",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:26"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "liqPool",
+            "type": "t_address",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:27"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "disPool",
+            "type": "t_address",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:28"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "burnPercent",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:29"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "liqPercent",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:30"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "disPercent",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:31"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_averageInterval",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:33"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_getRewardEndTime",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:34"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_getRewardStartTime",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:35"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_numOfDaysPerMth",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:36"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_monthlyDistributePr",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:37"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_percentageDistribute",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:38"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_lastRewardStartTime",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:39"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "_totalSupply",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:40"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "balanceOf",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:42"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "allowance",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:43"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "isAdmin",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:44"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "isWhitelistedTo",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:45"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "isWhitelistedFrom",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:46"
+          },
+          {
+            "contract": "PurseTokenUpgradableV2",
+            "label": "accAmount",
+            "type": "t_mapping(t_address,t_struct(AccAmount)4161_storage)",
+            "src": "..\\..\\..\\..\\..\\..\\..\\..\\..\\C\\Users\\cheek\\Desktop\\Developer doc\\Visual Studio Code\\PundiX\\purseRewardBSC\\src\\contracts\\PurseTokenUpgradableV2.sol:47"
+          }
+        ],
+        "types": {
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_uint8": {
+            "label": "uint8"
+          },
+          "t_array(t_address)dyn_storage": {
+            "label": "address[]"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_mapping(t_address,t_struct(AccAmount)4161_storage)": {
+            "label": "mapping(address => struct PurseTokenUpgradableV2.AccAmount)"
+          },
+          "t_struct(AccAmount)4161_storage": {
+            "label": "struct PurseTokenUpgradableV2.AccAmount",
             "members": [
               {
                 "label": "amount",
