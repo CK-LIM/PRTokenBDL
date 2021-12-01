@@ -2,11 +2,11 @@
 
 const { deployProxy, upgradeProxy } = require('@openzeppelin/truffle-upgrades');
 
-const NPXSXEMBSC = artifacts.require("NPXSXEMBSC.sol")
+// const NPXSXEMBSC = artifacts.require("NPXSXEMBSC.sol")
 
 const PurseTokenUpgradable = artifacts.require("PurseTokenUpgradable.sol")
-const PurseTokenUpgradableV2 = artifacts.require("PurseTokenUpgradableV2.sol")
-const NPXSXEMigration = artifacts.require("NPXSXEMigration.sol")
+// const PurseTokenUpgradableV2 = artifacts.require("PurseTokenUpgradableV2.sol")
+// const NPXSXEMigration = artifacts.require("NPXSXEMigration.sol")
 const PurseDistribution = artifacts.require('PurseDistribution.sol');
 
 
@@ -23,25 +23,25 @@ module.exports = async function(deployer, network, accounts ) {
     console.log(purseToken.address)
     // console.log(upgrade.address)
 
-    await deployer.deploy(NPXSXEMBSC)
-    const nPXSXEMBSC = await NPXSXEMBSC.deployed()
+    // await deployer.deploy(NPXSXEMBSC)
+    // const nPXSXEMBSC = await NPXSXEMBSC.deployed()
     
-    //Deploy NPXSXEMigration
-    await deployer.deploy(NPXSXEMigration, nPXSXEMBSC.address , purseToken.address)
-    const nPXSXEMigration = await NPXSXEMigration.deployed()    
+    // //Deploy NPXSXEMigration
+    // await deployer.deploy(NPXSXEMigration, nPXSXEMBSC.address , purseToken.address)
+    // const nPXSXEMigration = await NPXSXEMigration.deployed()    
 
-    // Deploy PurseDistribution
-    await deployer.deploy(PurseDistribution, purseToken.address)
-    const purseDistribution = await PurseDistribution.deployed() 
+    // // Deploy PurseDistribution
+    // await deployer.deploy(PurseDistribution, purseToken.address)
+    // const purseDistribution = await PurseDistribution.deployed() 
 
-    await purseToken.setWhitelistedFrom(purseToken.address)
-    await purseToken.setWhitelistedFrom(nPXSXEMigration.address)
-    await purseToken.setWhitelistedFrom(purseDistribution.address)
-    await purseToken.setWhitelistedFrom(accounts[0])
-    await purseToken.transfer(nPXSXEMigration.address, tokens('2308488193.5804'))   //12%
-    console.log('Purse done')
-    await purseToken.transfer(purseDistribution.address, tokens('19237401613.17'))    
-    console.log('Purse done')
+    // await purseToken.setWhitelistedFrom(purseToken.address)
+    // await purseToken.setWhitelistedFrom(nPXSXEMigration.address)
+    // await purseToken.setWhitelistedFrom(purseDistribution.address)
+    // await purseToken.setWhitelistedFrom(accounts[0])
+    // await purseToken.transfer(nPXSXEMigration.address, tokens('2308488193.5804'))   //12%
+    // console.log('Purse done')
+    // await purseToken.transfer(purseDistribution.address, tokens('19237401613.17'))    
+    // console.log('Purse done')
   }
 
   if(network === 'development') {
