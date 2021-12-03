@@ -214,7 +214,7 @@ using SafeERC20Upgradeable for IERC20Upgradeable;
         uint256 claimAmount = accAmount[msg.sender].accReward;
         accAmount[msg.sender].accReward = 0;
 
-        IERC20Upgradeable(address(this)).safeTransfer(msg.sender, claimAmount);
+        IERC20Upgradeable(disPool).safeTransfer(msg.sender, claimAmount);
         return true;
     }
 
