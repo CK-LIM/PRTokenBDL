@@ -412,7 +412,7 @@ using SafeERC20Upgradeable for IERC20Upgradeable;
         burnPercent = _burnPercent;
         liqPercent = _liqPercent;
         disPercent = _disPercent;
-        _averageInterval = 1 minutes;
+        _averageInterval = 1 days;
         _lastRewardStartTime = block.timestamp;
         __Pausable_init();
         __Ownable_init();
