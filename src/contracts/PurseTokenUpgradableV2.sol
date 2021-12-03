@@ -205,7 +205,7 @@ using SafeERC20Upgradeable for IERC20Upgradeable;
         updateAccumulateBalance(_to);
     }
 
-    function claimDistributionPurse() external whenNotPaused returns (bool success) {
+    function claimDistributionPurse() public whenNotPaused returns (bool success) {
         require(block.timestamp > _getRewardStartTime, "Claim not started");
         require(block.timestamp < _getRewardEndTime, "Claim period over");
 
@@ -214,7 +214,7 @@ using SafeERC20Upgradeable for IERC20Upgradeable;
         uint256 claimAmount = accAmount[msg.sender].accReward;
         accAmount[msg.sender].accReward = 0;
 
-        IERC20Upgradeable(disPool).safeTransfer(msg.sender, claimAmount);
+        IERC20Upgradeable(address(this)).safeTransfer(msg.sender, claimAmount);
         return true;
     }
 
@@ -335,7 +335,7 @@ using SafeERC20Upgradeable for IERC20Upgradeable;
         return admins;
     }
 
-    function transferERCToken(address token, uint256 amount, address _to) external whenNotPaused onlyOwner {
+    function transferERCToken(address token, uint256 amount, address _to) public whenNotPaused onlyOwner {
         require(_to != address(0), "0 address");
         if (token == address(this)) {
             updateAccumulateBalance(_to);
