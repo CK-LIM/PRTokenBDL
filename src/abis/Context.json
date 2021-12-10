@@ -1,7 +1,7 @@
 {
   "contractName": "Context",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/Users/cheek/Desktop/Developer doc/Visual Studio Code/PundiX/purseRewardBSC/src/contracts/NPXSXEMBSC.sol\":\"Context\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/cheek/Desktop/Developer doc/Visual Studio Code/PundiX/purseRewardBSC/src/contracts/NPXSXEMBSC.sol\":{\"keccak256\":\"0x4ac3d20c998403d8330cc50bc8b8014cbf6bcc088f491eefe7b165eaf1998b45\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://c31b14d8d6985a1fe386af94f9a15ed1fbd67dd4effef82d36e4118cf381ea37\",\"dweb:/ipfs/QmXHeMY39c5noLWBCEovopcpopw2JD5o36HtqbCyEUNx1f\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/Users/cheek/Desktop/Developer doc/Visual Studio Code/PundiX/purseRewardBSC/src/contracts/NPXSXEMBSC.sol\":\"Context\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/cheek/Desktop/Developer doc/Visual Studio Code/PundiX/purseRewardBSC/src/contracts/NPXSXEMBSC.sol\":{\"keccak256\":\"0x4ac3d20c998403d8330cc50bc8b8014cbf6bcc088f491eefe7b165eaf1998b45\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://c31b14d8d6985a1fe386af94f9a15ed1fbd67dd4effef82d36e4118cf381ea37\",\"dweb:/ipfs/QmXHeMY39c5noLWBCEovopcpopw2JD5o36HtqbCyEUNx1f\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
@@ -24411,7 +24411,7 @@
   },
   "networks": {},
   "schemaVersion": "3.2.3",
-  "updatedAt": "2021-12-03T10:34:06.880Z",
+  "updatedAt": "2021-12-10T11:04:38.408Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

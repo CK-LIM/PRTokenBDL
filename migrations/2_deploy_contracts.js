@@ -4,10 +4,10 @@ const { deployProxy, upgradeProxy } = require('@openzeppelin/truffle-upgrades');
 
 // const NPXSXEMBSC = artifacts.require("NPXSXEMBSC.sol")
 
-const PurseTokenUpgradable = artifacts.require("PurseTokenUpgradable.sol")
+const PurseTokenUpgradableV2 = artifacts.require("PurseTokenUpgradableV2.sol")
 // const PurseTokenUpgradableV2 = artifacts.require("PurseTokenUpgradableV2.sol")
 // const NPXSXEMigration = artifacts.require("NPXSXEMigration.sol")
-const PurseDistribution = artifacts.require('PurseDistribution.sol');
+// const PurseDistribution = artifacts.require('PurseDistribution.sol');
 
 
 function tokens(n) {
@@ -18,7 +18,7 @@ module.exports = async function(deployer, network, accounts ) {
   if(network === 'rinkeby' || network === 'kovan' || network ==='bscTestnet') {
 
     //Deploy PurseToken
-    const purseToken = await deployProxy(PurseTokenUpgradable,["0x8CF7Fb0326C6a5B5A8dA62e3FE8c5eD8Cb041217", "0xA2993e1171520ba0fD0AB39224e1B24BDa5c24a9", 10, 5, 5],{deployer, kind: 'uups' });
+    const purseToken = await deployProxy(PurseTokenUpgradableV2,["0x8CF7Fb0326C6a5B5A8dA62e3FE8c5eD8Cb041217", "0xA2993e1171520ba0fD0AB39224e1B24BDa5c24a9", 10, 5, 5],{deployer, kind: 'uups' });
     // const upgrade = await upgradeProxy(purseToken.address, PurseTokenUpgradableV2, { deployer }); //Upgrade smart contract
     console.log(purseToken.address)
     // console.log(upgrade.address)

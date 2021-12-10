@@ -52,6 +52,8 @@ using SafeERC20Upgradeable for IERC20Upgradeable;
     event Burn(address indexed _from, uint256 _value);
     event Mint(address indexed _from, address indexed _to, uint256 _value);
     event Approval(address indexed _owner, address indexed _spender, uint256 _value);
+    event UpdatePercent(uint256 _newBurnPercent, uint256 _newDisPercent,  uint256 _newLiqPercent);
+    event UpdateMinSupply(uint256 _newMinimumSupply);
 
     modifier onlyAdmin() {
         require(isAdmin[msg.sender], "Not Admin");
@@ -205,7 +207,7 @@ using SafeERC20Upgradeable for IERC20Upgradeable;
         updateAccumulateBalance(_to);
     }
 
-    function claimDistributionPurse() public whenNotPaused returns (bool success) {
+    function claimDistributionPurse() external whenNotPaused returns (bool success) {
         require(block.timestamp > _getRewardStartTime, "Claim not started");
         require(block.timestamp < _getRewardEndTime, "Claim period over");
 
@@ -255,14 +257,14 @@ using SafeERC20Upgradeable for IERC20Upgradeable;
     }
 
     function _calculateDeductAmount(uint256 _amount) internal view returns (uint256, uint256, uint256) {
-        uint256 burnAmount;
-        uint256 liqAmount;
-        uint256 disAmount;
+        uint256 burnAmount = 0;
+        uint256 liqAmount = 0;
+        uint256 disAmount = 0;
 
         if (totalSupply > minimumSupply) {
-            burnAmount = (_amount * burnPercent) / 100;
-            liqAmount = (_amount * liqPercent) / 100;
-            disAmount = (_amount * disPercent) / 100;
+            burnAmount = (_amount * burnPercent) / 10000;
+            liqAmount = (_amount * liqPercent) / 10000;
+            disAmount = (_amount * disPercent) / 10000;
             uint256 availableBurn = totalSupply - minimumSupply;
             if (burnAmount > availableBurn) {
                 burnAmount = availableBurn;
@@ -302,16 +304,20 @@ using SafeERC20Upgradeable for IERC20Upgradeable;
     }
 
     function updatePercent(uint256 _newDisPercent, uint256 _newLiqPercent, uint256 _newBurnPercent) external onlyOwner {
-        require(_newDisPercent <= 100 && _newLiqPercent <= 100 && _newBurnPercent <= 100, "% > 100");
-        require(_newDisPercent + _newLiqPercent + _newBurnPercent <= 100, "Total more than 100");
+        require(_newDisPercent <= 10000 && _newLiqPercent <= 10000 && _newBurnPercent <= 10000, "% > 10000");
+        require(_newDisPercent + _newLiqPercent + _newBurnPercent <= 10000, "Total more than 10000");
 
         disPercent = _newDisPercent;
         liqPercent = _newLiqPercent;
         burnPercent = _newBurnPercent;
+
+        emit UpdatePercent(burnPercent, disPercent,  liqPercent);
     }
 
     function updateMinimumSupply(uint256 _minimumSupply) external onlyOwner {
         minimumSupply = _minimumSupply;
+
+        emit UpdateMinSupply(minimumSupply);
     }
 
     function addAdmin(address newAdmin) external onlyOwner {
@@ -397,9 +403,6 @@ using SafeERC20Upgradeable for IERC20Upgradeable;
         uint256 _disPercent
     ) public initializer {
         require(_lPool != address(0), "0 address");
-        require(_burnPercent >= 0, "Percentage is 0");
-        require(_liqPercent >= 0, "Percentage is 0");
-        require(_disPercent >= 0, "Percentage is 0");
 
         name = "PURSE TOKEN";
         symbol = "PURSE";
