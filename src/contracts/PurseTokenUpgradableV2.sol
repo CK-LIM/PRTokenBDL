@@ -52,7 +52,7 @@ using SafeERC20Upgradeable for IERC20Upgradeable;
     event Burn(address indexed _from, uint256 _value);
     event Mint(address indexed _from, address indexed _to, uint256 _value);
     event Approval(address indexed _owner, address indexed _spender, uint256 _value);
-    event UpdatePercent(uint256 _newBurnPercent, uint256 _newDisPercent,  uint256 _newLiqPercent);
+    event UpdatePercent(uint256 _newDisPercent,  uint256 _newLiqPercent, uint256 _newBurnPercent);
     event UpdateMinSupply(uint256 _newMinimumSupply);
 
     modifier onlyAdmin() {
@@ -303,14 +303,14 @@ using SafeERC20Upgradeable for IERC20Upgradeable;
         disPool = _newDPool;
     }
 
-    function updatePercent(uint256 _newBurnPercent, uint256 _newDisPercent, uint256 _newLiqPercent) external onlyOwner {
+    function updatePercent(uint256 _newDisPercent, uint256 _newLiqPercent, uint256 _newBurnPercent) external onlyOwner {
         require(_newDisPercent + _newLiqPercent + _newBurnPercent <= 10000, "Total more than 10000");
-        
-        burnPercent = _newBurnPercent;
+
         disPercent = _newDisPercent;
         liqPercent = _newLiqPercent;
+        burnPercent = _newBurnPercent;
 
-        emit UpdatePercent(burnPercent, disPercent,  liqPercent);
+        emit UpdatePercent(disPercent, liqPercent, burnPercent);
     }
 
     function updateMinimumSupply(uint256 _minimumSupply) external onlyOwner {
@@ -401,6 +401,7 @@ using SafeERC20Upgradeable for IERC20Upgradeable;
         uint256 _liqPercent,
         uint256 _disPercent
     ) public initializer {
+        require(_disPercent + _liqPercent + _burnPercent <= 10000, "Total more than 10000");
         require(_lPool != address(0), "0 address");
 
         name = "PURSE TOKEN";
