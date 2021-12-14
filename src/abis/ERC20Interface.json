@@ -55,49 +55,49 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokens\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"success\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokens\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"success\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/Users/cheek/Desktop/Developer doc/Visual Studio Code/PundiX/purseRewardBSC/src/contracts/PurseTokenUpgradable.sol\":\"ERC20Interface\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/cheek/Desktop/Developer doc/Visual Studio Code/PundiX/purseRewardBSC/src/contracts/PurseTokenUpgradable.sol\":{\"keccak256\":\"0x3a90e61afc349fe79c0540977a7088bcd5476bd0feaeae16e64c717c04d89271\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a8e03129fdcaa2eebabc258f094af1a4561e2a9d3c85cfcbba0002602f22e7df\",\"dweb:/ipfs/QmRCVLaXSwDDmfM2Ea22fyuzsHv8qsnwZqu1BkFnLVPHt4\"]},\"@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol\":{\"keccak256\":\"0x35b09b69aca3bc2633da8f47382a81ecf367efe57167a2114f60f9ec81988afa\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4dd39ae44599da9e6b59035de3cddcfaa8d7b2a45f1c887adf5a1e38315cf6cd\",\"dweb:/ipfs/QmcFVkc7m3MzxoiCWCb2yZuezqW7eQTEvnScNALXhdsyJu\"]},\"@openzeppelin/contracts-upgradeable/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol\":{\"keccak256\":\"0xcc3fca7831523600d2cac44ec77ee7e079f70c6910b6d7229ff774eaa5f04cdc\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b7831b612db9847586663c82a3d071429520fc5c4ee1a15cb7873ebf15baa42d\",\"dweb:/ipfs/Qmezw3xDRDjm2by9rmNLa575CvqTWBoEMSdimp5nWd9ZfZ\"]},\"@openzeppelin/contracts-upgradeable/proxy/beacon/IBeaconUpgradeable.sol\":{\"keccak256\":\"0xce27d2053e9b7a970532947213c84eed0289ada2d9a91c92b7e1e15f3a466c54\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://429b36651fab917b4cdfa5e9431b96c5bd3ba73392a31e62a4d92b4b4ae85184\",\"dweb:/ipfs/QmY1SgWuSbxgYCPAibNHT4phA71QzzqagZRunwC7Gm19wq\"]},\"@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol\":{\"keccak256\":\"0x8b2abd85d0ece7e866e100e9d47ca9cbec93c87cf71a8d267b2b93eb81f7d5e9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fe9fa1beb63e4a09637701f783982ba80380d630d600c9cafe26b68bf58be1b2\",\"dweb:/ipfs/QmRA3GXhTWys88joD9x8xYhdjzvGwmDGLMMzGw3LxbSEge\"]},\"@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol\":{\"keccak256\":\"0x57e153cdc803037ecf68a916c6d7eb38d7e4ddbc7ceb6e37c0bee45a5aef9709\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a63838ebf237b9b8e0defe37c091cac1d5f9f41515edda31f01b6b04369ba783\",\"dweb:/ipfs/QmXvEJKHP2o8rfp6ahHhXdF5LyQtGM5r31Z5k4i8sfyv2a\"]},\"@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol\":{\"keccak256\":\"0x742c0fbab73bf595ca40025f6e81cb48dbd5e133950717f7befd062a925c0148\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://104b5ce52aba5c5f57735005b5869e8c97232a9ac6a37a8dcdf8dc38e17ea5aa\",\"dweb:/ipfs/QmRdWh7R1oYzZMAAwwGUu8Sw18ChMAyCXD513RidThvjuZ\"]},\"@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol\":{\"keccak256\":\"0x946f08c0a132c5877d458d7af7956da60607f20a5c03dd75760708c848aae6b7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3b80d20ed113ad0be486d489e1cc2f0f4006b7893e579c2156e8c434d8eec382\",\"dweb:/ipfs/QmdB8QGghkRGcSkp4xAWCvohGgYXFU9ncMx82XSqDMiZJf\"]},\"@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol\":{\"keccak256\":\"0x062b5a0f7cc6b0528fa350033759f3a15ba42afb57423d7c593753860f2c82e0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b3c8b4ec819fc9648ef5ae6b8edc474b2a631389fa73add4c4545e1918abe034\",\"dweb:/ipfs/Qmc8GzvTtCxR3mg3QuLRzycSMfsSjjZPyPALmLBjMxSGv6\"]},\"@openzeppelin/contracts-upgradeable/utils/StorageSlotUpgradeable.sol\":{\"keccak256\":\"0xc15eeb888d421aa4dedf46768a0502590d88911cfe5750d3ab9f644a7e5ada95\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2f270653fd8d1a109e3e3aa77d5035a52f175b66604f924e0db1f71a5b38e708\",\"dweb:/ipfs/QmNiP7PvV47ahSvMwxCifeUExVNhyVXdd8Zu2hGz4XC32j\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokens\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"success\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"tokens\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"success\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/Users/cheek/Desktop/Developer doc/Visual Studio Code/PundiX/purseRewardBSC/src/contracts/PurseTokenUpgradable.sol\":\"ERC20Interface\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/cheek/Desktop/Developer doc/Visual Studio Code/PundiX/purseRewardBSC/src/contracts/PurseTokenUpgradable.sol\":{\"keccak256\":\"0xabd81a89d5291c47fc9e98add0f8721079eed0cf6f6e98cd1b4b073b68bec367\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9f62931c285a401f814f6422715aff5e6f0f3553ac9de8422c42ec693b33ddca\",\"dweb:/ipfs/Qmdt5QGHDGg4XDy94yAJX8zjwRfKbmE3qNHeRub1anMnyF\"]},\"@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol\":{\"keccak256\":\"0x35b09b69aca3bc2633da8f47382a81ecf367efe57167a2114f60f9ec81988afa\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4dd39ae44599da9e6b59035de3cddcfaa8d7b2a45f1c887adf5a1e38315cf6cd\",\"dweb:/ipfs/QmcFVkc7m3MzxoiCWCb2yZuezqW7eQTEvnScNALXhdsyJu\"]},\"@openzeppelin/contracts-upgradeable/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol\":{\"keccak256\":\"0xcc3fca7831523600d2cac44ec77ee7e079f70c6910b6d7229ff774eaa5f04cdc\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b7831b612db9847586663c82a3d071429520fc5c4ee1a15cb7873ebf15baa42d\",\"dweb:/ipfs/Qmezw3xDRDjm2by9rmNLa575CvqTWBoEMSdimp5nWd9ZfZ\"]},\"@openzeppelin/contracts-upgradeable/proxy/beacon/IBeaconUpgradeable.sol\":{\"keccak256\":\"0xce27d2053e9b7a970532947213c84eed0289ada2d9a91c92b7e1e15f3a466c54\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://429b36651fab917b4cdfa5e9431b96c5bd3ba73392a31e62a4d92b4b4ae85184\",\"dweb:/ipfs/QmY1SgWuSbxgYCPAibNHT4phA71QzzqagZRunwC7Gm19wq\"]},\"@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol\":{\"keccak256\":\"0x8b2abd85d0ece7e866e100e9d47ca9cbec93c87cf71a8d267b2b93eb81f7d5e9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fe9fa1beb63e4a09637701f783982ba80380d630d600c9cafe26b68bf58be1b2\",\"dweb:/ipfs/QmRA3GXhTWys88joD9x8xYhdjzvGwmDGLMMzGw3LxbSEge\"]},\"@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol\":{\"keccak256\":\"0x57e153cdc803037ecf68a916c6d7eb38d7e4ddbc7ceb6e37c0bee45a5aef9709\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a63838ebf237b9b8e0defe37c091cac1d5f9f41515edda31f01b6b04369ba783\",\"dweb:/ipfs/QmXvEJKHP2o8rfp6ahHhXdF5LyQtGM5r31Z5k4i8sfyv2a\"]},\"@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol\":{\"keccak256\":\"0x742c0fbab73bf595ca40025f6e81cb48dbd5e133950717f7befd062a925c0148\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://104b5ce52aba5c5f57735005b5869e8c97232a9ac6a37a8dcdf8dc38e17ea5aa\",\"dweb:/ipfs/QmRdWh7R1oYzZMAAwwGUu8Sw18ChMAyCXD513RidThvjuZ\"]},\"@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol\":{\"keccak256\":\"0x946f08c0a132c5877d458d7af7956da60607f20a5c03dd75760708c848aae6b7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3b80d20ed113ad0be486d489e1cc2f0f4006b7893e579c2156e8c434d8eec382\",\"dweb:/ipfs/QmdB8QGghkRGcSkp4xAWCvohGgYXFU9ncMx82XSqDMiZJf\"]},\"@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol\":{\"keccak256\":\"0x062b5a0f7cc6b0528fa350033759f3a15ba42afb57423d7c593753860f2c82e0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b3c8b4ec819fc9648ef5ae6b8edc474b2a631389fa73add4c4545e1918abe034\",\"dweb:/ipfs/Qmc8GzvTtCxR3mg3QuLRzycSMfsSjjZPyPALmLBjMxSGv6\"]},\"@openzeppelin/contracts-upgradeable/utils/StorageSlotUpgradeable.sol\":{\"keccak256\":\"0xc15eeb888d421aa4dedf46768a0502590d88911cfe5750d3ab9f644a7e5ada95\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2f270653fd8d1a109e3e3aa77d5035a52f175b66604f924e0db1f71a5b38e708\",\"dweb:/ipfs/QmNiP7PvV47ahSvMwxCifeUExVNhyVXdd8Zu2hGz4XC32j\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity ^0.8.0;\r\n\r\nimport \"@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol\";\r\nimport \"@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol\";\r\nimport \"@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol\";\r\nimport \"@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol\";\r\n\r\nabstract contract ERC20Interface {\r\n\r\n    function transfer(address to, uint tokens) public virtual returns (bool success);\r\n\r\n    function transferFrom(address from, address to, uint tokens) public virtual returns (bool success);\r\n\r\n}\r\n\r\ncontract PurseTokenUpgradable is Initializable, UUPSUpgradeable, PausableUpgradeable, OwnableUpgradeable {\r\n\r\n    string public name;\r\n    string public symbol;\r\n    uint256 public totalSupply;\r\n    uint8 public decimals;\r\n    uint256 public minimumSupply;\r\n    address[] public admins;\r\n    address public liqPool;\r\n    address public disPool;\r\n    uint256 public burnPercent;\r\n    uint256 public liqPercent;\r\n    uint256 public disPercent;\r\n\r\n    uint256 public _averageInterval;\r\n    uint256 public _getRewardEndTime;\r\n    uint256 public _getRewardStartTime;\r\n    uint256 public _numOfDaysPerMth;\r\n    uint256 public _monthlyDistributePr;\r\n    uint256 public _percentageDistribute;\r\n    uint256 public _lastRewardStartTime;\r\n    uint256 public _totalSupply;\r\n\r\n    mapping(address => uint256) public balanceOf;\r\n    mapping(address => mapping(address => uint256)) public allowance;\r\n    mapping(address => bool) public isAdmin;\r\n    mapping(address => bool) public isWhitelistedTo;\r\n    mapping(address => bool) public isWhitelistedFrom;\r\n    mapping(address => AccAmount) public accAmount;\r\n\r\n    struct AccAmount {\r\n        uint256 amount;\r\n        uint256 accReward;\r\n        uint256 lastUpdateTime;\r\n    }\r\n\r\n    event Transfer(address indexed _from, address indexed _to, uint256 _value);\r\n    event Burn(address indexed _from, uint256 _value);\r\n    event Mint(address indexed _from, address indexed _to, uint256 _value);\r\n    event Approval(address indexed _owner, address indexed _spender, uint256 _value);\r\n\r\n    modifier onlyAdmin() {\r\n        require(isAdmin[msg.sender], \"Not Admin\");\r\n        _;\r\n    }\r\n\r\n    function transfer(address _to, uint256 _value) public whenNotPaused returns (bool success)\r\n    {\r\n        require(balanceOf[msg.sender] >= _value, \"Not enough balance\");\r\n        if (isWhitelistedTo[_to] || isWhitelistedFrom[msg.sender]) {\r\n            updateAccumulateBalanceTransaction(msg.sender, _to);\r\n            balanceOf[msg.sender] -= _value;\r\n            balanceOf[_to] += _value;\r\n\r\n\r\n            emit Transfer(msg.sender, _to, _value);\r\n            return true;\r\n        } else {\r\n            updateAccumulateBalanceTransaction(msg.sender, _to);\r\n            uint256 transferValue = _partialBurn(_value, msg.sender);\r\n            balanceOf[msg.sender] -= transferValue;\r\n            balanceOf[_to] += transferValue;\r\n\r\n\r\n            emit Transfer(msg.sender, _to, transferValue);\r\n            return true;\r\n        }\r\n    }\r\n\r\n    function approve(address _spender, uint256 _value) public whenNotPaused returns (bool success)\r\n    {\r\n        allowance[msg.sender][_spender] = _value;\r\n        emit Approval(msg.sender, _spender, _value);\r\n        return true;\r\n    }\r\n\r\n    function transferFrom(address _from, address _to, uint256 _value) public whenNotPaused returns (bool success) {\r\n        require(_value <= balanceOf[_from], \"Not enough balance\");\r\n        require(_value <= allowance[_from][msg.sender], \"Not enough allowance\");\r\n        if (isWhitelistedTo[_to] || isWhitelistedFrom[msg.sender]) {\r\n            allowance[_from][msg.sender] -= _value;\r\n            updateAccumulateBalanceTransaction(_from, _to);\r\n            balanceOf[_from] -= _value;\r\n            balanceOf[_to] += _value;\r\n\r\n            emit Transfer(_from, _to, _value);\r\n            return true;\r\n        } else {\r\n            allowance[_from][msg.sender] -= _value;\r\n            updateAccumulateBalanceTransaction(_from, _to);\r\n            uint256 transferValue = _partialBurn(_value, _from);\r\n            balanceOf[_from] -= transferValue;\r\n            balanceOf[_to] += transferValue;\r\n\r\n            emit Transfer(_from, _to, transferValue);\r\n            return true;\r\n        }\r\n    }\r\n\r\n    function mint(address _account, uint256 _amount) public whenNotPaused onlyAdmin {\r\n        require(_account != address(0), \"0 address\");\r\n        updateAccumulateBalance(_account);\r\n        balanceOf[_account] += _amount;\r\n\r\n        totalSupply += _amount;\r\n\r\n        mintEvent(_account, _amount);\r\n    }\r\n\r\n    function burn(uint256 _amount) public whenNotPaused {\r\n        require(_amount != 0, \"0 address\");\r\n        require(balanceOf[msg.sender] >= _amount, \"Not enough balance\");\r\n        updateAccumulateBalance(msg.sender);\r\n        balanceOf[msg.sender] -= _amount;\r\n        totalSupply -= _amount;\r\n\r\n        burnEvent(msg.sender, _amount);\r\n    }\r\n\r\n    function updateAccumulateBalance(address _holder) private {\r\n        if (accAmount[_holder].lastUpdateTime == 0) {\r\n            if (_getRewardStartTime == 0) {\r\n                uint256 interval = (block.timestamp - _lastRewardStartTime) / _averageInterval;\r\n                accAmount[_holder].lastUpdateTime = _lastRewardStartTime + (interval * _averageInterval);\r\n            } else {\r\n                if (block.timestamp < _getRewardStartTime) {\r\n                    uint256 interval = (block.timestamp - _lastRewardStartTime) / _averageInterval;\r\n                    accAmount[_holder].lastUpdateTime = _lastRewardStartTime + (interval * _averageInterval);\r\n                } else {\r\n                    uint256 interval = (block.timestamp - _getRewardStartTime) / _averageInterval;\r\n                    accAmount[_holder].lastUpdateTime = _getRewardStartTime + (interval * _averageInterval);\r\n                }\r\n            }\r\n        }\r\n        else if (block.timestamp < _getRewardStartTime) {\r\n            if (accAmount[_holder].lastUpdateTime < _lastRewardStartTime) {\r\n                uint256 interval = (block.timestamp - _lastRewardStartTime) / _averageInterval;\r\n                uint256 accumulateAmount = balanceOf[_holder] * interval;\r\n                accAmount[_holder].lastUpdateTime = _lastRewardStartTime + (interval * _averageInterval);\r\n                accAmount[_holder].amount = accumulateAmount;\r\n            }\r\n            else {\r\n                uint256 interval = (block.timestamp - accAmount[_holder].lastUpdateTime) / _averageInterval;\r\n                if (interval >= 1) {\r\n                    uint256 accumulateAmount = balanceOf[_holder] * interval;\r\n                    accAmount[_holder].lastUpdateTime += (interval * _averageInterval);\r\n                    accAmount[_holder].amount = accAmount[_holder].amount + accumulateAmount;\r\n                }\r\n            }\r\n        }\r\n        else if (block.timestamp >= _getRewardStartTime) {\r\n            if (accAmount[_holder].lastUpdateTime < _lastRewardStartTime) {\r\n                uint256 interval = (_getRewardStartTime - _lastRewardStartTime) / _averageInterval;\r\n                uint256 lastmonthAccAmount = balanceOf[_holder] * interval;\r\n                accAmount[_holder].amount = 0;\r\n                accAmount[_holder].accReward = lastmonthAccAmount * _monthlyDistributePr * _percentageDistribute * 100 / _totalSupply / _numOfDaysPerMth / 10000;\r\n                accAmount[_holder].lastUpdateTime = _getRewardStartTime;\r\n                updateAccumulateBalance(_holder);\r\n            }\r\n            else if (accAmount[_holder].lastUpdateTime >= _lastRewardStartTime && accAmount[_holder].lastUpdateTime < _getRewardStartTime) {\r\n                uint256 interval = (_getRewardStartTime - accAmount[_holder].lastUpdateTime) / _averageInterval;\r\n                if (interval >= 1) {\r\n                    uint256 accumulateAmount = balanceOf[_holder] * interval;\r\n                    uint256 lastmonthAccAmount = accAmount[_holder].amount + accumulateAmount;\r\n                    accAmount[_holder].amount = 0;\r\n                    accAmount[_holder].accReward = lastmonthAccAmount * _monthlyDistributePr * _percentageDistribute * 100 / _totalSupply / _numOfDaysPerMth / 10000;\r\n                    accAmount[_holder].lastUpdateTime = _getRewardStartTime;\r\n                    updateAccumulateBalance(_holder);\r\n                }\r\n                else {\r\n                    uint256 lastmonthAccAmount = accAmount[_holder].amount;\r\n                    accAmount[_holder].amount = 0;\r\n                    accAmount[_holder].accReward = lastmonthAccAmount * _monthlyDistributePr * _percentageDistribute * 100 / _totalSupply / _numOfDaysPerMth / 10000;\r\n                    accAmount[_holder].lastUpdateTime = _getRewardStartTime;\r\n                    updateAccumulateBalance(_holder);\r\n                }\r\n            }\r\n            else {\r\n                uint256 interval = (block.timestamp - accAmount[_holder].lastUpdateTime) / _averageInterval;\r\n                if (interval >= 1) {\r\n                    uint256 accumulateAmount = balanceOf[_holder] * interval;\r\n                    accAmount[_holder].lastUpdateTime += (interval * _averageInterval);\r\n                    accAmount[_holder].amount = accAmount[_holder].amount + accumulateAmount;\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n\r\n    function updateAccumulateBalanceTransaction(address _from, address _to) private {\r\n        updateAccumulateBalance(_from);\r\n        updateAccumulateBalance(_to);\r\n    }\r\n\r\n    function claimDistributionPurse() public whenNotPaused returns (bool success) {\r\n        require(block.timestamp > _getRewardStartTime, \"Claim not started\");\r\n        require(block.timestamp < _getRewardEndTime, \"Claim period over\");\r\n\r\n        updateAccumulateBalance(msg.sender);\r\n        require(accAmount[msg.sender].accReward > 0, \"User reward is 0\");\r\n        uint256 claimAmount = accAmount[msg.sender].accReward;\r\n        accAmount[msg.sender].accReward = 0;\r\n\r\n        ERC20Interface(address(this)).transfer(msg.sender, claimAmount);\r\n        return true;\r\n    }\r\n\r\n    function activateClaimMonthly(uint256 _rewardStartTime, uint256 _rewardEndTime, uint256 _monthlyDisPr, uint256 _numOfDays, uint256 _percentage) public onlyAdmin {\r\n        require(_rewardStartTime > block.timestamp, \"Less than current time\");\r\n        require(_rewardEndTime > _rewardStartTime, \"Less than start time\");\r\n        require(_numOfDays > 0, \"Less than 0\");\r\n        require(_percentage > 0 && _percentage <= 100, \"Less than 0 or More than 100\");\r\n        require(_monthlyDisPr <= balanceOf[address(this)], \"More than pool balance\");\r\n\r\n        _totalSupply = totalSupply;\r\n        if (_getRewardStartTime != 0) {\r\n            _lastRewardStartTime = _getRewardStartTime;\r\n        }\r\n        _numOfDaysPerMth = _numOfDays;\r\n        _getRewardStartTime = _rewardStartTime;\r\n        _getRewardEndTime = _rewardEndTime;\r\n        _percentageDistribute = _percentage;\r\n        _monthlyDistributePr = _monthlyDisPr;\r\n    }\r\n\r\n    function _partialBurn(uint256 _amount, address _from) internal returns (uint256) {\r\n        uint256 transferAmount = 0;\r\n        uint256 burnAmount;\r\n        uint256 liqAmount;\r\n        uint256 disAmount;\r\n        (\r\n        burnAmount,\r\n        liqAmount,\r\n        disAmount\r\n        ) = _calculateDeductAmount(_amount);\r\n\r\n        if (burnAmount >= 0 || liqAmount >= 0 || disAmount >= 0) {\r\n            burnPrivate(_from, burnAmount, liqAmount, disAmount);\r\n        }\r\n        transferAmount = _amount - burnAmount - liqAmount - disAmount;\r\n\r\n        return transferAmount;\r\n    }\r\n\r\n    function _calculateDeductAmount(uint256 _amount) internal view returns (uint256, uint256, uint256) {\r\n        uint256 burnAmount;\r\n        uint256 liqAmount;\r\n        uint256 disAmount;\r\n\r\n        if (totalSupply > minimumSupply) {\r\n            burnAmount = (_amount * burnPercent) / 100;\r\n            liqAmount = (_amount * liqPercent) / 100;\r\n            disAmount = (_amount * disPercent) / 100;\r\n            uint256 availableBurn = totalSupply - minimumSupply;\r\n            if (burnAmount > availableBurn) {\r\n                burnAmount = availableBurn;\r\n            }\r\n        }\r\n        return (burnAmount, liqAmount, disAmount);\r\n    }\r\n\r\n    function burnPrivate(address _account, uint256 _burnAmount, uint256 _liqAmount, uint256 _disAmount) private {\r\n        require(_account != address(0), \"0 address\");\r\n        uint256 accountBalance = balanceOf[_account];\r\n        uint256 deductAmount = _burnAmount + _liqAmount + _disAmount;\r\n        require(accountBalance >= deductAmount, \"Not enough balance\");\r\n        balanceOf[_account] -= _burnAmount;\r\n        balanceOf[_account] -= _liqAmount;\r\n        balanceOf[_account] -= _disAmount;\r\n\r\n        totalSupply -= _burnAmount;\r\n        balanceOf[liqPool] += _liqAmount;\r\n        balanceOf[disPool] += _disAmount;\r\n\r\n        burnEvent(_account, _burnAmount);\r\n        emit Transfer(msg.sender, liqPool, _liqAmount);\r\n        emit Transfer(msg.sender, disPool, _disAmount);\r\n    }\r\n\r\n    function updateLPoolAdd(address _newLPool) public onlyOwner {\r\n        require(_newLPool != liqPool, \"Same with previous address\");\r\n\r\n        liqPool = _newLPool;\r\n    }\r\n\r\n    function updateDPoolAdd(address _newDPool) public onlyOwner {\r\n        require(_newDPool != disPool, \"Same with previous address\");\r\n\r\n        disPool = _newDPool;\r\n    }\r\n\r\n    function updatePercent(uint256 _newDisPercent, uint256 _newLiqPercent, uint256 _newBurnPercent) public onlyOwner {\r\n        require(_newDisPercent >= 0 && _newDisPercent <= 100 && _newLiqPercent >= 0 && _newLiqPercent <= 100 && _newBurnPercent >= 0 && _newBurnPercent <= 100, \"% < 0 or > 100\");\r\n        require(_newDisPercent + _newLiqPercent + _newBurnPercent <= 100, \"Total more than 100\");\r\n\r\n        disPercent = _newDisPercent;\r\n        liqPercent = _newLiqPercent;\r\n        burnPercent = _newBurnPercent;\r\n    }\r\n\r\n    function updateMinimumSupply(uint256 _minimumSupply) public onlyOwner {\r\n        minimumSupply = _minimumSupply;\r\n    }\r\n\r\n    function addAdmin(address newAdmin) public onlyOwner {\r\n        require(!isAdmin[newAdmin], \"Is admin\");\r\n\r\n        isAdmin[newAdmin] = true;\r\n        admins.push(newAdmin);\r\n    }\r\n\r\n    function removeAdmin(uint index) public onlyOwner returns (address[] memory){\r\n        address removeOwner = admins[index];\r\n        require(index < admins.length, \"Input over admins length\");\r\n        require(isAdmin[removeOwner], \"Not an admin\");\r\n\r\n        for (uint i = index; i < admins.length - 1; i++) {\r\n            admins[i] = admins[i + 1];\r\n        }\r\n        admins.pop();\r\n\r\n        isAdmin[removeOwner] = false;\r\n        return admins;\r\n    }\r\n\r\n    function transferERCToken(address token, uint256 amount, address _to) public whenNotPaused onlyOwner {\r\n        require(_to != address(0), \"0 address\");\r\n        if (token == address(this)) {\r\n            updateAccumulateBalance(_to);\r\n            ERC20Interface(token).transfer(_to, amount);\r\n        } else {\r\n            ERC20Interface(token).transfer(_to, amount);\r\n        }\r\n    }\r\n\r\n    function pause() public whenNotPaused onlyOwner {\r\n        _pause();\r\n    }\r\n\r\n    function unpause() public whenPaused onlyOwner {\r\n        _unpause();\r\n    }\r\n\r\n    function setWhitelistedTo(address newWhitelist) public onlyOwner {\r\n        require(!isWhitelistedTo[newWhitelist], \"Whilisted Address\");\r\n\r\n        isWhitelistedTo[newWhitelist] = true;\r\n    }\r\n\r\n    function removeWhitelistedTo(address newWhitelist) public onlyOwner {\r\n        require(isWhitelistedTo[newWhitelist], \"Non whilisted Address\");\r\n\r\n        isWhitelistedTo[newWhitelist] = false;\r\n    }\r\n\r\n    function setWhitelistedFrom(address newWhitelist) public onlyOwner {\r\n        require(!isWhitelistedFrom[newWhitelist], \"Whilisted Address\");\r\n\r\n        isWhitelistedFrom[newWhitelist] = true;\r\n    }\r\n\r\n    function removeWhitelistedFrom(address newWhitelist) public onlyOwner {\r\n        require(isWhitelistedFrom[newWhitelist], \"Non whilisted Address\");\r\n\r\n        isWhitelistedFrom[newWhitelist] = false;\r\n    }\r\n\r\n    function _authorizeUpgrade(address) internal override onlyOwner {}\r\n\r\n    function mintEvent(address to, uint256 amount) internal {\r\n        emit Mint(address(0), to, amount);\r\n        emit Transfer(address(0), to, amount);\r\n    }\r\n\r\n    function burnEvent(address from, uint256 amount) internal {\r\n        emit Burn(from, amount);\r\n        emit Transfer(from, address(0), amount);\r\n    }\r\n\r\n    function initialize(\r\n        address _to,\r\n        address _lPool,\r\n        uint256 _burnPercent,\r\n        uint256 _liqPercent,\r\n        uint256 _disPercent\r\n    ) public initializer {\r\n        require(_lPool != address(0), \"0 address\");\r\n        require(_burnPercent >= 0, \"Percentage is 0\");\r\n        require(_liqPercent >= 0, \"Percentage is 0\");\r\n        require(_disPercent >= 0, \"Percentage is 0\");\r\n\r\n        name = \"PURSE TOKEN\";\r\n        symbol = \"PURSE\";\r\n        totalSupply = 64000000000 * (10 ** 18);\r\n        decimals = 18;\r\n        minimumSupply = 12800000000 * (10 ** 18);\r\n\r\n        liqPool = _lPool;\r\n        disPool = address(this);\r\n        burnPercent = _burnPercent;\r\n        liqPercent = _liqPercent;\r\n        disPercent = _disPercent;\r\n        _averageInterval = 1 days;\r\n        _lastRewardStartTime = block.timestamp;\r\n        __Pausable_init();\r\n        __Ownable_init();\r\n        __UUPSUpgradeable_init();\r\n\r\n        balanceOf[_to] = totalSupply;\r\n        updateAccumulateBalance(_to);\r\n\r\n        mintEvent(_to, totalSupply);\r\n    }\r\n}",
+  "source": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity ^0.8.0;\r\n\r\nimport \"@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol\";\r\nimport \"@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol\";\r\nimport \"@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol\";\r\nimport \"@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol\";\r\n\r\nabstract contract ERC20Interface {\r\n\r\n    function transfer(address to, uint tokens) public virtual returns (bool success);\r\n\r\n    function transferFrom(address from, address to, uint tokens) public virtual returns (bool success);\r\n\r\n}\r\n\r\ncontract PurseTokenUpgradable is Initializable, UUPSUpgradeable, PausableUpgradeable, OwnableUpgradeable {\r\n\r\n    string public name;\r\n    string public symbol;\r\n    uint256 public totalSupply;\r\n    uint8 public decimals;\r\n    uint256 public minimumSupply;\r\n    address[] public admins;\r\n    address public liqPool;\r\n    address public disPool;\r\n    uint256 public burnPercent;\r\n    uint256 public liqPercent;\r\n    uint256 public disPercent;\r\n\r\n    uint256 public _averageInterval;\r\n    uint256 public _getRewardEndTime;\r\n    uint256 public _getRewardStartTime;\r\n    uint256 public _numOfDaysPerMth;\r\n    uint256 public _monthlyDistributePr;\r\n    uint256 public _percentageDistribute;\r\n    uint256 public _lastRewardStartTime;\r\n    uint256 public _totalSupply;\r\n\r\n    mapping(address => uint256) public balanceOf;\r\n    mapping(address => mapping(address => uint256)) public allowance;\r\n    mapping(address => bool) public isAdmin;\r\n    mapping(address => bool) public isWhitelistedTo;\r\n    mapping(address => bool) public isWhitelistedFrom;\r\n    mapping(address => AccAmount) public accAmount;\r\n\r\n    struct AccAmount {\r\n        uint256 amount;\r\n        uint256 accReward;\r\n        uint256 lastUpdateTime;\r\n    }\r\n\r\n    event Transfer(address indexed _from, address indexed _to, uint256 _value);\r\n    event Burn(address indexed _from, uint256 _value);\r\n    event Mint(address indexed _from, address indexed _to, uint256 _value);\r\n    event Approval(address indexed _owner, address indexed _spender, uint256 _value);\r\n\r\n    modifier onlyAdmin() {\r\n        require(isAdmin[msg.sender], \"Not Admin\");\r\n        _;\r\n    }\r\n\r\n    function transfer(address _to, uint256 _value) public whenNotPaused returns (bool success)\r\n    {\r\n        require(balanceOf[msg.sender] >= _value, \"Not enough balance\");\r\n        if (isWhitelistedTo[_to] || isWhitelistedFrom[msg.sender]) {\r\n            updateAccumulateBalanceTransaction(msg.sender, _to);\r\n            balanceOf[msg.sender] -= _value;\r\n            balanceOf[_to] += _value;\r\n\r\n\r\n            emit Transfer(msg.sender, _to, _value);\r\n            return true;\r\n        } else {\r\n            updateAccumulateBalanceTransaction(msg.sender, _to);\r\n            uint256 transferValue = _partialBurn(_value, msg.sender);\r\n            balanceOf[msg.sender] -= transferValue;\r\n            balanceOf[_to] += transferValue;\r\n\r\n\r\n            emit Transfer(msg.sender, _to, transferValue);\r\n            return true;\r\n        }\r\n    }\r\n\r\n    function approve(address _spender, uint256 _value) public whenNotPaused returns (bool success)\r\n    {\r\n        allowance[msg.sender][_spender] = _value;\r\n        emit Approval(msg.sender, _spender, _value);\r\n        return true;\r\n    }\r\n\r\n    function transferFrom(address _from, address _to, uint256 _value) public whenNotPaused returns (bool success) {\r\n        require(_value <= balanceOf[_from], \"Not enough balance\");\r\n        require(_value <= allowance[_from][msg.sender], \"Not enough allowance\");\r\n        if (isWhitelistedTo[_to] || isWhitelistedFrom[msg.sender]) {\r\n            allowance[_from][msg.sender] -= _value;\r\n            updateAccumulateBalanceTransaction(_from, _to);\r\n            balanceOf[_from] -= _value;\r\n            balanceOf[_to] += _value;\r\n\r\n            emit Transfer(_from, _to, _value);\r\n            return true;\r\n        } else {\r\n            allowance[_from][msg.sender] -= _value;\r\n            updateAccumulateBalanceTransaction(_from, _to);\r\n            uint256 transferValue = _partialBurn(_value, _from);\r\n            balanceOf[_from] -= transferValue;\r\n            balanceOf[_to] += transferValue;\r\n\r\n            emit Transfer(_from, _to, transferValue);\r\n            return true;\r\n        }\r\n    }\r\n\r\n    function mint(address _account, uint256 _amount) public whenNotPaused onlyAdmin {\r\n        require(_account != address(0), \"0 address\");\r\n        updateAccumulateBalance(_account);\r\n        balanceOf[_account] += _amount;\r\n\r\n        totalSupply += _amount;\r\n\r\n        mintEvent(_account, _amount);\r\n    }\r\n\r\n    function burn(uint256 _amount) public whenNotPaused {\r\n        require(_amount != 0, \"0 address\");\r\n        require(balanceOf[msg.sender] >= _amount, \"Not enough balance\");\r\n        updateAccumulateBalance(msg.sender);\r\n        balanceOf[msg.sender] -= _amount;\r\n        totalSupply -= _amount;\r\n\r\n        burnEvent(msg.sender, _amount);\r\n    }\r\n\r\n    function updateAccumulateBalance(address _holder) private {\r\n        if (accAmount[_holder].lastUpdateTime == 0) {\r\n            if (_getRewardStartTime == 0) {\r\n                uint256 interval = (block.timestamp - _lastRewardStartTime) / _averageInterval;\r\n                accAmount[_holder].lastUpdateTime = _lastRewardStartTime + (interval * _averageInterval);\r\n            } else {\r\n                if (block.timestamp < _getRewardStartTime) {\r\n                    uint256 interval = (block.timestamp - _lastRewardStartTime) / _averageInterval;\r\n                    accAmount[_holder].lastUpdateTime = _lastRewardStartTime + (interval * _averageInterval);\r\n                } else {\r\n                    uint256 interval = (block.timestamp - _getRewardStartTime) / _averageInterval;\r\n                    accAmount[_holder].lastUpdateTime = _getRewardStartTime + (interval * _averageInterval);\r\n                }\r\n            }\r\n        }\r\n        else if (block.timestamp < _getRewardStartTime) {\r\n            if (accAmount[_holder].lastUpdateTime < _lastRewardStartTime) {\r\n                uint256 interval = (block.timestamp - _lastRewardStartTime) / _averageInterval;\r\n                uint256 accumulateAmount = balanceOf[_holder] * interval;\r\n                accAmount[_holder].lastUpdateTime = _lastRewardStartTime + (interval * _averageInterval);\r\n                accAmount[_holder].amount = accumulateAmount;\r\n            }\r\n            else {\r\n                uint256 interval = (block.timestamp - accAmount[_holder].lastUpdateTime) / _averageInterval;\r\n                if (interval >= 1) {\r\n                    uint256 accumulateAmount = balanceOf[_holder] * interval;\r\n                    accAmount[_holder].lastUpdateTime += (interval * _averageInterval);\r\n                    accAmount[_holder].amount = accAmount[_holder].amount + accumulateAmount;\r\n                }\r\n            }\r\n        }\r\n        else if (block.timestamp >= _getRewardStartTime) {\r\n            if (accAmount[_holder].lastUpdateTime < _lastRewardStartTime) {\r\n                uint256 interval = (_getRewardStartTime - _lastRewardStartTime) / _averageInterval;\r\n                uint256 lastmonthAccAmount = balanceOf[_holder] * interval;\r\n                accAmount[_holder].amount = 0;\r\n                accAmount[_holder].accReward = lastmonthAccAmount * _monthlyDistributePr * _percentageDistribute * 100 / _totalSupply / _numOfDaysPerMth / 10000;\r\n                accAmount[_holder].lastUpdateTime = _getRewardStartTime;\r\n                updateAccumulateBalance(_holder);\r\n            }\r\n            else if (accAmount[_holder].lastUpdateTime >= _lastRewardStartTime && accAmount[_holder].lastUpdateTime < _getRewardStartTime) {\r\n                uint256 interval = (_getRewardStartTime - accAmount[_holder].lastUpdateTime) / _averageInterval;\r\n                if (interval >= 1) {\r\n                    uint256 accumulateAmount = balanceOf[_holder] * interval;\r\n                    uint256 lastmonthAccAmount = accAmount[_holder].amount + accumulateAmount;\r\n                    accAmount[_holder].amount = 0;\r\n                    accAmount[_holder].accReward = lastmonthAccAmount * _monthlyDistributePr * _percentageDistribute * 100 / _totalSupply / _numOfDaysPerMth / 10000;\r\n                    accAmount[_holder].lastUpdateTime = _getRewardStartTime;\r\n                    updateAccumulateBalance(_holder);\r\n                }\r\n                else {\r\n                    uint256 lastmonthAccAmount = accAmount[_holder].amount;\r\n                    accAmount[_holder].amount = 0;\r\n                    accAmount[_holder].accReward = lastmonthAccAmount * _monthlyDistributePr * _percentageDistribute * 100 / _totalSupply / _numOfDaysPerMth / 10000;\r\n                    accAmount[_holder].lastUpdateTime = _getRewardStartTime;\r\n                    updateAccumulateBalance(_holder);\r\n                }\r\n            }\r\n            else {\r\n                uint256 interval = (block.timestamp - accAmount[_holder].lastUpdateTime) / _averageInterval;\r\n                if (interval >= 1) {\r\n                    uint256 accumulateAmount = balanceOf[_holder] * interval;\r\n                    accAmount[_holder].lastUpdateTime += (interval * _averageInterval);\r\n                    accAmount[_holder].amount = accAmount[_holder].amount + accumulateAmount;\r\n                }\r\n            }\r\n        }\r\n    }\r\n\r\n\r\n    function updateAccumulateBalanceTransaction(address _from, address _to) private {\r\n        updateAccumulateBalance(_from);\r\n        updateAccumulateBalance(_to);\r\n    }\r\n\r\n    function claimDistributionPurse() public whenNotPaused returns (bool success) {\r\n        require(block.timestamp > _getRewardStartTime, \"Claim not started\");\r\n        require(block.timestamp < _getRewardEndTime, \"Claim period over\");\r\n\r\n        updateAccumulateBalance(msg.sender);\r\n        require(accAmount[msg.sender].accReward > 0, \"User reward is 0\");\r\n        uint256 claimAmount = accAmount[msg.sender].accReward;\r\n        accAmount[msg.sender].accReward = 0;\r\n\r\n        ERC20Interface(address(this)).transfer(msg.sender, claimAmount);\r\n        return true;\r\n    }\r\n\r\n    function activateClaimMonthly(uint256 _rewardStartTime, uint256 _rewardEndTime, uint256 _monthlyDisPr, uint256 _numOfDays, uint256 _percentage) public onlyAdmin {\r\n        require(_rewardStartTime > block.timestamp, \"Less than current time\");\r\n        require(_rewardEndTime > _rewardStartTime, \"Less than start time\");\r\n        require(_numOfDays > 0, \"Less than 0\");\r\n        require(_percentage > 0 && _percentage <= 100, \"Less than 0 or More than 100\");\r\n        require(_monthlyDisPr <= balanceOf[address(this)], \"More than pool balance\");\r\n\r\n        _totalSupply = totalSupply;\r\n        if (_getRewardStartTime != 0) {\r\n            _lastRewardStartTime = _getRewardStartTime;\r\n        }\r\n        _numOfDaysPerMth = _numOfDays;\r\n        _getRewardStartTime = _rewardStartTime;\r\n        _getRewardEndTime = _rewardEndTime;\r\n        _percentageDistribute = _percentage;\r\n        _monthlyDistributePr = _monthlyDisPr;\r\n    }\r\n\r\n    function _partialBurn(uint256 _amount, address _from) internal returns (uint256) {\r\n        uint256 transferAmount = 0;\r\n        uint256 burnAmount;\r\n        uint256 liqAmount;\r\n        uint256 disAmount;\r\n        (\r\n        burnAmount,\r\n        liqAmount,\r\n        disAmount\r\n        ) = _calculateDeductAmount(_amount);\r\n\r\n        if (burnAmount >= 0 || liqAmount >= 0 || disAmount >= 0) {\r\n            burnPrivate(_from, burnAmount, liqAmount, disAmount);\r\n        }\r\n        transferAmount = _amount - burnAmount - liqAmount - disAmount;\r\n\r\n        return transferAmount;\r\n    }\r\n\r\n    function _calculateDeductAmount(uint256 _amount) internal view returns (uint256, uint256, uint256) {\r\n        uint256 burnAmount;\r\n        uint256 liqAmount;\r\n        uint256 disAmount;\r\n\r\n        if (totalSupply > minimumSupply) {\r\n            burnAmount = (_amount * burnPercent) / 100;\r\n            liqAmount = (_amount * liqPercent) / 100;\r\n            disAmount = (_amount * disPercent) / 100;\r\n            uint256 availableBurn = totalSupply - minimumSupply;\r\n            if (burnAmount > availableBurn) {\r\n                burnAmount = availableBurn;\r\n            }\r\n        }\r\n        return (burnAmount, liqAmount, disAmount);\r\n    }\r\n\r\n    function burnPrivate(address _account, uint256 _burnAmount, uint256 _liqAmount, uint256 _disAmount) private {\r\n        require(_account != address(0), \"0 address\");\r\n        uint256 accountBalance = balanceOf[_account];\r\n        uint256 deductAmount = _burnAmount + _liqAmount + _disAmount;\r\n        require(accountBalance >= deductAmount, \"Not enough balance\");\r\n        balanceOf[_account] -= _burnAmount;\r\n        balanceOf[_account] -= _liqAmount;\r\n        balanceOf[_account] -= _disAmount;\r\n\r\n        totalSupply -= _burnAmount;\r\n        balanceOf[liqPool] += _liqAmount;\r\n        balanceOf[disPool] += _disAmount;\r\n\r\n        burnEvent(_account, _burnAmount);\r\n        emit Transfer(msg.sender, liqPool, _liqAmount);\r\n        emit Transfer(msg.sender, disPool, _disAmount);\r\n    }\r\n\r\n    function updateLPoolAdd(address _newLPool) public onlyOwner {\r\n        require(_newLPool != liqPool, \"Same with previous address\");\r\n\r\n        liqPool = _newLPool;\r\n    }\r\n\r\n    function updateDPoolAdd(address _newDPool) public onlyOwner {\r\n        require(_newDPool != disPool, \"Same with previous address\");\r\n\r\n        disPool = _newDPool;\r\n    }\r\n\r\n    function updatePercent(uint256 _newDisPercent, uint256 _newLiqPercent, uint256 _newBurnPercent) public onlyOwner {\r\n        require(_newDisPercent >= 0 && _newDisPercent <= 100 && _newLiqPercent >= 0 && _newLiqPercent <= 100 && _newBurnPercent >= 0 && _newBurnPercent <= 100, \"% < 0 or > 100\");\r\n        require(_newDisPercent + _newLiqPercent + _newBurnPercent <= 100, \"Total more than 100\");\r\n\r\n        disPercent = _newDisPercent;\r\n        liqPercent = _newLiqPercent;\r\n        burnPercent = _newBurnPercent;\r\n    }\r\n\r\n    function updateMinimumSupply(uint256 _minimumSupply) public onlyOwner {\r\n        minimumSupply = _minimumSupply;\r\n    }\r\n\r\n    function addAdmin(address newAdmin) public onlyOwner {\r\n        require(!isAdmin[newAdmin], \"Is admin\");\r\n\r\n        isAdmin[newAdmin] = true;\r\n        admins.push(newAdmin);\r\n    }\r\n\r\n    function removeAdmin(uint index) public onlyOwner returns (address[] memory){\r\n        address removeOwner = admins[index];\r\n        require(index < admins.length, \"Input over admins length\");\r\n        require(isAdmin[removeOwner], \"Not an admin\");\r\n\r\n        for (uint i = index; i < admins.length - 1; i++) {\r\n            admins[i] = admins[i + 1];\r\n        }\r\n        admins.pop();\r\n\r\n        isAdmin[removeOwner] = false;\r\n        return admins;\r\n    }\r\n\r\n    function transferERCToken(address token, uint256 amount, address _to) public whenNotPaused onlyOwner {\r\n        require(_to != address(0), \"0 address\");\r\n        if (token == address(this)) {\r\n            updateAccumulateBalance(_to);\r\n            ERC20Interface(token).transfer(_to, amount);\r\n        } else {\r\n            ERC20Interface(token).transfer(_to, amount);\r\n        }\r\n    }\r\n\r\n    function pause() public whenNotPaused onlyOwner {\r\n        _pause();\r\n    }\r\n\r\n    function unpause() public whenPaused onlyOwner {\r\n        _unpause();\r\n    }\r\n\r\n    function setWhitelistedTo(address newWhitelist) public onlyOwner {\r\n        require(!isWhitelistedTo[newWhitelist], \"Whilisted Address\");\r\n\r\n        isWhitelistedTo[newWhitelist] = true;\r\n    }\r\n\r\n    function removeWhitelistedTo(address newWhitelist) public onlyOwner {\r\n        require(isWhitelistedTo[newWhitelist], \"Non whilisted Address\");\r\n\r\n        isWhitelistedTo[newWhitelist] = false;\r\n    }\r\n\r\n    function setWhitelistedFrom(address newWhitelist) public onlyOwner {\r\n        require(!isWhitelistedFrom[newWhitelist], \"Whilisted Address\");\r\n\r\n        isWhitelistedFrom[newWhitelist] = true;\r\n    }\r\n\r\n    function removeWhitelistedFrom(address newWhitelist) public onlyOwner {\r\n        require(isWhitelistedFrom[newWhitelist], \"Non whilisted Address\");\r\n\r\n        isWhitelistedFrom[newWhitelist] = false;\r\n    }\r\n\r\n    function _authorizeUpgrade(address) internal override onlyOwner {}\r\n\r\n    function mintEvent(address to, uint256 amount) internal {\r\n        emit Mint(address(0), to, amount);\r\n        emit Transfer(address(0), to, amount);\r\n    }\r\n\r\n    function burnEvent(address from, uint256 amount) internal {\r\n        emit Burn(from, amount);\r\n        emit Transfer(from, address(0), amount);\r\n    }\r\n\r\n    function initialize(\r\n        address _to,\r\n        address _lPool,\r\n        uint256 _burnPercent,\r\n        uint256 _liqPercent,\r\n        uint256 _disPercent\r\n    ) public initializer {\r\n        require(_lPool != address(0), \"0 address\");\r\n        require(_burnPercent >= 0, \"Percentage is 0\");\r\n        require(_liqPercent >= 0, \"Percentage is 0\");\r\n        require(_disPercent >= 0, \"Percentage is 0\");\r\n\r\n        name = \"PURSE TOKEN\";\r\n        symbol = \"PURSE\";\r\n        totalSupply = 64000000000 * (10 ** 18);\r\n        decimals = 18;\r\n        minimumSupply = 12800000000 * (10 ** 18);\r\n\r\n        liqPool = _lPool;\r\n        disPool = address(this);\r\n        burnPercent = _burnPercent;\r\n        liqPercent = _liqPercent;\r\n        disPercent = _disPercent;\r\n        _averageInterval = 1 minutes;\r\n        _lastRewardStartTime = block.timestamp;\r\n        __Pausable_init();\r\n        __Ownable_init();\r\n        __UUPSUpgradeable_init();\r\n\r\n        balanceOf[_to] = totalSupply;\r\n        updateAccumulateBalance(_to);\r\n\r\n        mintEvent(_to, totalSupply);\r\n    }\r\n}",
   "sourcePath": "C:/Users/cheek/Desktop/Developer doc/Visual Studio Code/PundiX/purseRewardBSC/src/contracts/PurseTokenUpgradable.sol",
   "ast": {
     "absolutePath": "/C/Users/cheek/Desktop/Developer doc/Visual Studio Code/PundiX/purseRewardBSC/src/contracts/PurseTokenUpgradable.sol",
     "exportedSymbols": {
       "AddressUpgradeable": [
-        7282
+        7267
       ],
       "ContextUpgradeable": [
-        7326
+        7311
       ],
       "ERC1967UpgradeUpgradeable": [
-        6489
+        6474
       ],
       "ERC20Interface": [
         2228
       ],
       "IBeaconUpgradeable": [
-        6499
+        6484
       ],
       "Initializable": [
-        6545
+        6530
       ],
       "OwnableUpgradeable": [
-        6091
+        6076
       ],
       "PausableUpgradeable": [
-        6735
+        6720
       ],
       "PurseTokenUpgradable": [
         4103
       ],
       "StorageSlotUpgradeable": [
-        7386
+        7371
       ],
       "UUPSUpgradeable": [
-        6622
+        6607
       ]
     },
     "id": 4104,
@@ -122,7 +122,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 4104,
-        "sourceUnit": 6546,
+        "sourceUnit": 6531,
         "src": "62:75:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -134,7 +134,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 4104,
-        "sourceUnit": 6623,
+        "sourceUnit": 6608,
         "src": "139:77:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -146,7 +146,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 4104,
-        "sourceUnit": 6736,
+        "sourceUnit": 6721,
         "src": "218:78:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -158,7 +158,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 4104,
-        "sourceUnit": 6092,
+        "sourceUnit": 6077,
         "src": "298:75:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -440,7 +440,7 @@
               "id": 2229,
               "name": "Initializable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 6545,
+              "referencedDeclaration": 6530,
               "src": "649:13:4"
             },
             "id": 2230,
@@ -452,7 +452,7 @@
               "id": 2231,
               "name": "UUPSUpgradeable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 6622,
+              "referencedDeclaration": 6607,
               "src": "664:15:4"
             },
             "id": 2232,
@@ -464,7 +464,7 @@
               "id": 2233,
               "name": "PausableUpgradeable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 6735,
+              "referencedDeclaration": 6720,
               "src": "681:19:4"
             },
             "id": 2234,
@@ -476,7 +476,7 @@
               "id": 2235,
               "name": "OwnableUpgradeable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 6091,
+              "referencedDeclaration": 6076,
               "src": "702:18:4"
             },
             "id": 2236,
@@ -490,12 +490,12 @@
         "id": 4103,
         "linearizedBaseContracts": [
           4103,
-          6091,
-          6735,
-          7326,
-          6622,
-          6489,
-          6545
+          6076,
+          6720,
+          7311,
+          6607,
+          6474,
+          6530
         ],
         "name": "PurseTokenUpgradable",
         "nameLocation": "625:20:4",
@@ -3076,7 +3076,7 @@
                   "id": 2357,
                   "name": "whenNotPaused",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6687,
+                  "referencedDeclaration": 6672,
                   "src": "2294:13:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -3436,7 +3436,7 @@
                   "id": 2454,
                   "name": "whenNotPaused",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6687,
+                  "referencedDeclaration": 6672,
                   "src": "3142:13:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -4933,7 +4933,7 @@
                   "id": 2486,
                   "name": "whenNotPaused",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6687,
+                  "referencedDeclaration": 6672,
                   "src": "3400:13:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -5480,7 +5480,7 @@
                   "id": 2605,
                   "name": "whenNotPaused",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6687,
+                  "referencedDeclaration": 6672,
                   "src": "4385:13:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -6127,7 +6127,7 @@
                   "id": 2644,
                   "name": "whenNotPaused",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6687,
+                  "referencedDeclaration": 6672,
                   "src": "4679:13:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -12984,7 +12984,7 @@
                   "id": 3146,
                   "name": "whenNotPaused",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6687,
+                  "referencedDeclaration": 6672,
                   "src": "9605:13:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -17422,7 +17422,7 @@
                   "id": 3545,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6030,
+                  "referencedDeclaration": 6015,
                   "src": "13160:9:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -17648,7 +17648,7 @@
                   "id": 3564,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6030,
+                  "referencedDeclaration": 6015,
                   "src": "13338:9:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -18454,7 +18454,7 @@
                   "id": 3587,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6030,
+                  "referencedDeclaration": 6015,
                   "src": "13569:9:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -18627,7 +18627,7 @@
                   "id": 3645,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6030,
+                  "referencedDeclaration": 6015,
                   "src": "14052:9:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -18958,7 +18958,7 @@
                   "id": 3657,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6030,
+                  "referencedDeclaration": 6015,
                   "src": "14162:9:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -19780,7 +19780,7 @@
                   "id": 3685,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6030,
+                  "referencedDeclaration": 6015,
                   "src": "14347:9:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -20446,7 +20446,7 @@
                   "id": 3759,
                   "name": "whenNotPaused",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6687,
+                  "referencedDeclaration": 6672,
                   "src": "14848:13:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -20459,7 +20459,7 @@
                   "id": 3761,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6030,
+                  "referencedDeclaration": 6015,
                   "src": "14862:9:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -20586,7 +20586,7 @@
                       "name": "_pause",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6714,
+                      "referencedDeclaration": 6699,
                       "src": "15224:6:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
@@ -20626,7 +20626,7 @@
                   "id": 3806,
                   "name": "whenNotPaused",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6687,
+                  "referencedDeclaration": 6672,
                   "src": "15189:13:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -20639,7 +20639,7 @@
                   "id": 3808,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6030,
+                  "referencedDeclaration": 6015,
                   "src": "15203:9:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -20682,7 +20682,7 @@
                       "name": "_unpause",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6730,
+                      "referencedDeclaration": 6715,
                       "src": "15306:8:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
@@ -20722,7 +20722,7 @@
                   "id": 3817,
                   "name": "whenPaused",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6698,
+                  "referencedDeclaration": 6683,
                   "src": "15274:10:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -20735,7 +20735,7 @@
                   "id": 3819,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6030,
+                  "referencedDeclaration": 6015,
                   "src": "15285:9:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -20971,7 +20971,7 @@
                   "id": 3830,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6030,
+                  "referencedDeclaration": 6015,
                   "src": "15387:9:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -21221,7 +21221,7 @@
                   "id": 3852,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6030,
+                  "referencedDeclaration": 6015,
                   "src": "15591:9:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -21486,7 +21486,7 @@
                   "id": 3873,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6030,
+                  "referencedDeclaration": 6015,
                   "src": "15798:9:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -21736,7 +21736,7 @@
                   "id": 3895,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6030,
+                  "referencedDeclaration": 6015,
                   "src": "16008:9:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -21795,7 +21795,7 @@
           },
           {
             "baseFunctions": [
-              6617
+              6602
             ],
             "body": {
               "id": 3920,
@@ -21814,7 +21814,7 @@
                   "id": 3917,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6030,
+                  "referencedDeclaration": 6015,
                   "src": "16216:9:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -22527,7 +22527,7 @@
             "body": {
               "id": 4101,
               "nodeType": "Block",
-              "src": "16742:876:4",
+              "src": "16742:879:4",
               "statements": [
                 {
                   "expression": {
@@ -23705,15 +23705,15 @@
                       "kind": "number",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "17345:6:4",
-                      "subdenomination": "days",
+                      "src": "17345:9:4",
+                      "subdenomination": "minutes",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_rational_86400_by_1",
-                        "typeString": "int_const 86400"
+                        "typeIdentifier": "t_rational_60_by_1",
+                        "typeString": "int_const 60"
                       },
                       "value": "1"
                     },
-                    "src": "17326:25:4",
+                    "src": "17326:28:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -23721,7 +23721,7 @@
                   },
                   "id": 4071,
                   "nodeType": "ExpressionStatement",
-                  "src": "17326:25:4"
+                  "src": "17326:28:4"
                 },
                 {
                   "expression": {
@@ -23736,7 +23736,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 2273,
-                      "src": "17362:20:4",
+                      "src": "17365:20:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -23751,7 +23751,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 4294967292,
-                        "src": "17385:5:4",
+                        "src": "17388:5:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_block",
                           "typeString": "block"
@@ -23764,13 +23764,13 @@
                       "lValueRequested": false,
                       "memberName": "timestamp",
                       "nodeType": "MemberAccess",
-                      "src": "17385:15:4",
+                      "src": "17388:15:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "17362:38:4",
+                    "src": "17365:38:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -23778,7 +23778,7 @@
                   },
                   "id": 4076,
                   "nodeType": "ExpressionStatement",
-                  "src": "17362:38:4"
+                  "src": "17365:38:4"
                 },
                 {
                   "expression": {
@@ -23789,8 +23789,8 @@
                       "name": "__Pausable_init",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6656,
-                      "src": "17411:15:4",
+                      "referencedDeclaration": 6641,
+                      "src": "17414:15:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
                         "typeString": "function ()"
@@ -23804,7 +23804,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "17411:17:4",
+                    "src": "17414:17:4",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
@@ -23813,7 +23813,7 @@
                   },
                   "id": 4079,
                   "nodeType": "ExpressionStatement",
-                  "src": "17411:17:4"
+                  "src": "17414:17:4"
                 },
                 {
                   "expression": {
@@ -23824,8 +23824,8 @@
                       "name": "__Ownable_init",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 5996,
-                      "src": "17439:14:4",
+                      "referencedDeclaration": 5981,
+                      "src": "17442:14:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
                         "typeString": "function ()"
@@ -23839,7 +23839,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "17439:16:4",
+                    "src": "17442:16:4",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
@@ -23848,7 +23848,7 @@
                   },
                   "id": 4082,
                   "nodeType": "ExpressionStatement",
-                  "src": "17439:16:4"
+                  "src": "17442:16:4"
                 },
                 {
                   "expression": {
@@ -23859,8 +23859,8 @@
                       "name": "__UUPSUpgradeable_init",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6566,
-                      "src": "17466:22:4",
+                      "referencedDeclaration": 6551,
+                      "src": "17469:22:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
                         "typeString": "function ()"
@@ -23874,7 +23874,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "17466:24:4",
+                    "src": "17469:24:4",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
@@ -23883,7 +23883,7 @@
                   },
                   "id": 4085,
                   "nodeType": "ExpressionStatement",
-                  "src": "17466:24:4"
+                  "src": "17469:24:4"
                 },
                 {
                   "expression": {
@@ -23899,7 +23899,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 2279,
-                        "src": "17503:9:4",
+                        "src": "17506:9:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                           "typeString": "mapping(address => uint256)"
@@ -23912,7 +23912,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 3971,
-                        "src": "17513:3:4",
+                        "src": "17516:3:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -23923,7 +23923,7 @@
                       "isPure": false,
                       "lValueRequested": true,
                       "nodeType": "IndexAccess",
-                      "src": "17503:14:4",
+                      "src": "17506:14:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -23937,13 +23937,13 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 2242,
-                      "src": "17520:11:4",
+                      "src": "17523:11:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "17503:28:4",
+                    "src": "17506:28:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -23951,7 +23951,7 @@
                   },
                   "id": 4091,
                   "nodeType": "ExpressionStatement",
-                  "src": "17503:28:4"
+                  "src": "17506:28:4"
                 },
                 {
                   "expression": {
@@ -23962,7 +23962,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 3971,
-                        "src": "17566:3:4",
+                        "src": "17569:3:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -23981,7 +23981,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 3128,
-                      "src": "17542:23:4",
+                      "src": "17545:23:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
@@ -23995,7 +23995,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "17542:28:4",
+                    "src": "17545:28:4",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
@@ -24004,7 +24004,7 @@
                   },
                   "id": 4095,
                   "nodeType": "ExpressionStatement",
-                  "src": "17542:28:4"
+                  "src": "17545:28:4"
                 },
                 {
                   "expression": {
@@ -24015,7 +24015,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 3971,
-                        "src": "17593:3:4",
+                        "src": "17596:3:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -24027,7 +24027,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 2242,
-                        "src": "17598:11:4",
+                        "src": "17601:11:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -24050,7 +24050,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 3947,
-                      "src": "17583:9:4",
+                      "src": "17586:9:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
                         "typeString": "function (address,uint256)"
@@ -24064,7 +24064,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "17583:27:4",
+                    "src": "17586:27:4",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
@@ -24073,7 +24073,7 @@
                   },
                   "id": 4100,
                   "nodeType": "ExpressionStatement",
-                  "src": "17583:27:4"
+                  "src": "17586:27:4"
                 }
               ]
             },
@@ -24089,7 +24089,7 @@
                   "id": 3981,
                   "name": "initializer",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6544,
+                  "referencedDeclaration": 6529,
                   "src": "16730:11:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -24250,54 +24250,54 @@
               "src": "16742:0:4"
             },
             "scope": 4103,
-            "src": "16558:1060:4",
+            "src": "16558:1063:4",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           }
         ],
         "scope": 4104,
-        "src": "616:17005:4",
+        "src": "616:17008:4",
         "usedErrors": []
       }
     ],
-    "src": "35:17586:4"
+    "src": "35:17589:4"
   },
   "legacyAST": {
     "absolutePath": "/C/Users/cheek/Desktop/Developer doc/Visual Studio Code/PundiX/purseRewardBSC/src/contracts/PurseTokenUpgradable.sol",
     "exportedSymbols": {
       "AddressUpgradeable": [
-        7282
+        7267
       ],
       "ContextUpgradeable": [
-        7326
+        7311
       ],
       "ERC1967UpgradeUpgradeable": [
-        6489
+        6474
       ],
       "ERC20Interface": [
         2228
       ],
       "IBeaconUpgradeable": [
-        6499
+        6484
       ],
       "Initializable": [
-        6545
+        6530
       ],
       "OwnableUpgradeable": [
-        6091
+        6076
       ],
       "PausableUpgradeable": [
-        6735
+        6720
       ],
       "PurseTokenUpgradable": [
         4103
       ],
       "StorageSlotUpgradeable": [
-        7386
+        7371
       ],
       "UUPSUpgradeable": [
-        6622
+        6607
       ]
     },
     "id": 4104,
@@ -24322,7 +24322,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 4104,
-        "sourceUnit": 6546,
+        "sourceUnit": 6531,
         "src": "62:75:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -24334,7 +24334,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 4104,
-        "sourceUnit": 6623,
+        "sourceUnit": 6608,
         "src": "139:77:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -24346,7 +24346,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 4104,
-        "sourceUnit": 6736,
+        "sourceUnit": 6721,
         "src": "218:78:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -24358,7 +24358,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 4104,
-        "sourceUnit": 6092,
+        "sourceUnit": 6077,
         "src": "298:75:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -24640,7 +24640,7 @@
               "id": 2229,
               "name": "Initializable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 6545,
+              "referencedDeclaration": 6530,
               "src": "649:13:4"
             },
             "id": 2230,
@@ -24652,7 +24652,7 @@
               "id": 2231,
               "name": "UUPSUpgradeable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 6622,
+              "referencedDeclaration": 6607,
               "src": "664:15:4"
             },
             "id": 2232,
@@ -24664,7 +24664,7 @@
               "id": 2233,
               "name": "PausableUpgradeable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 6735,
+              "referencedDeclaration": 6720,
               "src": "681:19:4"
             },
             "id": 2234,
@@ -24676,7 +24676,7 @@
               "id": 2235,
               "name": "OwnableUpgradeable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 6091,
+              "referencedDeclaration": 6076,
               "src": "702:18:4"
             },
             "id": 2236,
@@ -24690,12 +24690,12 @@
         "id": 4103,
         "linearizedBaseContracts": [
           4103,
-          6091,
-          6735,
-          7326,
-          6622,
-          6489,
-          6545
+          6076,
+          6720,
+          7311,
+          6607,
+          6474,
+          6530
         ],
         "name": "PurseTokenUpgradable",
         "nameLocation": "625:20:4",
@@ -27276,7 +27276,7 @@
                   "id": 2357,
                   "name": "whenNotPaused",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6687,
+                  "referencedDeclaration": 6672,
                   "src": "2294:13:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -27636,7 +27636,7 @@
                   "id": 2454,
                   "name": "whenNotPaused",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6687,
+                  "referencedDeclaration": 6672,
                   "src": "3142:13:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -29133,7 +29133,7 @@
                   "id": 2486,
                   "name": "whenNotPaused",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6687,
+                  "referencedDeclaration": 6672,
                   "src": "3400:13:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -29680,7 +29680,7 @@
                   "id": 2605,
                   "name": "whenNotPaused",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6687,
+                  "referencedDeclaration": 6672,
                   "src": "4385:13:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -30327,7 +30327,7 @@
                   "id": 2644,
                   "name": "whenNotPaused",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6687,
+                  "referencedDeclaration": 6672,
                   "src": "4679:13:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -37184,7 +37184,7 @@
                   "id": 3146,
                   "name": "whenNotPaused",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6687,
+                  "referencedDeclaration": 6672,
                   "src": "9605:13:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -41622,7 +41622,7 @@
                   "id": 3545,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6030,
+                  "referencedDeclaration": 6015,
                   "src": "13160:9:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -41848,7 +41848,7 @@
                   "id": 3564,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6030,
+                  "referencedDeclaration": 6015,
                   "src": "13338:9:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -42654,7 +42654,7 @@
                   "id": 3587,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6030,
+                  "referencedDeclaration": 6015,
                   "src": "13569:9:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -42827,7 +42827,7 @@
                   "id": 3645,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6030,
+                  "referencedDeclaration": 6015,
                   "src": "14052:9:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -43158,7 +43158,7 @@
                   "id": 3657,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6030,
+                  "referencedDeclaration": 6015,
                   "src": "14162:9:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -43980,7 +43980,7 @@
                   "id": 3685,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6030,
+                  "referencedDeclaration": 6015,
                   "src": "14347:9:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -44646,7 +44646,7 @@
                   "id": 3759,
                   "name": "whenNotPaused",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6687,
+                  "referencedDeclaration": 6672,
                   "src": "14848:13:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -44659,7 +44659,7 @@
                   "id": 3761,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6030,
+                  "referencedDeclaration": 6015,
                   "src": "14862:9:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -44786,7 +44786,7 @@
                       "name": "_pause",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6714,
+                      "referencedDeclaration": 6699,
                       "src": "15224:6:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
@@ -44826,7 +44826,7 @@
                   "id": 3806,
                   "name": "whenNotPaused",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6687,
+                  "referencedDeclaration": 6672,
                   "src": "15189:13:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -44839,7 +44839,7 @@
                   "id": 3808,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6030,
+                  "referencedDeclaration": 6015,
                   "src": "15203:9:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -44882,7 +44882,7 @@
                       "name": "_unpause",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6730,
+                      "referencedDeclaration": 6715,
                       "src": "15306:8:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
@@ -44922,7 +44922,7 @@
                   "id": 3817,
                   "name": "whenPaused",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6698,
+                  "referencedDeclaration": 6683,
                   "src": "15274:10:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -44935,7 +44935,7 @@
                   "id": 3819,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6030,
+                  "referencedDeclaration": 6015,
                   "src": "15285:9:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -45171,7 +45171,7 @@
                   "id": 3830,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6030,
+                  "referencedDeclaration": 6015,
                   "src": "15387:9:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -45421,7 +45421,7 @@
                   "id": 3852,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6030,
+                  "referencedDeclaration": 6015,
                   "src": "15591:9:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -45686,7 +45686,7 @@
                   "id": 3873,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6030,
+                  "referencedDeclaration": 6015,
                   "src": "15798:9:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -45936,7 +45936,7 @@
                   "id": 3895,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6030,
+                  "referencedDeclaration": 6015,
                   "src": "16008:9:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -45995,7 +45995,7 @@
           },
           {
             "baseFunctions": [
-              6617
+              6602
             ],
             "body": {
               "id": 3920,
@@ -46014,7 +46014,7 @@
                   "id": 3917,
                   "name": "onlyOwner",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6030,
+                  "referencedDeclaration": 6015,
                   "src": "16216:9:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -46727,7 +46727,7 @@
             "body": {
               "id": 4101,
               "nodeType": "Block",
-              "src": "16742:876:4",
+              "src": "16742:879:4",
               "statements": [
                 {
                   "expression": {
@@ -47905,15 +47905,15 @@
                       "kind": "number",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "17345:6:4",
-                      "subdenomination": "days",
+                      "src": "17345:9:4",
+                      "subdenomination": "minutes",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_rational_86400_by_1",
-                        "typeString": "int_const 86400"
+                        "typeIdentifier": "t_rational_60_by_1",
+                        "typeString": "int_const 60"
                       },
                       "value": "1"
                     },
-                    "src": "17326:25:4",
+                    "src": "17326:28:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -47921,7 +47921,7 @@
                   },
                   "id": 4071,
                   "nodeType": "ExpressionStatement",
-                  "src": "17326:25:4"
+                  "src": "17326:28:4"
                 },
                 {
                   "expression": {
@@ -47936,7 +47936,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 2273,
-                      "src": "17362:20:4",
+                      "src": "17365:20:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -47951,7 +47951,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 4294967292,
-                        "src": "17385:5:4",
+                        "src": "17388:5:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_block",
                           "typeString": "block"
@@ -47964,13 +47964,13 @@
                       "lValueRequested": false,
                       "memberName": "timestamp",
                       "nodeType": "MemberAccess",
-                      "src": "17385:15:4",
+                      "src": "17388:15:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "17362:38:4",
+                    "src": "17365:38:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -47978,7 +47978,7 @@
                   },
                   "id": 4076,
                   "nodeType": "ExpressionStatement",
-                  "src": "17362:38:4"
+                  "src": "17365:38:4"
                 },
                 {
                   "expression": {
@@ -47989,8 +47989,8 @@
                       "name": "__Pausable_init",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6656,
-                      "src": "17411:15:4",
+                      "referencedDeclaration": 6641,
+                      "src": "17414:15:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
                         "typeString": "function ()"
@@ -48004,7 +48004,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "17411:17:4",
+                    "src": "17414:17:4",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
@@ -48013,7 +48013,7 @@
                   },
                   "id": 4079,
                   "nodeType": "ExpressionStatement",
-                  "src": "17411:17:4"
+                  "src": "17414:17:4"
                 },
                 {
                   "expression": {
@@ -48024,8 +48024,8 @@
                       "name": "__Ownable_init",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 5996,
-                      "src": "17439:14:4",
+                      "referencedDeclaration": 5981,
+                      "src": "17442:14:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
                         "typeString": "function ()"
@@ -48039,7 +48039,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "17439:16:4",
+                    "src": "17442:16:4",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
@@ -48048,7 +48048,7 @@
                   },
                   "id": 4082,
                   "nodeType": "ExpressionStatement",
-                  "src": "17439:16:4"
+                  "src": "17442:16:4"
                 },
                 {
                   "expression": {
@@ -48059,8 +48059,8 @@
                       "name": "__UUPSUpgradeable_init",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6566,
-                      "src": "17466:22:4",
+                      "referencedDeclaration": 6551,
+                      "src": "17469:22:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
                         "typeString": "function ()"
@@ -48074,7 +48074,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "17466:24:4",
+                    "src": "17469:24:4",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
@@ -48083,7 +48083,7 @@
                   },
                   "id": 4085,
                   "nodeType": "ExpressionStatement",
-                  "src": "17466:24:4"
+                  "src": "17469:24:4"
                 },
                 {
                   "expression": {
@@ -48099,7 +48099,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 2279,
-                        "src": "17503:9:4",
+                        "src": "17506:9:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                           "typeString": "mapping(address => uint256)"
@@ -48112,7 +48112,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 3971,
-                        "src": "17513:3:4",
+                        "src": "17516:3:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -48123,7 +48123,7 @@
                       "isPure": false,
                       "lValueRequested": true,
                       "nodeType": "IndexAccess",
-                      "src": "17503:14:4",
+                      "src": "17506:14:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -48137,13 +48137,13 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 2242,
-                      "src": "17520:11:4",
+                      "src": "17523:11:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "17503:28:4",
+                    "src": "17506:28:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -48151,7 +48151,7 @@
                   },
                   "id": 4091,
                   "nodeType": "ExpressionStatement",
-                  "src": "17503:28:4"
+                  "src": "17506:28:4"
                 },
                 {
                   "expression": {
@@ -48162,7 +48162,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 3971,
-                        "src": "17566:3:4",
+                        "src": "17569:3:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -48181,7 +48181,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 3128,
-                      "src": "17542:23:4",
+                      "src": "17545:23:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
@@ -48195,7 +48195,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "17542:28:4",
+                    "src": "17545:28:4",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
@@ -48204,7 +48204,7 @@
                   },
                   "id": 4095,
                   "nodeType": "ExpressionStatement",
-                  "src": "17542:28:4"
+                  "src": "17545:28:4"
                 },
                 {
                   "expression": {
@@ -48215,7 +48215,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 3971,
-                        "src": "17593:3:4",
+                        "src": "17596:3:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -48227,7 +48227,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 2242,
-                        "src": "17598:11:4",
+                        "src": "17601:11:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -48250,7 +48250,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 3947,
-                      "src": "17583:9:4",
+                      "src": "17586:9:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
                         "typeString": "function (address,uint256)"
@@ -48264,7 +48264,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "17583:27:4",
+                    "src": "17586:27:4",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
@@ -48273,7 +48273,7 @@
                   },
                   "id": 4100,
                   "nodeType": "ExpressionStatement",
-                  "src": "17583:27:4"
+                  "src": "17586:27:4"
                 }
               ]
             },
@@ -48289,7 +48289,7 @@
                   "id": 3981,
                   "name": "initializer",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 6544,
+                  "referencedDeclaration": 6529,
                   "src": "16730:11:4"
                 },
                 "nodeType": "ModifierInvocation",
@@ -48450,18 +48450,18 @@
               "src": "16742:0:4"
             },
             "scope": 4103,
-            "src": "16558:1060:4",
+            "src": "16558:1063:4",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           }
         ],
         "scope": 4104,
-        "src": "616:17005:4",
+        "src": "616:17008:4",
         "usedErrors": []
       }
     ],
-    "src": "35:17586:4"
+    "src": "35:17589:4"
   },
   "compiler": {
     "name": "solc",
@@ -48469,7 +48469,7 @@
   },
   "networks": {},
   "schemaVersion": "3.2.3",
-  "updatedAt": "2021-12-10T11:04:38.431Z",
+  "updatedAt": "2021-12-14T04:34:01.109Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

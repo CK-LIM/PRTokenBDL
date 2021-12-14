@@ -303,13 +303,12 @@ using SafeERC20Upgradeable for IERC20Upgradeable;
         disPool = _newDPool;
     }
 
-    function updatePercent(uint256 _newDisPercent, uint256 _newLiqPercent, uint256 _newBurnPercent) external onlyOwner {
-        require(_newDisPercent <= 10000 && _newLiqPercent <= 10000 && _newBurnPercent <= 10000, "% > 10000");
+    function updatePercent(uint256 _newBurnPercent, uint256 _newDisPercent, uint256 _newLiqPercent) external onlyOwner {
         require(_newDisPercent + _newLiqPercent + _newBurnPercent <= 10000, "Total more than 10000");
-
+        
+        burnPercent = _newBurnPercent;
         disPercent = _newDisPercent;
         liqPercent = _newLiqPercent;
-        burnPercent = _newBurnPercent;
 
         emit UpdatePercent(burnPercent, disPercent,  liqPercent);
     }
